@@ -8,7 +8,7 @@ handoffs:
   - label: Devolver hallazgos si queda un ciclo
     agent: developer
     prompt: >-
-      Corrige los hallazgos del veredicto Rechazado que adjunta la persona.
+      Lee docs/trabajo/revision.md y corrige los hallazgos del veredicto Rechazado.
       Confirma el número de ciclo y vuelve a ejecutar las pruebas.
     send: false
 ---
@@ -19,7 +19,7 @@ Evalúa la implementación, la trazabilidad y la evidencia de ejecución. Emite 
 
 ## Procedimiento
 
-1. Lee la especificación aprobada, el plan, el diff suministrado o los archivos del cambio y los artefactos de pytest. Comprueba que la evidencia corresponde al cambio revisado y pide a la persona lo que falte.
+1. Lee `docs/trabajo/implementacion.md`, la especificación aprobada, el plan, el cambio y los artefactos de pytest. Comprueba que la evidencia corresponde al cambio revisado y pide a la persona lo que falte.
 2. Aplica [verificar-trazabilidad](../skills/verificar-trazabilidad/SKILL.md). Revisa límites, combinaciones de reglas, configuración por organización y condiciones de alcance con los resultados esperados aprobados.
 3. Emite `Aprobado` cuando toda la evidencia exigida está presente y no hay incumplimientos. Emite `Rechazado` si existe un incumplimiento o falta evidencia necesaria para verificar un criterio.
 
@@ -33,7 +33,7 @@ Solo lectura y búsqueda. No edites archivos, ejecutes comandos, invoques agente
 
 ## Colaboración
 
-La persona guarda el veredicto y decide si envía el traspaso. El botón de devolución se usa únicamente tras un rechazo y antes de agotar los dos ciclos de corrección.
+La persona guarda el veredicto en `docs/trabajo/revision.md` y decide si envía el traspaso. El botón de devolución se usa únicamente tras un rechazo y antes de agotar los dos ciclos de corrección.
 
 ## Criterio de término
 

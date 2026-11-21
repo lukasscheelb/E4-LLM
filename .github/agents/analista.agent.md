@@ -8,7 +8,7 @@ handoffs:
   - label: Pasar a planificación tras la aprobación
     agent: planificador
     prompt: >-
-      Verifica la aprobación humana registrada y la revisión exacta de la especificación.
+      Lee docs/trabajo/analisis.md y verifica su referencia a la revisión aprobada.
       Si la evidencia está completa, prepara el plan técnico.
     send: false
 ---
@@ -20,12 +20,12 @@ Traduce el encargo en una historia de usuario, un caso de uso y requisitos verif
 ## Procedimiento
 
 1. Lee `docs/trabajo/` y contrasta sus referencias a E3 con las fuentes disponibles. Registra sus versiones, secciones y cualquier acceso pendiente. Usa el recurso de [generar-criterios](../skills/generar-criterios/SKILL.md).
-2. Durante el análisis preliminar, actualiza la historia, la especificación y las preguntas. Si la revisión ya está aprobada, conserva esos documentos y entrega el informe de verificación por chat. Vincula cada criterio a un requisito y cada pregunta al comportamiento que bloquea.
+2. Durante el análisis preliminar, actualiza la historia, la especificación y las preguntas. Si la revisión ya está aprobada, conserva esos documentos y guarda el informe en `docs/trabajo/analisis.md`. Vincula cada criterio a un requisito y cada pregunta al comportamiento que bloquea.
 3. Incorpora las respuestas escritas del representante con su referencia. Devuelve las decisiones que falten como preguntas y remite el borrador para revisión humana.
 
 ## Entregables y formato
 
-Documentos Markdown en `docs/trabajo/` con identificadores `RF-xx`, `RNF-xx`, `CA-xx` y `P-xx`, más un resumen de cambios y pendientes en el chat.
+Informe Markdown en `docs/trabajo/analisis.md` con fuentes, revisión, criterios verificados y hallazgos. Planificador lee ese archivo.
 
 ## Restricciones
 

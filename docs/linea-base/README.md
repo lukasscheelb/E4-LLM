@@ -1,27 +1,17 @@
-# Metodología de comparación con un solo agente
+# Línea base con un solo agente
 
-**Estado:** protocolo preparado. Las dos corridas y sus mediciones están pendientes.
+Corre el mismo caso en un chat nuevo con un solo agente generalista. Usa una rama separada desde la misma revisión previa a la implementación, la misma especificación aprobada y el mismo modelo y entorno cuando estén disponibles. El agente generalista recibe el caso y realiza análisis, plan, implementación y pruebas dentro de su propio chat. Mantén la salida de la corrida multiagente fuera de sus insumos.
 
-## Preparación de la comparación
+> Lee la especificación y la historia aprobadas de MIRA E4 y el registro `cadb048`. Resuelve el mismo caso de principio a fin en este chat. Diseña e implementa una API mínima en Python en `src/`, con pruebas en `tests/` y sin Bonsai. Ejecuta pytest, reporta la cobertura de los criterios aprobados y entrega tu evaluación sin delegar.
 
-1. Fija el commit de aprobación del cliente, la revisión asociada y el mismo objetivo de implementación para ambas corridas. Crea dos ramas de experimento desde el commit de aprobación. Inicia dos chats sin historial y mantén el mismo modelo, entorno, versiones, insumos y límites de tiempo o turnos. Registra las diferencias inevitables.
-2. Lanza el flujo secuencial en una rama. En la otra, usa un solo agente generalista durante todas las etapas, con permisos de leer, buscar, editar y ejecutar. Entrega la misma especificación aprobada y el mismo encargo. El generalista diseña, implementa, prueba y autoevalúa en su sesión sin delegación ni acceso a productos generados por la otra corrida.
-3. Usa el mismo inicio de medición, desde el primer prompt de trabajo posterior a la aprobación compartida, y el mismo fin, cuando la entrega incluye código, pruebas y veredicto o alcanza el límite documentado. La preparación y aprobación previas son comunes y pueden registrarse aparte. Usa un orden fijado antes de comenzar y evita transferir hallazgos entre sesiones.
-4. Antes de las corridas, fija una suite común de aceptación y una lista de requisitos basada en la revisión aprobada. Tras cada entrega, aplica ambas al mismo tipo de instantánea. Las suites que escriba cada agente también se reportan, con sus tamaños y resultados propios.
+Guarda aquí el prompt enviado, la salida, el hash o diff de la implementación y el resultado de pytest. Evalúa ambos enfoques contra los mismos 17 criterios aprobados, con la evidencia de cada corrida. Cuenta el tiempo desde el primer mensaje hasta la entrega revisada de cada corrida, con el mismo criterio.
 
-Prompt inicial propuesto para la línea base, que se registrará literalmente al enviarse:
+| Métrica | Qué registrar en cada corrida |
+|---|---|
+| Tiempo | Inicio, fin y duración en la misma unidad. |
+| Tokens | Total real cuando esté disponible. Si falta en alguna corrida, usa para ambas la misma aproximación por caracteres visibles divididos por cuatro y declara sus exclusiones. |
+| Intervenciones humanas | Número de acciones de la persona y su tipo. Cuenta los traspasos y correcciones cuando ocurran. |
+| Pruebas aprobadas | Aprobadas y total ejecutado, además de fallos, errores y omisiones. Indica qué criterios cubre cada suite. |
+| Cumplimiento | Requisitos cumplidos sobre ocho, según los 17 criterios aprobados y su evidencia. |
 
-> Con la revisión aprobada y su commit de aprobación adjuntos, diseña, implementa y verifica el evaluador local de MIRA en Python con pytest. Entrega trazabilidad requisito–diseño–código–prueba y una autoevaluación con evidencia. Continúa en este mismo chat sin delegar.
-
-## Registro de medidas
-
-| Métrica | Método | Secuencial | Agente único |
-|---|---|---|---|
-| Tiempo transcurrido | Hora de inicio y fin con zona, pausas por separado. Usa la misma unidad. | Pendiente | Pendiente |
-| Tokens | Suma entrada y salida de todos los turnos cuando el entorno los exponga. Si faltan, aplica a ambos el mismo proxy de caracteres visibles de prompts y respuestas dividido por cuatro. Registra exclusiones de contexto, caché y herramientas y conserva las transcripciones. | Pendiente | Pendiente |
-| Intervenciones humanas | Cuenta los envíos iniciados por la persona, incluidos prompt inicial, traspasos, aclaraciones y correcciones. Registra aprobaciones de herramientas y guardado de entregables como acciones separadas. Excluye el evento de aprobación de negocio común a ambas corridas. | Pendiente | Pendiente |
-| Pruebas aprobadas | Usa casos aprobados sobre el total esperado de la suite común. Registra fallos, errores, omisiones y no ejecutadas. Reporta aparte las suites propias de los agentes. | Pendiente | Pendiente |
-| Cumplimiento | Aplica la lista congelada a cada requisito y su evidencia. Calcula requisitos cumplidos sobre el total aprobado. Registra el motivo de cada incumplimiento o falta de evidencia. | Pendiente | Pendiente |
-| MAST | Registra solo incidentes observados que correspondan a una categoría con un fragmento verificable. | Pendiente | Pendiente |
-
-Presenta las diferencias junto con sus artefactos. Una corrida por enfoque describe esas ejecuciones y sus condiciones. Si se repiten las corridas, preserva todos los resultados y documenta el criterio de agregación.
+Presenta los valores reales de ambas corridas y explica diferencias favorables y desfavorables. Registra incidentes MAST solo si ocurrieron y hay evidencia.

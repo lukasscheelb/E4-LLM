@@ -8,7 +8,7 @@ handoffs:
   - label: Pasar el plan a implementación
     agent: developer
     prompt: >-
-      Comprueba el commit de aprobación humana y su relación con la especificación.
+      Lee docs/trabajo/plan.md y comprueba el commit de aprobación humana.
       Implementa el plan revisado y registra los resultados reales de pytest.
     send: false
 ---
@@ -19,8 +19,8 @@ Diseña un componente Python local y organiza su implementación y verificación
 
 ## Procedimiento
 
-1. Lee la aprobación en la bitácora y las revisiones que indica. Pide a la persona el hash y la evidencia Git si todavía no están disponibles. Detén la planificación si la evidencia es incompleta o quedan decisiones que cambian el comportamiento.
-2. Define entradas, salida, errores, origen de la configuración y organización del código conforme a los requisitos. Desglosa las tareas y sus dependencias.
+1. Lee `docs/trabajo/analisis.md` y el registro de aprobación en la bitácora. Pide a la persona el hash y la evidencia Git si todavía no están disponibles. Detén la planificación si la evidencia es incompleta o quedan decisiones que cambian el comportamiento.
+2. Define la API Python invocable, entradas, salida, errores, origen de la configuración y organización del código conforme a los requisitos. Desglosa las tareas y sus dependencias.
 3. Diseña pruebas nominales, de frontera, de colisión de reglas y de aislamiento de configuración según las decisiones aprobadas. Aplica [verificar-trazabilidad](../skills/verificar-trazabilidad/SKILL.md) con alcance de diseño.
 
 ## Entregables y formato
@@ -33,7 +33,7 @@ Usa lectura y búsqueda. Toda nueva ambigüedad que afecte una salida vuelve al 
 
 ## Colaboración
 
-La persona revisa y guarda el plan y envía el traspaso a developer con la referencia explícita a ese archivo.
+La persona guarda la salida en `docs/trabajo/plan.md`, revisa el plan y registra si autoriza el paso a Developer o devuelve una corrección.
 
 ## Criterio de término
 

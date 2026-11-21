@@ -8,7 +8,7 @@ handoffs:
   - label: Pasar implementación a revisión
     agent: reviewer
     prompt: >-
-      Revisa el estado actual contra la especificación aprobada y el plan.
+      Lee docs/trabajo/implementacion.md y revisa el cambio contra la especificación aprobada y el plan.
       Comprueba la evidencia entregada y devuelve un veredicto de solo lectura.
     send: false
 ---
@@ -19,13 +19,13 @@ Implementa y prueba el componente en Python. En una devolución, atiende los hal
 
 ## Procedimiento
 
-1. Comprueba con Git que el commit independiente que registra la aprobación del representante es ancestro de la rama de trabajo. Verifica que corresponde a la revisión aprobada y que la historia, la especificación y las decisiones coinciden con esa revisión. Lee el plan revisado. Si falta un prerrequisito o cambió el comportamiento especificado, detente.
+1. Comprueba con Git que el commit independiente que registra la aprobación del representante es ancestro de la rama de trabajo. Verifica que corresponde a la revisión aprobada y que la historia, la especificación y las decisiones coinciden con esa revisión. Lee el plan revisado en `docs/trabajo/plan.md`. Para una devolución, lee también `docs/trabajo/revision.md`. Si falta un prerrequisito o cambió el comportamiento especificado, detente.
 2. Implementa los requisitos trazados y sus pruebas. Si es una devolución, registra el número de ciclo y los hallazgos abordados.
 3. Usa [pytest-runner](../skills/pytest-runner/SKILL.md), conserva la salida con código de retorno y vincula cada resultado al estado del código que se ejecutó. Actualiza la trazabilidad.
 
 ## Entregables y formato
 
-Código y pruebas Python, más un registro Markdown con archivos modificados, requisitos cubiertos, comando, evidencia de pytest y pendientes. Guarda la evidencia en `docs/evidencia/` y las actividades reales en la bitácora.
+API Python en `src/`, pruebas en `tests/` y `docs/trabajo/implementacion.md` con archivos modificados, requisitos cubiertos, revisión probada, comando, enlaces a pytest y pendientes. Guarda la evidencia en `docs/evidencia/` y las actividades reales en la bitácora.
 
 ## Restricciones
 
