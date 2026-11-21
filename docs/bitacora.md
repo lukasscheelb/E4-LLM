@@ -59,3 +59,24 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 - Hash de la revisión aprobada y rutas de historia, especificación y respuestas:
 - Preguntas resueltas y evidencia de las respuestas:
 - Persona que registra la aprobación:
+
+## Aprobación expresa del representante · 2026-11-21
+
+- **Representante del cliente:** Lukas Scheel.
+- **Fecha de aprobación:** 2026-11-21, America/Santiago. La hora exacta del mensaje no está disponible en el contexto del chat.
+- **Fecha y hora de transcripción:** 2026-11-21 17:03:58, America/Santiago (20:03:58 UTC).
+- **Evidencia:** mensaje del representante en el chat de Codex asociado a este repositorio.
+- **Declaración literal:**
+
+  > Como representante del cliente, apruebo expresamente la especificación y la historia de usuario de MIRA E4 en el commit 2c625d6446b6fdba4cdc361c77f71235c4c4b45e.
+
+- **Revisión documental aprobada:** `2c625d6446b6fdba4cdc361c77f71235c4c4b45e`.
+- **Documentos de esa revisión:**
+  - `docs/trabajo/especificacion.md`
+  - `docs/trabajo/historia-usuario.md`
+  - `docs/trabajo/preguntas-cliente.md`
+- **Decisiones incorporadas:** P-01 a P-09 y aclaraciones P-05.a, P-05.b y P-07.a, con las respuestas y su aceptación registradas en `docs/trabajo/preguntas-cliente.md`.
+- **Autorización posterior para el registro y commit:** el representante indicó literalmente «hazlo por mi en mi nombre», después de recibir las instrucciones para registrar la aprobación en un commit independiente que modificara únicamente `docs/bitacora.md`.
+- **Procedencia del registro:** decisión y autorización humanas de Lukas Scheel; transcripción y ejecución material del commit realizadas por Codex por encargo expreso. No se afirma que una persona haya ejecutado los comandos de Git. Esta autorización sustituye, para este registro, la ejecución manual solicitada anteriormente.
+- **Verificación previa:** el repositorio estaba limpio y HEAD coincidía con la revisión aprobada. El commit dedicado debe incluir únicamente este archivo; su hash se obtiene de Git después de crearlo.
+- **Estado al registrar:** aprobación expresa otorgada antes de cualquier implementación. En esta actividad no se ejecutaron los agentes Analista, Planificador, Developer o Reviewer, las Skills del proyecto ni pytest; no se generaron resultados de pruebas, métricas o fallas MAST.
