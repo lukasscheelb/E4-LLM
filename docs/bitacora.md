@@ -151,3 +151,13 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 - **Demostración técnica:** `scripts/demo.py` ejecutó cinco escenarios con retorno 0; log y duración del proceso reales en cierre-demo. No se presenta como un ensayo oral ni como nueva corrida de cuatro agentes.
 - **Limitaciones declaradas:** métricas totales comparables no se reconstruyeron retrospectivamente; MAST se presenta como interpretación con incertidumbre, no como dos causas certificadas; no consta rechazo/corrección humana de una salida en la corrida. Se preparó el guion, pero el ensayo del equipo, confirmación de rotación/acceso del docente y datos de app/modelo siguen requiriendo verificación humana.
 - **Cierre Git autorizado:** preparar main y etiqueta entrega-3 sin sobrescribir ramas o etiquetas existentes. No se modifican la visibilidad del repositorio ni permisos de terceros sin identidad/autorización específica.
+
+## Guía de instalación desde cero · 2026-11-21
+
+- **Encargo:** documento paso a paso para ejecutar el proyecto en un computador sin descargas previas del proyecto, incluidos requisitos como VS Code.
+- **Artefactos:** `docs/entrega/guia-instalacion.md`, fuente JSON y `output/pdf/Guia_Instalacion_MIRA_E4.pdf`, diez páginas. Se enlazaron desde README y la documentación de entrega. El generador está en `scripts/generar_guia.py`.
+- **Contenido:** requisitos y enlaces oficiales, instalación Python/Git/VS Code, clon explícito de main o etiqueta, entorno virtual sin necesidad de activación, demo y resultados esperados, pytest y evidencia nueva, macOS/Linux, ejemplo API, Docker opcional, agentes y control humano, solución de problemas.
+- **Verificación:** copia limpia de la etiqueta mediante git archive en tmp, .venv nuevo, instalación requirements-dev.txt y ejecución real de demo, ejemplo API y suite mediante pytest-runner. Los tres retornaron 0; 173 pruebas aprobadas. La descarga inicial fue bloqueada por el sandbox y completó con escalación autorizada. Se corrigió un error del registro de salida por codificación sin cambiar el producto.
+- **Docker:** comando exacto de PowerShell de la guía comprobado con la imagen ya preparada; 115/115 y retorno 0, red aislada real. JSON ambiental, JUnit y retorno conservados en guia-docker-*.
+- **QA PDF:** diez páginas renderizadas e inspeccionadas; enlaces de fuentes oficiales clicables y comandos sin recorte. Evidencia y hash en guia-verificacion.json. No se afirma instalación gráfica en una máquina vacía ni ejecución en macOS/Linux.
+- **Versionado:** documentación nueva en main; código y requisitos sin cambios. La etiqueta entrega-3 se conserva inmutable para la reproducción académica.

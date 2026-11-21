@@ -1,0 +1,55 @@
+{
+  "metodo": "git archive entrega-3 en carpeta nueva, .venv nuevo e instalación requirements-dev.txt; no instalación gráfica de herramientas",
+  "pasos": [
+    {
+      "paso": "demo",
+      "argumentos": [
+        "scripts/demo.py"
+      ],
+      "retorno": 0
+    },
+    {
+      "paso": "api",
+      "argumentos": [
+        "ejemplo_mira.py"
+      ],
+      "retorno": 0
+    },
+    {
+      "paso": "pytest",
+      "argumentos": [
+        ".github/skills/pytest-runner/scripts/run_pytest.py",
+        "tests",
+        "--junitxml",
+        "C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4\\docs\\evidencia\\guia-verificacion-junit.xml"
+      ],
+      "retorno": 0
+    }
+  ],
+  "pdf_paginas_inspeccionadas": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "prueba_de_todos_los_sistemas_operativos": false,
+  "incidencia_coordinacion": "El primer registro se interrumpió al imprimir una decodificación de salida cp1252 como utf8; demo ya había retornado 0. Se corrigió solo el registro y se completaron los pasos.",
+  "python_entorno_nuevo": "3.14.3",
+  "verificacion_pdf": {
+    "paginas": 10,
+    "inspeccion_visual": "diez páginas, sin recortes ni superposiciones",
+    "sha256": "5449c72b47673573c6e7b4bb9d911c8587fa741ce7f44bb875c6626cbf1ab267"
+  },
+  "docker_guia": {
+    "retorno": 0,
+    "pruebas": 115,
+    "aislamiento": "network none, solo lo, conexion rechazada",
+    "comando": "sección 7 de docs/entrega/guia-instalacion.json, ejecutado en PowerShell"
+  }
+}

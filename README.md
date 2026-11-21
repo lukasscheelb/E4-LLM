@@ -2,6 +2,8 @@
 
 **Equipo:** Lukas Scheel (representante de negocio), Francisca Meyer y Sebastian Rodriguez.
 
+**Primera instalación:** sigue la [guía paso a paso desde cero](docs/entrega/guia-instalacion.md) o descarga su [versión PDF](output/pdf/Guia_Instalacion_MIRA_E4.pdf). Incluye requisitos, Windows, macOS/Linux, demo, pruebas y opciones de Docker y agentes.
+
 **Entrega académica:** [informe PDF](output/pdf/Informe_MIRA_E4.pdf), [presentación PowerPoint](output/presentacion/Presentacion_MIRA_E4.pptx), [guion de demostración](docs/entrega/guion-demo.md) y [estado y límites de entrega](docs/entrega/README.md). Diagrama y tabla de agentes en `docs/entrega/`. La versión final se identifica mediante la etiqueta `entrega-3`. Los puntos que requieren una respuesta o actuación humana se declaran pendientes, sin dar por completado un ensayo ni métricas inexistentes.
 
 **Alternativa A · Desarrollo conducido por especificación.** El caso propone un evaluador independiente de MIRA que considera puntaje de confianza, señales de fraude y umbrales configurables por organización. El componente es local, en Python y verificable con pytest.

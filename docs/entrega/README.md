@@ -8,6 +8,10 @@
 
 Identificación proporcionada por el usuario. Falta confirmar quién representó al cliente en E2; no se afirma la rotación sin respuesta.
 
+## Instalación desde un equipo nuevo
+
+[Guía paso a paso](guia-instalacion.md) y [PDF descargable](../../output/pdf/Guia_Instalacion_MIRA_E4.pdf).
+
 ## Artefactos
 
 - `output/pdf/Informe_MIRA_E4.pdf`: informe de diez páginas con portada y ocho secciones dentro de sus máximos.
