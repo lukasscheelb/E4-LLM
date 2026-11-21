@@ -104,3 +104,13 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 - **Control humano:** se presenta el plan concreto y su addendum al representante para revisión y autorización de Developer. Ese control sigue pendiente; la solicitud general de ejecutar el flujo no se registra como aprobación anticipada de este plan.
 - **Estado:** pasos 1, 2 y 3 realizados; Developer, pytest, Reviewer y línea base no iniciados. No se inventaron resultados, correcciones humanas ni fallas MAST. La limitación de catálogo y la indisponibilidad de Docker no se clasificaron como MAST sin evidencia causal suficiente.
 - **Evidencia de coordinación:** `docs/evidencia/multi-r0-coordinacion.md`.
+
+## Control humano del plan · 2026-11-21
+
+- **Representante:** Lukas Scheel.
+- **Revisión revisada y aprobada:** `30c7d65565f5517a629a09eef258e23c2d6ef743`, `docs/trabajo/plan.md`, incluido el addendum de catálogo presentado en el mensaje anterior.
+- **Respuesta literal:** «apruebo, continua».
+- **Evidencia:** respuesta del representante en este chat a la solicitud explícita de aprobar el plan, su addendum y autorizar Developer.
+- **Decisión humana:** acepta el contrato técnico, diseño y matriz del plan, y las seis señales numéricas adicionales como opcionales (enteros 0–100, validadas y desglosadas, sin mínimos ni efecto en ruta/puntaje); autoriza pasar a Developer.
+- **Procedencia:** transcripción por Codex de la decisión humana; no se atribuye al asistente la aprobación. La hora exacta del mensaje no está expuesta; registro observado a las 2026-11-21 20:40:27 UTC / 17:40:27 America/Santiago.
+- **Alcance:** se conserva la revisión documental `2c625d6` y su registro `cadb048`; el addendum aprobado se registra como decisión posterior común a la corrida multiagente y a la línea base.
