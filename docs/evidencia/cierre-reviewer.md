@@ -1,8 +1,10 @@
 # Revisión de cierre documental · MIRA E4
 
+Copia editada de denominaciones y rutas de entorno; véase [la nota de edición](NOTA_EDICION.md). No es una transcripción literal sin cambios.
+
 **Veredicto: Aprobado con una observación documental menor.**
 
-Revisión de solo lectura en `codex/cierre-e4`. No modifica el veredicto original del producto ni aprueba nuevos requisitos de negocio.
+Revisión de solo lectura en `[rama de cierre]`. No modifica el veredicto original del producto ni aprueba nuevos requisitos de negocio.
 
 - El análisis de fallas distingue hechos, interpretaciones MAST y límites causales. No presenta las etiquetas como certificadas ni convierte la coordinación automática en una corrección humana.
 - Los cambios preventivos del Planificador y de `verificar-trazabilidad` corresponden a las debilidades descritas: inventario de aportes complementarios y comprobación del módulo realmente importado.

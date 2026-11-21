@@ -111,19 +111,19 @@
             "Mounts": [
                 {
                     "Type": "bind",
-                    "Source": "C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4",
+                    "Source": "[REPOSITORIO_LOCAL]",
                     "Target": "/work",
                     "ReadOnly": true
                 },
                 {
                     "Type": "bind",
-                    "Source": "C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4",
+                    "Source": "[REPOSITORIO_LOCAL]",
                     "Target": "/audit",
                     "ReadOnly": true
                 },
                 {
                     "Type": "bind",
-                    "Source": "C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4\\docs\\evidencia",
+                    "Source": "[REPOSITORIO_LOCAL]\\docs\\evidencia",
                     "Target": "/evidence"
                 }
             ],
@@ -159,7 +159,7 @@
         "Mounts": [
             {
                 "Type": "bind",
-                "Source": "C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4",
+                "Source": "[REPOSITORIO_LOCAL]",
                 "Destination": "/audit",
                 "Mode": "",
                 "RW": false,
@@ -167,7 +167,7 @@
             },
             {
                 "Type": "bind",
-                "Source": "C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4\\docs\\evidencia",
+                "Source": "[REPOSITORIO_LOCAL]\\docs\\evidencia",
                 "Destination": "/evidence",
                 "Mode": "",
                 "RW": true,
@@ -175,7 +175,7 @@
             },
             {
                 "Type": "bind",
-                "Source": "C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4",
+                "Source": "[REPOSITORIO_LOCAL]",
                 "Destination": "/work",
                 "Mode": "",
                 "RW": false,

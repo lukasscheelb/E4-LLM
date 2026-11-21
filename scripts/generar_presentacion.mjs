@@ -4,9 +4,10 @@ import {createRequire} from 'node:module';
 import {spawnSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 const ROOT=process.cwd();
-const MODULES='C:/Users/lukas/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
-const RUNTIME_PYTHON='C:/Users/lukas/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe';
-const SKILL='C:/Users/lukas/.codex/plugins/cache/openai-primary-runtime/presentations/26.1119.11507/skills/presentations';
+const MODULES=process.env.MIRA_RUNTIME_NODE_MODULES;
+const RUNTIME_PYTHON=process.env.MIRA_RUNTIME_PYTHON;
+const SKILL=process.env.MIRA_PRESENTATION_SKILL_DIR;
+if(!MODULES||!RUNTIME_PYTHON||!SKILL) throw new Error('Configura MIRA_RUNTIME_NODE_MODULES, MIRA_RUNTIME_PYTHON y MIRA_PRESENTATION_SKILL_DIR con las dependencias del entorno de autoría.');
 process.env.RUNTIME_NODE_MODULES ??= MODULES;
 const req=createRequire(path.join(MODULES,'resolve.mjs'));
 const {Presentation,PresentationFile}=await import(pathToFileURL(req.resolve('@oai/artifact-tool')).href);
@@ -19,7 +20,7 @@ function txt(s,text,x,y,w,h,size=26,bold=false,color='#263648'){
 }
 function slide(title,note){const s=pres.slides.add();s.background.fill='#FAFBFD';txt(s,title,72,58,1136,105,32,true,'#142D4E');s.speakerNotes.text=note;return s;}
 const source='Fuente: repositorio E4-LLM, revisión 08f0bbf, docs/bitacora.md, docs/trabajo/revision.md y docs/linea-base/comparacion.md. ';
-let s=slide('MIRA E4\nSistema multiagente',source+'Lukas. 40 segundos. Presentar alternativa A y equipo. Describir el alcance del sistema y el entorno Python de pruebas.');
+let s=slide('MIRA E4\nSistema multiagente',source+'Lukas. 40 segundos. Presentar alternativa A y equipo. Identificar los cuatro roles como agentes de Codex y describir el entorno Python de pruebas.');
 txt(s,'Desarrollo conducido por especificación',72,290,1136,70,26);
 txt(s,'Lukas Scheel · Representante de negocio\nFrancisca Meyer\nSebastian Rodriguez',72,405,1136,170,22);
 s=slide('Evaluación de casos MIRA',source+'Lukas. 80 segundos. Explicar que el puntaje ya llega calculado, las tres rutas y el rechazo humano.');
@@ -27,6 +28,7 @@ txt(s,'Puntaje recibido y configuración por organización',72,205,1136,95,28,tr
 txt(s,'Fraude o riesgo alto: supervisor\nSeñal faltante o mínimo incumplido: revisión\nCaso sin alertas desde el corte: aprobación',72,330,1136,225,26);
 txt(s,'Python local y pytest. Sin Bonsai ni servicios externos.',72,595,1136,55,19);
 s=slide('Cuatro roles y archivos de traspaso',source+'Francisca. 75 segundos. Explicar cada rol y dos puntos humanos. Diagrama editable. Máximo dos ciclos si Reviewer rechaza, cero usados.');
+txt(s,'Agentes de Codex con responsabilidades separadas',72,180,1136,45,22);
 const roles=[['Analista','analisis.md'],['Planificador','plan.md'],['Developer','src y evidencia'],['Reviewer','revision.md']];
 for(let i=0;i<4;i++){let x=72+i*293;s.shapes.add({geometry:'rect',position:{left:x,top:250,width:230,height:100},fill:'#E3EBF3',line:{fill:'#8EA1B7',width:1}});txt(s,roles[i][0],x+16,270,205,40,23,true);txt(s,roles[i][1],x+16,315,205,35,17);if(i<3)s.shapes.add({geometry:'rightArrow',position:{left:x+244,top:282,width:35,height:25},fill:'#64748B',line:{fill:'none',width:0}});}
 txt(s,'Control humano 1: especificación aprobada antes del código\nControl humano 2: revisión y autorización del plan',72,425,1136,135,24);

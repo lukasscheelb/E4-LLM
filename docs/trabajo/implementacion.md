@@ -1,6 +1,8 @@
 # Implementación del evaluador MIRA · multi-r0
 
-**Agente:** Developer, subagente Codex separado; perfil seguido por instrucciones, no sesión Copilot/VS Code.
+**Entorno del rol:** agente de Codex.
+
+**Agente:** Developer, agente separado; perfil seguido por instrucciones, no sesión Copilot/VS Code.
 **Estado:** implementación y primera suite local completadas. Pendientes CA-10 con aislamiento OS y veredicto Reviewer.
 **Ciclo:** entrega inicial; no se ha recibido rechazo ni iniciado un ciclo de corrección.
 

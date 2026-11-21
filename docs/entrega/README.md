@@ -24,11 +24,11 @@ Identificación proporcionada por el usuario. Falta confirmar quién representó
 - `scripts/demo.py`: reproducción de cinco casos del producto. Se verificó el proceso; no representa una corrida de agentes.
 - `docs/evidencia/cierre-*-junit.xml`: aceptación posterior con guardia del origen de módulo, 115/115 en ambos enfoques.
 
-Los artefactos originales de la corrida, la bitácora y los prompts están en `docs/trabajo/` y `docs/evidencia/`. La línea base original está en la rama `codex/linea-base`, commit 79c69fd.
+Los artefactos originales de la corrida, la bitácora y los prompts están en `docs/trabajo/` y `docs/evidencia/`. La línea base original está en la rama `[rama de línea base]`, commit 79c69fd.
 
 ## Herramienta y versiones
 
-La ejecución multiagente fue Codex Desktop con subagentes separados, siguiendo perfiles por instrucciones. El identificador exacto del modelo y la versión de la app no estuvieron expuestos. El runtime de autoría de documentos fue bundle 26.1119.11507, Python 3.12.14; no es la versión del modelo. Pruebas del producto: Python 3.14.3 local y 3.14.10 Linux; pytest 9.0.2 en la evaluación común; Docker 29.9.2. El generalista usó inicialmente pytest 9.2.0 en su suite Windows; la comparación aislada usó 9.0.2 para ambos.
+La ejecución multiagente utilizó agentes de Codex separados, siguiendo perfiles por instrucciones. El identificador exacto del modelo y la versión de la app no estuvieron expuestos. El runtime de autoría de documentos fue bundle 26.1119.11507, Python 3.12.14; no es la versión del modelo. Pruebas del producto: Python 3.14.3 local y 3.14.10 Linux; pytest 9.0.2 en la evaluación común; Docker 29.9.2. El generalista usó inicialmente pytest 9.2.0 en su suite Windows; la comparación aislada usó 9.0.2 para ambos.
 
 La edición live de presentaciones falló con `requires MXC in its execution environment`; se creó un PPTX local mediante Artifact Tool. No se afirma que se haya inspeccionado en PowerPoint. Sus diez imágenes renderizadas sí fueron revisadas, junto con las páginas del PDF.
 
@@ -52,3 +52,7 @@ Verificaciones externas pendientes: rotación del representante, acceso real del
 ## Fuentes
 
 Pauta docente local aportada por el usuario; referencias del caso aprobadas en la especificación; [taxonomía MAST, fuente primaria](https://arxiv.org/html/2503.13657v2). La clasificación de los incidentes es interpretativa y sus incertidumbres se declaran.
+
+## Rutas del generador de presentación
+
+El generador recibe tres rutas del entorno de autoría: MIRA_RUNTIME_NODE_MODULES (dependencias Node), MIRA_RUNTIME_PYTHON (intérprete Python) y MIRA_PRESENTATION_SKILL_DIR (directorio de la herramienta de presentaciones). Configúralas para tu instalación antes de ejecutar scripts/generar_presentacion.mjs. No son requisitos para ejecutar el evaluador o sus pruebas.

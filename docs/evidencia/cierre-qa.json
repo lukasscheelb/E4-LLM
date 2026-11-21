@@ -103,8 +103,8 @@
       "passed": true,
       "slideCount": 10,
       "sha256": "baa53d8ec445ba635f19361012acea87598e642d800ce67380d509cd84511ef6",
-      "runtimeNodeModules": "C:/Users/lukas/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
-      "nodeExecutable": "C:\\Users\\lukas\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+      "runtimeNodeModules": "[RUNTIME_LOCAL]/dependencies/node/node_modules",
+      "nodeExecutable": "[RUNTIME_LOCAL]\\dependencies\\node\\bin\\node.exe"
     },
     "nativeTableArithmetic": {
       "performed": true,

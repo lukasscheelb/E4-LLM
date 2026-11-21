@@ -1,5 +1,5 @@
-Working directory: C:\Users\lukas\.codex\worktrees\e4-linea-base\LLM - E4\tmp\guia\verificacion
-Command arguments: ['C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4\\tmp\\guia\\verificacion\\.venv\\Scripts\\python.exe', '-m', 'pytest', '-q', '--junitxml', 'C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4\\docs\\evidencia\\guia-verificacion-junit.xml', 'tests']
+Working directory: [REPOSITORIO_LOCAL]\tmp\guia\verificacion
+Command arguments: ['[REPOSITORIO_LOCAL]\\tmp\\guia\\verificacion\\.venv\\Scripts\\python.exe', '-m', 'pytest', '-q', '--junitxml', '[REPOSITORIO_LOCAL]\\docs\\evidencia\\guia-verificacion-junit.xml', 'tests']
 ........................................................................ [ 41%]
 ........................................................................ [ 83%]
 .............................                                            [100%]

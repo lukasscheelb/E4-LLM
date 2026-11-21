@@ -2,7 +2,7 @@
 
 ## Registro inicial · 2026-11-21
 
-- **Actividad real:** preparación documental asistida por Codex. Se consultaron los archivos de la copia local de E3 y la documentación oficial de VS Code, se creó la rama de preparación y se redactaron el flujo y la especificación. Las fuentes consultadas quedan identificadas en [la especificación](trabajo/especificacion.md).
+- **Actividad real:** preparación documental asistida por agentes. Se consultaron los archivos de la copia local de E3 y la documentación oficial de VS Code, se creó la rama de preparación y se redactaron el flujo y la especificación. Las fuentes consultadas quedan identificadas en [la especificación](trabajo/especificacion.md).
 - **Encargo recibido:** el prompt completo de preparación está en el adjunto `Texto pegado.txt` del chat. Para la comparación se conservarán los prompts literales enviados durante las corridas, incluidos los textos de los traspasos.
 - **Incidencias de preparación:** el acceso por Git a GitHub falló por resolución de red. Se usaron la copia local de E3 y el conector de GitHub para verificar la referencia y el estado vacío de E4. La creación local de la rama necesitó permiso para escribir en `.git`.
 - **Verificación de preparación:** se validaron los encabezados YAML, los destinos y el envío manual de los traspasos, el acceso de solo lectura del Reviewer y los enlaces locales. El script mostró su ayuda y se comprobó la propagación de los códigos 0, 1 y 5 con un subproceso simulado. Estas verificaciones no ejecutaron pytest ni un flujo de agentes.
@@ -21,7 +21,7 @@
 - **Criterios:** se fijaron valores para mínimos, bandas y errores. Se añadieron CA-15 a CA-17 para los extremos del dominio, la concurrencia de señales sin fraude y los valores numéricos fuera de rango.
 - **Pendientes:** se conservaron P-05.a y P-05.b. Se agregó P-07.a para confirmar la precisión de las señales numéricas individuales. Las nueve respuestas acordadas y las referencias a E3 se conservaron.
 - **Verificación documental:** se cotejaron los ocho requisitos y los diecisiete criterios en ambos sentidos y se comprobó la conservación de las nueve respuestas acordadas, los enlaces locales y las referencias a E3.
-- **Estado:** revisión documental asistida por Codex. Pendiente de aclaración y aprobación expresa. Durante esta revisión no se ejecutaron Developer, el flujo multiagente, las Skills del proyecto ni pytest.
+- **Estado:** revisión documental asistida por agentes. Pendiente de aclaración y aprobación expresa. Durante esta revisión no se ejecutaron Developer, el flujo multiagente, las Skills del proyecto ni pytest.
 
 ## Cierre documental de las aclaraciones
 
@@ -73,7 +73,7 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 - **Representante del cliente:** Lukas Scheel.
 - **Fecha de aprobación:** 2026-11-21, America/Santiago. La hora exacta del mensaje no está disponible en el contexto del chat.
 - **Fecha y hora de transcripción:** 2026-11-21 17:03:58, America/Santiago (20:03:58 UTC).
-- **Evidencia:** mensaje del representante en el chat de Codex asociado a este repositorio.
+- **Evidencia:** mensaje del representante en el chat de trabajo asociado a este repositorio.
 - **Declaración literal:**
 
   > Como representante del cliente, apruebo expresamente la especificación y la historia de usuario de MIRA E4 en el commit 2c625d6446b6fdba4cdc361c77f71235c4c4b45e.
@@ -85,16 +85,18 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
   - `docs/trabajo/preguntas-cliente.md`
 - **Decisiones incorporadas:** P-01 a P-09 y aclaraciones P-05.a, P-05.b y P-07.a, con las respuestas y su aceptación registradas en `docs/trabajo/preguntas-cliente.md`.
 - **Autorización posterior para el registro y commit:** el representante indicó literalmente «hazlo por mi en mi nombre», después de recibir las instrucciones para registrar la aprobación en un commit independiente que modificara únicamente `docs/bitacora.md`.
-- **Procedencia del registro:** decisión y autorización humanas de Lukas Scheel; transcripción y ejecución material del commit realizadas por Codex por encargo expreso. No se afirma que una persona haya ejecutado los comandos de Git. Esta autorización sustituye, para este registro, la ejecución manual solicitada anteriormente.
+- **Procedencia del registro:** decisión y autorización humanas de Lukas Scheel; transcripción y ejecución material del commit realizadas por un agente por encargo expreso. No se afirma que una persona haya ejecutado los comandos de Git. Esta autorización sustituye, para este registro, la ejecución manual solicitada anteriormente.
 - **Verificación previa:** el repositorio estaba limpio y HEAD coincidía con la revisión aprobada. El commit dedicado debe incluir únicamente este archivo; su hash se obtiene de Git después de crearlo.
 - **Estado al registrar:** aprobación expresa otorgada antes de cualquier implementación. En esta actividad no se ejecutaron los agentes Analista, Planificador, Developer o Reviewer, las Skills del proyecto ni pytest; no se generaron resultados de pruebas, métricas o fallas MAST.
 
 ## Corrida multi-r0 · Analista y Planificador · 2026-11-21
 
+**Entorno de los roles:** Analista, Planificador, Developer y Reviewer son agentes de Codex con funciones separadas.
+
 - **Encargo humano literal:** «perfecto, quiero que hagas los 7 pasos que quedan por desarrollar. Puedes tomar control de mi pc».
-- **Rama y revisión inicial:** `codex/preparacion-e4`, `dba62c90a3c4f3c8b2476a0632b3129aeade182d`; árbol limpio antes del inicio.
+- **Rama y revisión inicial:** `[rama de preparación]`, `dba62c90a3c4f3c8b2476a0632b3129aeade182d`; árbol limpio antes del inicio.
 - **Aprobación verificada:** `cadb048819b191eac705be26ddae2575986139f9` es ancestro de HEAD y modifica únicamente esta bitácora; no hubo cambios en `docs/trabajo/` respecto de la revisión aprobada `2c625d6446b6fdba4cdc361c77f71235c4c4b45e` antes de iniciar.
-- **Herramienta real:** subagentes separados de Codex, no perfiles ejecutados por GitHub Copilot/VS Code. Los perfiles del repositorio se consultaron y siguieron por instrucciones. No se afirma aplicación técnica de los permisos `tools` de VS Code. Modelo y versión exactos no expuestos por estas herramientas.
+- **Herramienta real:** agentes separados, no perfiles ejecutados por GitHub Copilot/VS Code. Los perfiles del repositorio se consultaron y siguieron por instrucciones. No se afirma aplicación técnica de los permisos `tools` de VS Code. Modelo y versión exactos no expuestos por estas herramientas.
 - **Analista:** subagente `/root/analista`, aplicó `generar-criterios` y su plantilla a los 17 CA. Entregó `docs/trabajo/analisis.md`; prompt íntegro, lecturas, fuente de aprobación y límites constan en `docs/evidencia/multi-r0-analista.md`.
 - **Traspaso real Analista → Planificador:** el coordinador leyó el análisis y despachó al subagente `/root/planificador` con referencia explícita al archivo; este lo leyó. Es un traspaso automático autorizado por el encargo, no un envío manual de Copilot ni una intervención humana adicional. Esta ejecución difiere de los botones manuales descritos en la guía y se declara esa diferencia.
 - **Planificador:** consultó perfil y `verificar-trazabilidad` con su matriz. Devolvió el plan por respuesta sin escribir archivos; el coordinador lo guardó en `docs/trabajo/plan.md` (normalización de espacios finales). Incluye contrato, diseño y matriz de los 17 CA con código/resultados pendientes. Prompt y mensajes conservados en `docs/evidencia/multi-r0-planificador.md`.
@@ -112,14 +114,14 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 - **Respuesta literal:** «apruebo, continua».
 - **Evidencia:** respuesta del representante en este chat a la solicitud explícita de aprobar el plan, su addendum y autorizar Developer.
 - **Decisión humana:** acepta el contrato técnico, diseño y matriz del plan, y las seis señales numéricas adicionales como opcionales (enteros 0–100, validadas y desglosadas, sin mínimos ni efecto en ruta/puntaje); autoriza pasar a Developer.
-- **Procedencia:** transcripción por Codex de la decisión humana; no se atribuye al asistente la aprobación. La hora exacta del mensaje no está expuesta; registro observado a las 2026-11-21 20:40:27 UTC / 17:40:27 America/Santiago.
+- **Procedencia:** transcripción por un agente de la decisión humana; no se atribuye al asistente la aprobación. La hora exacta del mensaje no está expuesta; registro observado a las 2026-11-21 20:40:27 UTC / 17:40:27 America/Santiago.
 - **Alcance:** se conserva la revisión documental `2c625d6` y su registro `cadb048`; el addendum aprobado se registra como decisión posterior común a la corrida multiagente y a la línea base.
 
 ## Continuación y cierre funcional de multi-r0 · 2026-11-21
 
 - **Traspaso humano:** aprobación literal «apruebo, continua» del plan y addendum; registro previo al código `5a7b12d`. No se omitió el control humano adicional.
 - **Developer separado:** `/root/developer` leyó el plan y verificó aprobación/parentesco y conservación de documentos. Implementó API Python en `src/mira`, 173 pruebas y documentación de uso. Aplicó `pytest-runner` realmente. Evidencia local: `multi-r0-developer-*`; salida, JUnit y retorno 0. El manifiesto fija ocho archivos probados.
-- **Generalista:** sesión nueva sin historial (`fork_turns=none`), sin delegación ni lectura de productos multiagente, worktree/rama `codex/linea-base` desde `cadb048`. Recibió los mismos requisitos y addendum, implementó y autoevaluó; 124 pruebas locales aprobadas. Resultado guardado por raíz en commit `79c69fd`, publicado en la rama independiente. Evidencia y prompt literal están en `docs/linea-base/` de esa rama.
+- **Generalista:** sesión nueva sin historial (`fork_turns=none`), sin delegación ni lectura de productos multiagente, worktree/rama `[rama de línea base]` desde `cadb048`. Recibió los mismos requisitos y addendum, implementó y autoevaluó; 124 pruebas locales aprobadas. Resultado guardado por raíz en commit `79c69fd`, publicado en la rama independiente. Evidencia y prompt literal están en `docs/linea-base/` de esa rama.
 - **Aislamiento OS preparado por raíz:** se inició Docker Desktop mediante CLI y se comprobó su ventana con el control de equipo; la captura de ventana no completó por expiración del runtime. El resultado final del motor se observó por Docker CLI: versión 29.9.2. No se automatizó autenticación ni se desconectó la red del host.
 - **Pruebas aisladas:** imagen registrada en `offline-image.json`, Python 3.14.10 / pytest 9.0.2, red `none`, fuentes de solo lectura, temporal en memoria. Suite multi 173/173 y generalista 124/124. CA-10 se acredita con configuración Docker e intento de conexión fallido, no con mocks. Primer intento de ambos no pudo iniciar pytest por falta de temporales; se conservó y corrigió el comando, no el código.
 - **Evaluación común externa al flujo de producción:** un subagente auxiliar creó la suite posterior de aceptación, sin editar las soluciones. Root ejecutó 115 pruebas para cada entrega, con las mismas condiciones y adaptadores de firma/vocabulario. Ambas obtuvieron 115/115, cubriendo 17 CA. Primer intento baseline inválido por importación del src incorrecto se preservó; fijar configuración pytest al checkout evaluado corrigió el entorno. No se atribuye ese resultado al generalista.
@@ -141,7 +143,7 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 
 - **Encargo humano literal:** «Completa todos los puntos restante, Los integrantes son Lukas Scheel (Representante de negocio), Francisca Meyer y Sebastian Rodriguez».
 - **Equipo:** se incorporaron los tres nombres y rol suministrados. No se infirió la rotación respecto de E2 ni se inventó usuario del docente. Se solicitó esa información mediante pregunta asíncrona; no había respuesta al cerrar los documentos.
-- **Checkout:** se reutilizó el worktree activo, creando `codex/cierre-e4` desde `origin/codex/preparacion-e4` (08f0bbf). La rama de línea base 79c69fd se conserva intacta. La versión de entrega contiene el historial multiagente, no el código de la línea base.
+- **Checkout:** se reutilizó el worktree activo, creando `[rama de cierre]` desde `origin/[rama de preparación]` (08f0bbf). La rama de línea base 79c69fd se conserva intacta. La versión de entrega contiene el historial multiagente, no el código de la línea base.
 - **Documentos:** informe PDF de diez páginas, PPTX editable de diez diapositivas, fuentes, diagrama Mermaid, contratos de agentes, guion de 900 segundos repartidos entre los tres, análisis de fallas y protocolo para mediciones futuras.
 - **PDF y PPTX:** skills PDF y presentaciones aplicadas. Se usó el runtime bundle 26.1119.11507. La edición live de Spaces falló por requerir MXC; se produjo un PPTX local con Artifact Tool. No se afirma edición o revisión en PowerPoint nativo. La página de Spaces creada quedó sin contenido por el fallo; no se presenta como entregable.
 - **QA visual real:** se renderizaron e inspeccionaron las diez páginas y diez diapositivas. Se corrigió el escape literal de saltos de línea de la portada PDF y el ancho de una columna, se volvió a renderizar y revisar las páginas afectadas. PPTX pasó integridad, geometría, fuente Arial e importación Artifact Tool. Evidencia en `cierre-qa.json`.
@@ -164,7 +166,7 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 
 ## Edición de informe y presentación · 2026-11-21
 
-- **Solicitud humana:** retirar las referencias a Codex y a la participación del asistente del informe y la presentación. Se informó de que omitir herramienta/modelos deja ese requisito de la pauta sin cubrir.
+- **Solicitud humana:** retirar las referencias al entorno de agentes y a la participación del asistente del informe y la presentación. Se informó de que omitir herramienta/modelos deja ese requisito de la pauta sin cubrir.
 - **Alcance aplicado:** texto de informe y fuentes, portada, notas de presentador y propiedades de publicación del PowerPoint. La descripción técnica de agentes, reglas, resultados y limitaciones se conservó. No se atribuyeron a personas acciones de agentes ni se modificó la evidencia histórica.
 - **Archivos:** PDF y PPTX regenerados en sus rutas originales; manifest y ZIP actualizados con las nuevas copias. Se añadieron propiedades neutras de publicación sin atribuir un editor o fabricante distinto. Temas internos con nombre neutro.
 - **Verificación:** informe de diez páginas y presentación de diez diapositivas; texto extraído, notas y XML de propiedades sin los términos revisados. PDF renderizado e inspeccionado; diapositivas sin cambios visibles de composición, notas verificadas. PPTX pasó integridad, geometría e importación tras normalizar sus propiedades. Código y resultados de pruebas sin cambios.

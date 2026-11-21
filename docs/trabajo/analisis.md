@@ -1,6 +1,8 @@
 # Análisis de HU-E4-01 · corrida multi-r0
 
-**Agente:** Analista, subagente de Codex que consultó y siguió `.github/agents/analista.agent.md`. No se cargó un perfil de VS Code ni se usó GitHub Copilot. El respeto al rol es por instrucciones, no por un sandbox equivalente al perfil de VS Code.
+**Entorno del rol:** agente de Codex.
+
+**Agente:** Analista, agente que consultó y siguió `.github/agents/analista.agent.md`. No se cargó un perfil de VS Code ni se usó GitHub Copilot. El respeto al rol es por instrucciones, no por un sandbox equivalente al perfil de VS Code.
 
 **Estado:** revisión documental efectuada; no se escribió código ni se ejecutaron pruebas. Los resultados de esta tabla son expectativas aprobadas, no resultados de pytest.
 

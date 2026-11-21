@@ -1,6 +1,8 @@
 # Cierre documental de Planificador · Inventario de aportes
 
-**Alcance:** reejecución de lectura posterior a la corrección preventiva del perfil. Se consultaron únicamente el perfil actualizado de Planificador, `docs/trabajo/analisis.md` y `docs/trabajo/plan.md`, incluido su addendum, en el checkout `C:/Users/lukas/.codex/worktrees/e4-linea-base/LLM - E4`.
+Copia editada de denominaciones y rutas de entorno; véase [la nota de edición](NOTA_EDICION.md). No es una transcripción literal sin cambios.
+
+**Alcance:** reejecución de lectura posterior a la corrección preventiva del perfil. Se consultaron únicamente el perfil actualizado de Planificador, `docs/trabajo/analisis.md` y `docs/trabajo/plan.md`, incluido su addendum, en el checkout `[REPOSITORIO_LOCAL]`.
 
 Se aplicó la nueva cláusula del procedimiento que exige inventariar los hallazgos y aportes complementarios antes del cierre.
 

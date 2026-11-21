@@ -256,7 +256,7 @@ Espera 115 passed y retorno 0. En tmp quedan mi-offline-entorno.json, mi-offline
 
 ## 8 Volver a ejecutar los agentes en VS Code
 
-Esta parte es opcional y distinta de ejecutar el producto. La corrida guardada se hizo con subagentes separados de Codex. Los archivos del repositorio también describen una ruta para GitHub Copilot en VS Code; no se afirma que esa ruta haya producido la evidencia original.
+Esta parte es opcional y distinta de ejecutar el producto. La corrida guardada se hizo con agentes de Codex separados. Los archivos del repositorio también describen una ruta para GitHub Copilot en VS Code; no se afirma que esa ruta haya producido la evidencia original.
 
 ### Preparar Copilot y una copia de trabajo
 

@@ -378,7 +378,7 @@
       "items": [
         {
           "type": "p",
-          "text": "Esta parte es opcional y distinta de ejecutar el producto. La corrida guardada se hizo con subagentes separados de Codex. Los archivos del repositorio también describen una ruta para GitHub Copilot en VS Code; no se afirma que esa ruta haya producido la evidencia original."
+          "text": "Esta parte es opcional y distinta de ejecutar el producto. La corrida guardada se hizo con agentes de Codex separados. Los archivos del repositorio también describen una ruta para GitHub Copilot en VS Code; no se afirma que esa ruta haya producido la evidencia original."
         },
         {
           "type": "h",

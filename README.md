@@ -10,9 +10,9 @@
 
 **Entrada del caso:** el cliente necesita que MIRA use el puntaje del caso, las señales de fraude y los umbrales de cada organización para decidir la ruta y explicar el motivo. El comportamiento exacto está en la especificación aprobada.
 
-**Estado actual:** revisión documental y plan aprobados por Lukas Scheel; implementación y pruebas reales completadas mediante subagentes separados de Codex. Suite propia: 173/173; suite común de aceptación: 115/115, con aislamiento de red verificado en Docker. Veredicto independiente en [la revisión](docs/trabajo/revision.md) y [comparación con un generalista](docs/linea-base/comparacion.md).
+**Estado actual:** revisión documental y plan aprobados por Lukas Scheel; implementación y pruebas reales completadas. Los cuatro roles del sistema se ejecutan como agentes de Codex. Suite propia: 173/173; suite común de aceptación: 115/115, con aislamiento de red verificado en Docker. Veredicto independiente en [la revisión](docs/trabajo/revision.md) y [comparación con un generalista](docs/linea-base/comparacion.md).
 
-La corrida entregada utilizó Codex, siguiendo los perfiles del repositorio por instrucciones; no se presenta como una corrida de GitHub Copilot/VS Code. Los traspasos entre subagentes fueron coordinados automáticamente, con aprobación humana previa de la especificación y control humano adicional del plan. La guía VS Code de abajo se conserva como alternativa de reproducción, no como evidencia de esa herramienta.
+La corrida entregada utilizó agentes de Codex separados, siguiendo los perfiles del repositorio por instrucciones; no se presenta como una corrida de GitHub Copilot/VS Code. Los traspasos entre subagentes fueron coordinados automáticamente, con aprobación humana previa de la especificación y control humano adicional del plan. La guía VS Code de abajo se conserva como alternativa de reproducción, no como evidencia de esa herramienta.
 
 | Documento | Contenido |
 |---|---|
@@ -32,7 +32,7 @@ La corrida entregada utilizó Codex, siguiendo los perfiles del repositorio por 
 
 La especificación de `2c625d6` ya fue aprobada por Lukas Scheel. El commit independiente `cadb048` registra su decisión. [Bitácora](docs/bitacora.md).
 
-Abre el repositorio en `codex/preparacion-e4` y abre GitHub Copilot Chat. En **Chat: Open Customizations** ubica los agentes y las Skills del proyecto. Selecciona **Local** para usar los botones de traspaso. Cada botón prepara el mensaje con `send: false`. Revisa que cite el archivo de trabajo y envíalo. Si tu sesión Copilot lista los agentes sin botones, selecciona manualmente al siguiente agente y envía el mismo mensaje con el archivo. [Agentes y handoffs en VS Code](https://code.visualstudio.com/docs/agent-customization/custom-agents#handoffs).
+Abre el repositorio en `main` y abre GitHub Copilot Chat. En **Chat: Open Customizations** ubica los agentes y las Skills del proyecto. Selecciona **Local** para usar los botones de traspaso. Cada botón prepara el mensaje con `send: false`. Revisa que cite el archivo de trabajo y envíalo. Si tu sesión Copilot lista los agentes sin botones, selecciona manualmente al siguiente agente y envía el mismo mensaje con el archivo. [Agentes y handoffs en VS Code](https://code.visualstudio.com/docs/agent-customization/custom-agents#handoffs).
 
 En el campo de chat, escribe `/` para seleccionar la Skill de la etapa cuando esté disponible. Guarda una captura o el registro de actividad que muestre su carga y uso real. [Skills en VS Code](https://code.visualstudio.com/docs/agent-customization/agent-skills#use-skills-as-slash-commands).
 

@@ -21,7 +21,7 @@
         ".github/skills/pytest-runner/scripts/run_pytest.py",
         "tests",
         "--junitxml",
-        "C:\\Users\\lukas\\.codex\\worktrees\\e4-linea-base\\LLM - E4\\docs\\evidencia\\guia-verificacion-junit.xml"
+        "[REPOSITORIO_LOCAL]\\docs\\evidencia\\guia-verificacion-junit.xml"
       ],
       "retorno": 0
     }

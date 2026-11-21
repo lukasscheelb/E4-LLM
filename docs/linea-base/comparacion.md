@@ -2,9 +2,9 @@
 
 ## Entregas comparadas y protocolo
 
-- Multiagente: cuatro subagentes Codex separados (Analista, Planificador, Developer y Reviewer). Los perfiles se siguen por instrucciones; no son perfiles cargados en Copilot/VS Code ni un sandbox por herramientas de rol.
+- Multiagente: cuatro agentes de Codex separados (Analista, Planificador, Developer y Reviewer). Los perfiles se siguen por instrucciones; no son perfiles cargados en Copilot/VS Code ni un sandbox por herramientas de rol.
 - Generalista: subagente nuevo sin historial (`fork_turns=none`), sin delegación y en worktree/rama aislados desde `cadb048`, anterior a cualquier código. No recibió el plan ni productos multiagente. Solo recibió documentos aprobados y la misma decisión posterior sobre seis señales opcionales.
-- Código y autoevaluación originales del generalista: rama `codex/linea-base`, commit [`79c69fd`](https://github.com/lukasscheelb/E4-LLM/tree/79c69fd). [Informe original](https://github.com/lukasscheelb/E4-LLM/blob/79c69fd/docs/linea-base/resultado.md), [evidencia](https://github.com/lukasscheelb/E4-LLM/tree/79c69fd/docs/linea-base/evidencia), [código y pruebas](https://github.com/lukasscheelb/E4-LLM/tree/79c69fd/src).
+- Código y autoevaluación originales del generalista: rama `[rama de línea base]`, commit [`79c69fd`](https://github.com/lukasscheelb/E4-LLM/tree/79c69fd). [Informe original](https://github.com/lukasscheelb/E4-LLM/blob/79c69fd/docs/linea-base/resultado.md), [evidencia](https://github.com/lukasscheelb/E4-LLM/tree/79c69fd/docs/linea-base/evidencia), [código y pruebas](https://github.com/lukasscheelb/E4-LLM/tree/79c69fd/src).
 - Base del código multiagente: `5a7b12d`, posterior a la aprobación expresa del plan. Estado probado identificado por `../evidencia/multi-r0-developer-manifest.json`.
 - Verificación real de los 14 hashes de ambas entregas: `../evidencia/verificacion-manifiestos.json`, todos coinciden con los bytes utilizados.
 - Las suites propias se ejecutaron primero en Windows. Sus versiones de pytest difieren (9.0.2 multi; 9.2.0 generalista); no se comparan sus duraciones como si fueran el mismo entorno.

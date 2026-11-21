@@ -4,7 +4,7 @@
 
 **Representante del cliente:** Lukas Scheel.
 **Fecha:** 21 de noviembre de 2026 (America/Santiago).
-**Evidencia:** conversación de trabajo de Codex asociada a este repositorio. El representante aceptó la propuesta con «si, hagamos tu propuesta y retorname todas las preguntas con las respuestas seleccionadas» y luego solicitó «actualiza el doc con las preguntas en git y ponele las respuestas que elijimos».
+**Evidencia:** conversación de trabajo asociada a este repositorio. El representante aceptó la propuesta con «si, hagamos tu propuesta y retorname todas las preguntas con las respuestas seleccionadas» y luego solicitó «actualiza el doc con las preguntas en git y ponele las respuestas que elijimos».
 **Procedencia:** las respuestas siguientes transcriben las decisiones propuestas por el asistente y aceptadas por el representante; no son citas literales de respuestas redactadas por este último. Se conservan las preguntas y los requisitos afectados en cada sección.
 **Selección:** P-01 A, P-02 A, P-03 A, P-04 A, P-05 B armonizada con P-03, P-06 A, P-07 A, P-08 A y P-09 B.
 
