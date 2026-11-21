@@ -1,0 +1,12 @@
+{
+  "inicio_utc": "2026-11-21T20:41:36Z",
+  "fin_utc": "2026-11-21T20:45:54Z",
+  "zona_local": "America/Santiago",
+  "inicio_local": "2026-11-21T17:41:36-03:00",
+  "fin_local": "2026-11-21T17:45:54-03:00",
+  "duracion_segundos": 258,
+  "metodo": "Lecturas reales clock.curr_time al inicio de inspección y al cierre de entrega; excluye recepción previa y escritura posterior de este registro.",
+  "tokens": null,
+  "modelo_concreto": null,
+  "razon_no_disponibles": "Contadores y modelo concreto no expuestos al agente."
+}

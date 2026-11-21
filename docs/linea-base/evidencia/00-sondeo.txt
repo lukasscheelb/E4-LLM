@@ -1,0 +1,4 @@
+Python 3.14.3
+Intento previo de disponibilidad: python -m pytest --version
+Resultado observado: C:\Python314\python.exe: No module named pytest
+No fue ejecución de suite; no existe JUnit de ese sondeo.

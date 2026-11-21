@@ -1,0 +1,26 @@
+[
+  {
+    "path": "src/mira/__init__.py",
+    "sha256": "37fca68182245f097299742b7f9e4c7178ec0b48fd9d89c48985a43899970b69"
+  },
+  {
+    "path": "src/mira/evaluador.py",
+    "sha256": "5e183594b5eea93e6f4b30d198d7f1d45a0a10dd1a632f97bd275af4eaf26f47"
+  },
+  {
+    "path": "tests/test_evaluador.py",
+    "sha256": "15ae34f6079013888a38c235f4a024808b6c332519138310c9773459b2828a3d"
+  },
+  {
+    "path": "pyproject.toml",
+    "sha256": "775bb2378ea029cf4f47afe3e31e02b24f7cb4c9a8349e751f82de723f82a96a"
+  },
+  {
+    "path": "requirements-dev.txt",
+    "sha256": "a51bf3eba4220a8716d7830322c44825a5d4ac081a78fdba353e43b69f2e721f"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "af75a1e952b8047b603f25e67eafec484d7d025dc08fb39e35bea61e02abb070"
+  }
+]
