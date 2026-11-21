@@ -8,6 +8,13 @@
 - **Verificación de preparación:** se validaron los encabezados YAML, los destinos y el envío manual de los traspasos, el acceso de solo lectura del Reviewer y los enlaces locales. El script mostró su ayuda y se comprobó la propagación de los códigos 0, 1 y 5 con un subproceso simulado. Estas verificaciones no ejecutaron pytest ni un flujo de agentes.
 - **Estado:** aprobación humana, uso de las Skills del proyecto, ejecución de pytest del componente, flujo multiagente y corrida de línea base pendientes.
 
+## Actualización documental · 2026-11-21
+
+- **Prompt literal:** «vuelve a revisar el repo y actualizalo».
+- **Actividad real:** se incorporó mediante avance rápido el commit [`27b67c6`](https://github.com/lukasscheelb/E4-LLM/commit/27b67c6c9ea6c4f931347abc43bdcdb509408f8d) y se trasladaron las nueve respuestas registradas a la especificación y la historia. Se documentaron dos aclaraciones sobre estados de señales.
+- **Verificación:** se comprobaron los enlaces locales y las referencias entre ocho requisitos, catorce criterios y las decisiones del representante.
+- **Estado:** revisión documental pendiente de aprobación expresa. Esta actualización no es el commit humano de aprobación. El flujo de agentes, las Skills del proyecto y pytest permanecen sin ejecución en esta actualización.
+
 ## Plantilla de actividad
 
 Copia por actividad real. Los campos que no apliquen pueden indicarse como tales.

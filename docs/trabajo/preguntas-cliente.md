@@ -1,6 +1,6 @@
 # Preguntas al representante del cliente
 
-**Estado:** respuestas acordadas con el representante; pendientes de incorporar a la historia de usuario y la especificación y de aprobar expresamente esa revisión documental.
+**Estado:** respuestas acordadas con el representante e incorporadas a la historia y la especificación. Las aclaraciones de contrato al final del documento y la aprobación expresa de la revisión siguen pendientes.
 
 **Representante:** usuario de esta conversación, quien declaró actuar como representante del cliente.
 **Fecha:** 21 de noviembre de 2026 (America/Santiago).
@@ -176,3 +176,10 @@ El desglose corresponde a la evaluación de las señales; no reconstruye el cál
 Para resolver empates entre motivos, se utiliza un orden estable: **fraude activo, puntaje bajo R, señales obligatorias faltantes, mínimos incumplidos y banda restante de puntaje**. Si hay varios motivos de la misma categoría, se ordenan por identificador de señal.
 
 Cuando una entrada o configuración es inválida, se devuelve el error estructurado correspondiente y no una decisión de negocio.
+
+## Aclaraciones de contrato pendientes
+
+Estas preguntas se desprenden de P-05. Las respuestas acordadas se conservan arriba.
+
+- **P-05.a · Indicador de fraude omitido.** ¿Los tres indicadores del catálogo deben recibirse siempre de forma explícita? Si falta uno, ¿se trata como señal obligatoria faltante, como error estructurado o de otra manera? Indique la salida de un caso que podría aprobarse si ese indicador se hubiera recibido como inactivo. Afecta RF-04, RF-05 y CA-12.
+- **P-05.b · Estado no aplicable.** ¿Qué señales, si alguna, pueden declararse no aplicables en E4? ¿Qué tratamiento recibe un intento de declarar no aplicable una de las cuatro obligatorias? Afecta RF-05, RF-07 y CA-13.
