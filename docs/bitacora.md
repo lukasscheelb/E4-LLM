@@ -25,7 +25,7 @@
 
 ## Cierre documental de las aclaraciones
 
-- **Aceptación expresa:** «Acepto P-05.a, P-05.b y P-07.a tal como están formuladas». La declaración corresponde al representante en el chat de trabajo de E4.
+- **Aceptación expresa:** «Acepto P-05.a, P-05.b y P-07.a tal como están formuladas». La declaración se registró en el chat de trabajo de E4. El representante del cliente es Lukas Scheel.
 - **Cambios:** se actualizaron el registro de respuestas, la especificación, CA-12, CA-13, CA-17 y la matriz de trazabilidad. El README refleja que las aclaraciones se cerraron y la aprobación de la revisión quedó pendiente.
 - **Verificación documental:** se contrastaron los ocho requisitos y los 17 criterios con el registro de respuestas y se cotejó la distinción entre señal numérica ausente, indicador de fraude omitido y valor inválido.
 - **Estado:** queda pendiente la aprobación expresa del commit documental. En esta actualización no se implementó el evaluador ni se ejecutaron Developer, pytest, las Skills del proyecto o el flujo multiagente.

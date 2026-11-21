@@ -2,7 +2,7 @@
 
 **Estado:** respuestas acordadas con el representante e incorporadas a la historia y la especificación. El representante también aceptó las tres aclaraciones de contrato. La aprobación expresa de la revisión documental sigue pendiente.
 
-**Representante:** usuario de esta conversación, quien declaró actuar como representante del cliente.
+**Representante del cliente:** Lukas Scheel.
 **Fecha:** 21 de noviembre de 2026 (America/Santiago).
 **Evidencia:** conversación de trabajo de Codex asociada a este repositorio. El representante aceptó la propuesta con «si, hagamos tu propuesta y retorname todas las preguntas con las respuestas seleccionadas» y luego solicitó «actualiza el doc con las preguntas en git y ponele las respuestas que elijimos».
 **Procedencia:** las respuestas siguientes transcriben las decisiones propuestas por el asistente y aceptadas por el representante; no son citas literales de respuestas redactadas por este último. Se conservan las preguntas y los requisitos afectados en cada sección.
