@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createRequire} from 'node:module';
+import {spawnSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 const ROOT=process.cwd();
 const MODULES='C:/Users/lukas/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
@@ -18,7 +19,7 @@ function txt(s,text,x,y,w,h,size=26,bold=false,color='#263648'){
 }
 function slide(title,note){const s=pres.slides.add();s.background.fill='#FAFBFD';txt(s,title,72,58,1136,105,32,true,'#142D4E');s.speakerNotes.text=note;return s;}
 const source='Fuente: repositorio E4-LLM, revisión 08f0bbf, docs/bitacora.md, docs/trabajo/revision.md y docs/linea-base/comparacion.md. ';
-let s=slide('MIRA E4\nSistema multiagente',source+'Lukas. 40 segundos. Presentar alternativa A y equipo. Herramienta real Codex; versión y modelo no expuestos.');
+let s=slide('MIRA E4\nSistema multiagente',source+'Lukas. 40 segundos. Presentar alternativa A y equipo. Describir el alcance del sistema y el entorno Python de pruebas.');
 txt(s,'Desarrollo conducido por especificación',72,290,1136,70,26);
 txt(s,'Lukas Scheel · Representante de negocio\nFrancisca Meyer\nSebastian Rodriguez',72,405,1136,170,22);
 s=slide('Evaluación de casos MIRA',source+'Lukas. 80 segundos. Explicar que el puntaje ya llega calculado, las tres rutas y el rechazo humano.');
@@ -29,11 +30,11 @@ s=slide('Cuatro roles y archivos de traspaso',source+'Francisca. 75 segundos. Ex
 const roles=[['Analista','analisis.md'],['Planificador','plan.md'],['Developer','src y evidencia'],['Reviewer','revision.md']];
 for(let i=0;i<4;i++){let x=72+i*293;s.shapes.add({geometry:'rect',position:{left:x,top:250,width:230,height:100},fill:'#E3EBF3',line:{fill:'#8EA1B7',width:1}});txt(s,roles[i][0],x+16,270,205,40,23,true);txt(s,roles[i][1],x+16,315,205,35,17);if(i<3)s.shapes.add({geometry:'rightArrow',position:{left:x+244,top:282,width:35,height:25},fill:'#64748B',line:{fill:'none',width:0}});}
 txt(s,'Control humano 1: especificación aprobada antes del código\nControl humano 2: revisión y autorización del plan',72,425,1136,135,24);
-s=slide('Skills y límites de herramientas',source+'Francisca. 60 segundos. Skills realmente leídas y aplicadas, no solo citadas. Restricciones Codex por instrucciones, no sandboxVSCode.');
+s=slide('Skills y límites de herramientas',source+'Francisca. 60 segundos. Skills realmente leídas y aplicadas, no solo citadas. Explicar los límites de cada rol y su cumplimiento mediante instrucciones.');
 txt(s,'generar-criterios\nPlantilla de condiciones, fronteras y colisiones',72,190,1136,105,24);
 txt(s,'verificar-trazabilidad\nRequisito, diseño, código y prueba en ambos sentidos',72,335,1136,105,24);
 txt(s,'pytest-runner\nScript ejecutable y retorno real del mismo intérprete',72,480,1136,105,24);
-s=slide('Aprobaciones y trazabilidad',source+'Francisca. 45 segundos. Mostrar hashes de bitácora. No atribuir al asistente la decisión humana.');
+s=slide('Aprobaciones y trazabilidad',source+'Francisca. 45 segundos. Mostrar hashes de bitácora. Identificar la aprobación expresa del representante.');
 txt(s,'2c625d6   Revisión documental\ncadb048   Registro de aprobación de Lukas\n30c7d65   Plan y addendum\n5a7b12d   Autorización humana de Developer',72,205,1136,280,26);
 txt(s,'Cada resultado identifica el código que se probó',72,570,1136,60,24,true);
 s=slide('Demostración del flujo',source+'Sebastian. 360 segundos. Seguir docs/entrega/guion-demo.md. Abrir etiqueta entrega-3, necesidad, análisis, plan y aprobación. Ejecutar python scripts/demo.py y pytest mediante Skill. Mostrar colisión, errores, aislamiento y veredicto. Una repetición de pruebas no se presenta como nueva corrida de agentes. Si arranque de agentes excede tiempo, lanzar en vivo y mostrar finales guardados conforme pauta.');
@@ -57,7 +58,9 @@ txt(s,'Aprobación concreta antes de implementar\nIdentidad del código antes de
 txt(s,'Repositorio y evidencia verificables\ngithub.com/lukasscheelb/E4-LLM',72,540,1136,100,21);
 for(let i=0;i<pres.slides.items.length;i++){const blob=await pres.export({slide:pres.slides.items[i],format:'png',scale:1});await fs.writeFile(path.join(dir,`slide-${i+1}.png`),new Uint8Array(await blob.arrayBuffer()));}
 const candidate=path.join(ROOT,'tmp/entrega/candidate.pptx');await(await PresentationFile.exportPptx(pres)).save(candidate);
+const metadata=spawnSync(RUNTIME_PYTHON,[path.join(ROOT,'scripts/normalizar_propiedades_presentacion.py'),candidate],{encoding:'utf-8'});
+if(metadata.status!==0) throw new Error(metadata.stderr||'No se normalizaron propiedades');
 const final=process.env.MIRA_PPTX_OUT || path.join(ROOT,'output/presentacion/Presentacion_MIRA_E4.pptx');
 await fs.mkdir(path.dirname(final),{recursive:true});
-const result=await finalizePresentation({workspaceDir:ROOT,candidatePath:candidate,finalPath:final,pythonExecutable:RUNTIME_PYTHON,integrityValidatorPath:path.join(SKILL,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(SKILL,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit','--require-native-table-slide','7'],requiredNativeTableOwnerSlides:[7],fontPolicy:{basis:'design',families:['Arial']},verifyArtifactToolImport:true,explicitTotalSlideCount:10,receiptPath:path.join(ROOT,'tmp/entrega/validacion-pptx.json')});
+const result=await finalizePresentation({workspaceDir:ROOT,candidatePath:candidate,finalPath:final,pythonExecutable:RUNTIME_PYTHON,integrityValidatorPath:path.join(SKILL,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(SKILL,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit','--require-native-table-slide','7'],requiredNativeTableOwnerSlides:[7],fontPolicy:{basis:'design',families:['Arial']},verifyArtifactToolImport:true,explicitTotalSlideCount:10,receiptPath:process.env.MIRA_PPTX_RECEIPT || path.join(ROOT,`tmp/entrega/validacion-pptx-${Date.now()}.json`)});
 console.log(JSON.stringify(result));

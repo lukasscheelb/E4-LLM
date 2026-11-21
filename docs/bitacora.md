@@ -161,3 +161,11 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 - **Docker:** comando exacto de PowerShell de la guía comprobado con la imagen ya preparada; 115/115 y retorno 0, red aislada real. JSON ambiental, JUnit y retorno conservados en guia-docker-*.
 - **QA PDF:** diez páginas renderizadas e inspeccionadas; enlaces de fuentes oficiales clicables y comandos sin recorte. Evidencia y hash en guia-verificacion.json. No se afirma instalación gráfica en una máquina vacía ni ejecución en macOS/Linux.
 - **Versionado:** documentación nueva en main; código y requisitos sin cambios. La etiqueta entrega-3 se conserva inmutable para la reproducción académica.
+
+## Edición de informe y presentación · 2026-11-21
+
+- **Solicitud humana:** retirar las referencias a Codex y a la participación del asistente del informe y la presentación. Se informó de que omitir herramienta/modelos deja ese requisito de la pauta sin cubrir.
+- **Alcance aplicado:** texto de informe y fuentes, portada, notas de presentador y propiedades de publicación del PowerPoint. La descripción técnica de agentes, reglas, resultados y limitaciones se conservó. No se atribuyeron a personas acciones de agentes ni se modificó la evidencia histórica.
+- **Archivos:** PDF y PPTX regenerados en sus rutas originales; manifest y ZIP actualizados con las nuevas copias. Se añadieron propiedades neutras de publicación sin atribuir un editor o fabricante distinto. Temas internos con nombre neutro.
+- **Verificación:** informe de diez páginas y presentación de diez diapositivas; texto extraído, notas y XML de propiedades sin los términos revisados. PDF renderizado e inspeccionado; diapositivas sin cambios visibles de composición, notas verificadas. PPTX pasó integridad, geometría e importación tras normalizar sus propiedades. Código y resultados de pruebas sin cambios.
+- **Versionado:** cambios en main; la etiqueta histórica entrega-3 no se mueve. El historial y los registros originales del repositorio se conservan.

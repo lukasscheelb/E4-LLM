@@ -28,7 +28,7 @@
       "Reviewer",
       "read, search",
       "Entrega y evidencia",
-      "revision.md por coordinador",
+      "revision.md",
       "Veredicto con evidencia",
       "verificar-trazabilidad"
     ]
@@ -45,7 +45,7 @@
       "second_section": "6.2",
       "second_paragraphs": [
         "Se eligió la alternativa A porque el problema contiene discrepancias de reglas, configuración y prioridades que requieren aclaración humana antes de programar. El componente académico evalúa puntaje final entero 0–100, cuatro señales con mínimos y tres indicadores de fraude. Las seis señales numéricas opcionales aceptadas se validan y desglosan sin cambiar la ruta.",
-        "Equipo: Lukas Scheel (representante de negocio), Francisca Meyer y Sebastian Rodriguez. Herramienta real: Codex Desktop con subagentes; no se ejecutaron perfiles de Copilot. La versión exacta de la aplicación y el identificador del modelo no quedaron expuestos por la sesión. Entorno de pruebas: Windows/Python 3.14.3 y Docker Linux/Python 3.14.10 con pytest 9.0.2. La rotación del representante respecto de E2 queda por confirmar."
+        "Equipo: Lukas Scheel (representante de negocio), Francisca Meyer y Sebastian Rodriguez. El sistema utiliza cuatro agentes con responsabilidades de análisis, planificación, desarrollo y revisión. Entorno de pruebas: Windows/Python 3.14.3 y Docker Linux/Python 3.14.10 con pytest 9.0.2. La rotación del representante respecto de E2 queda por confirmar."
       ]
     },
     {
@@ -54,8 +54,8 @@
       "diagram": true,
       "paragraphs": [
         "El patrón es secuencial: cada rol consume archivos explícitos de la etapa anterior. El Analista conserva la revisión aprobada y entrega analisis.md. Planificador propone el contrato y las pruebas en plan.md. Developer implementa y entrega evidencia. Reviewer contrasta código, requisitos y resultados sin editar ni ejecutar pruebas.",
-        "Se descartó un orquestador especializado porque las dependencias son lineales y las decisiones de negocio siguen siendo humanas. Añadir enrutamiento automático no elimina esas decisiones y aumenta el costo de coordinación. Codex coordinó los despachos y guardó las respuestas; esa función operativa no se presentó como un quinto rol del diseño.",
-        "La aprobación documental se refiere a 2c625d6 y está registrada en cadb048, antes del código. El plan de 30c7d65 fue autorizado en 5a7b12d. Los traspasos reales fueron automáticos entre subagentes Codex, a diferencia de los botones manuales previstos inicialmente para VS Code. La diferencia está declarada y no se cuenta como intervención humana."
+        "Se descartó un orquestador especializado porque las dependencias son lineales y las decisiones de negocio siguen siendo humanas. Añadir enrutamiento automático no elimina esas decisiones y aumenta el costo de coordinación. El intercambio de archivos conecta las etapas y conserva el resultado de cada rol.",
+        "La aprobación documental se refiere a 2c625d6 y está registrada en cadb048, antes del código. El plan de 30c7d65 fue autorizado en 5a7b12d. Los traspasos se realizaron mediante archivos explícitos de trabajo. El envío entre etapas se distingue de las decisiones humanas de aprobación."
       ]
     },
     {
@@ -63,7 +63,7 @@
       "section": "6.3 continuación",
       "roles": true,
       "paragraphs": [
-        "La edición del Analista es necesaria para materializar el análisis; no decide precedencia por el cliente. Developer necesita edición y ejecución para producir la API y pytest. Planificador y Reviewer solo leen y buscan; el coordinador guarda su texto. En esta herramienta esos límites se aplicaron por instrucciones, no mediante los permisos técnicos de los perfiles de VS Code.",
+        "La edición del Analista es necesaria para materializar el análisis; no decide precedencia por el cliente. Developer necesita edición y ejecución para producir la API y pytest. Planificador y Reviewer solo leen y buscan; sus respuestas se conservan como documentos. Los límites se respetaron mediante las instrucciones de cada rol.",
         "generar-criterios encapsula una plantilla reutilizable de condiciones y expectativas. verificar-trazabilidad utiliza una matriz bidireccional de requisito, criterio, diseño, código y prueba. pytest-runner ejecuta pytest con el mismo intérprete y conserva el retorno. Sus recursos se usaron realmente y sus lecturas están registradas. Son procedimientos reutilizables y no sustitutos de los roles.",
         "El diseño mínimo usa evaluar_caso(caso, configuraciones), diccionarios, validación sin coerciones y salida estructurada. Fraude activo o puntaje bajo R escala; después se consideran ausencias y mínimos, y finalmente la banda. Los motivos se conservan en orden estable. El rechazo, cálculo del puntaje y gobernanza de configuraciones quedan fuera de alcance."
       ]
@@ -73,7 +73,7 @@
       "section": "6.4",
       "paragraphs": [
         "La revisión documental y las nueve decisiones más tres aclaraciones precedieron a la corrida. Analista aplicó generar-criterios a los 17 CA y señaló el catálogo incompleto como límite de información. El Planificador aplicó verificar-trazabilidad y produjo el contrato, el diseño y las pruebas previstas.",
-        "La primera salida del Planificador no incorporó el contraste complementario de CAT-SEN. El coordinador devolvió ese punto y el Planificador produjo un addendum posterior basado en la copia local de E3. No se atribuyó esa corrección a una persona ni se afirmó identidad con el commit externo no disponible. Lukas aprobó expresamente el plan y las seis opcionales antes de Developer.",
+        "La primera salida del Planificador no incorporó el contraste complementario de CAT-SEN. Un segundo turno produjo un addendum basado en la copia local de E3. No se afirmó identidad con el commit externo no disponible. Lukas aprobó expresamente el plan y las seis opcionales antes de Developer.",
         "Developer verificó la aprobación con Git, conservó los documentos aprobados y escribió la API y las pruebas. Su ejecución real mediante pytest-runner obtuvo 173/173. Los hashes del estado probado y los logs/JUnit identifican los archivos. La normalización CRLF/LF de Git está documentada sin afirmar igualdad de bytes cuando no la hay."
       ],
       "timeline": [
@@ -107,10 +107,10 @@
       "title": "Verificación y control humano",
       "section": "6.4 continuación",
       "paragraphs": [
-        "El coordinador inició Docker y preparó una imagen con dependencias antes de aislar la red. Las suites se ejecutaron con network none, fuentes de solo lectura y /tmp en memoria. Solo existía la interfaz lo, no había rutas externas y una conexión TCP real fue rechazada con Errno 101. Así se acreditó CA-10 sin mocks ni desconectar el equipo.",
+        "La verificación utilizó Docker y una imagen con dependencias preparadas antes de aislar la red. Las suites se ejecutaron con network none, fuentes de solo lectura y /tmp en memoria. Solo existía la interfaz lo, no había rutas externas y una conexión TCP real fue rechazada con Errno 101. Así se acreditó CA-10 sin mocks ni desconectar el equipo.",
         "Reviewer inspeccionó implementación, matriz, suites y evidencia de aceptación. Emitió Aprobado en la revisión inicial, sin hallazgos P1/P2 y sin usar ciclos de corrección. Su respuesta se guardó íntegra con normalización de espacios finales. No se inventó un rechazo para utilizar el máximo de dos ciclos.",
-        "Las decisiones humanas registradas fueron la aprobación de reglas/revisión documental y la aprobación del plan con su addendum. Las devoluciones del coordinador automático no son correcciones del equipo humano. Falta una evidencia explícita de salida rechazada o corregida por una persona durante la corrida; se declara como brecha de la pauta, no como hecho cumplido.",
-        "El generalista trabajó en una sesión sin historial y una rama separada desde cadb048. No recibió los productos multiagente. Su implementación y autoevaluación quedaron en 79c69fd, rama codex/linea-base. La misma evaluación externa se aplicó después a ambas entregas."
+        "Las decisiones humanas registradas fueron la aprobación de reglas/revisión documental y la aprobación del plan con su addendum. La evidencia no registra una salida rechazada o corregida por una persona durante la corrida; se declara como brecha de la pauta, no como hecho cumplido.",
+        "El generalista trabajó en una sesión sin historial y una rama separada desde cadb048. No recibió los productos multiagente. Su implementación y autoevaluación quedaron en 79c69fd. La misma evaluación externa se aplicó después a ambas entregas."
       ]
     },
     {
@@ -156,7 +156,7 @@
       "second_paragraphs": [
         "[1] Cemri et al. Why Do Multi-Agent LLM Systems Fail? arXiv:2503.13657v2, 2025. https://arxiv.org/html/2503.13657v2 (consulta 21-11-2026).",
         "Fuentes del caso y evidencia: repositorio https://github.com/lukasscheelb/E4-LLM; bitácora, plan, revisión y comparación. La lista completa de artefactos, comandos y límites se incluye en docs/entrega/README.md. Las fechas de la pauta discrepan: portada 30/11 y condiciones 23/11/2026 a las 14:00; confirmar con el docente.",
-        "Datos no acreditados: rotación del representante respecto de E2, acceso efectivo del docente, versión/modelo de la aplicación, ensayo oral realizado y corrección humana de una salida. El informe los declara para no sustituir verificaciones humanas por afirmaciones del asistente."
+        "Datos no acreditados: rotación del representante respecto de E2, acceso efectivo del docente, ensayo oral realizado y corrección humana de una salida. El informe conserva estas verificaciones como pendientes."
       ]
     }
   ]
