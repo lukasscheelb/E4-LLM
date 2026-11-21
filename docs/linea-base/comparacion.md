@@ -50,3 +50,9 @@ Son incidencias verificables de coordinación/entorno. No se clasifican como fal
 ## Lectura de utilidad
 
 En este caso ambos enfoques llegaron al mismo cumplimiento de aceptación. La separación multiagente produjo análisis, diseño, trazabilidad y revisión independiente; el generalista produjo una solución funcional con menos etapas. La evidencia disponible no demuestra una mejora de calidad funcional ni ahorro de tiempo/tokens del multiagente. Para comparar costos con rigor faltan mediciones homogéneas completas y más repeticiones; las diferencias y resultados desfavorables deben conservarse.
+
+## Verificación de cierre posterior
+
+Se añadió una guardia explícita `MIRA_SOURCE_ROOT` a la evaluación común y se preservó su versión anterior en `docs/evidencia/historico/aceptacion_comun-v1.py`. El manifiesto histórico corresponde a esa copia; el actual está en `cierre-evaluacion-manifiesto.json`. Las nuevas ejecuciones `cierre-multi` y `cierre-baseline` obtuvieron 115/115 cada una, retornos 0, con ruta de módulo y red aislada verificadas. No cambió el evaluador ni sus suites propias. Estos resultados no reemplazan los históricos ni completan retrospectivamente las métricas ausentes.
+
+Se realizó un análisis interpretativo posterior de dos episodios en `docs/entrega/fallas.md`, con fuente primaria MAST y límites explícitos. No se modifica la afirmación histórica de que durante la corrida no se habían clasificado fallas ni se presenta una interpretación posterior como anotación certificada.

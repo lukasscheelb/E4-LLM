@@ -1,0 +1,13 @@
+flowchart TD
+ N[Necesidad de negocio] --> A[Analista]
+ A --> D[Historia y especificación]
+ D --> H1{Aprobación humana documental}
+ H1 -->|2c625d6 / cadb048| P[Planificador]
+ A -->|analisis.md| P
+ P -->|plan.md| H2{Revisión humana del plan}
+ H2 -->|30c7d65 / 5a7b12d| DEV[Developer]
+ DEV -->|src, tests, implementacion.md, logs, JUnit| R[Reviewer solo lectura]
+ R -->|revision.md Aprobado| FIN[Entrega verificada]
+ R -->|Rechazado, máximo 2 correcciones| DEV
+ H1 -->|Cambio de reglas| A
+ H2 -->|Corrección| P

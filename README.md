@@ -1,5 +1,9 @@
 # MIRA · Entregable 4
 
+**Equipo:** Lukas Scheel (representante de negocio), Francisca Meyer y Sebastian Rodriguez.
+
+**Entrega académica:** [informe PDF](output/pdf/Informe_MIRA_E4.pdf), [presentación PowerPoint](output/presentacion/Presentacion_MIRA_E4.pptx), [guion de demostración](docs/entrega/guion-demo.md) y [estado y límites de entrega](docs/entrega/README.md). Diagrama y tabla de agentes en `docs/entrega/`. La versión final se identifica mediante la etiqueta `entrega-3`. Los puntos que requieren una respuesta o actuación humana se declaran pendientes, sin dar por completado un ensayo ni métricas inexistentes.
+
 **Alternativa A · Desarrollo conducido por especificación.** El caso propone un evaluador independiente de MIRA que considera puntaje de confianza, señales de fraude y umbrales configurables por organización. El componente es local, en Python y verificable con pytest.
 
 **Entrada del caso:** el cliente necesita que MIRA use el puntaje del caso, las señales de fraude y los umbrales de cada organización para decidir la ruta y explicar el motivo. El comportamiento exacto está en la especificación aprobada.
@@ -47,7 +51,7 @@ Cuando el flujo esté completo, pytest esté en verde, Reviewer haya aprobado y 
 
 ## Usar el evaluador local
 
-La implementación inicial tiene pruebas locales en verde; la aceptación final depende del veredicto de Reviewer y de la evidencia de ejecución aislada de red de CA-10.
+La implementación fue aprobada por Reviewer y CA-10 tiene evidencia real de ejecución sin red. Véanse el [veredicto](docs/trabajo/revision.md) y la [comparación](docs/linea-base/comparacion.md).
 
 Requiere Python 3.10 o superior. En PowerShell, desde la raíz:
 

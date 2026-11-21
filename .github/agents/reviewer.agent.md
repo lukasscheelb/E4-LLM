@@ -1,6 +1,6 @@
 ---
 name: reviewer
-description: Revisa la implementación y su evidencia contra la especificación aprobada con acceso de solo lectura.
+description: Úsalo tras la implementación para contrastar requisitos y evidencia en solo lectura y devolver un veredicto Markdown con hallazgos.
 target: vscode
 disable-model-invocation: true
 tools: ['read', 'search']
