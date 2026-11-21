@@ -179,7 +179,8 @@ Cuando una entrada o configuración es inválida, se devuelve el error estructur
 
 ## Aclaraciones de contrato pendientes
 
-Estas preguntas se desprenden de P-05. Las respuestas acordadas se conservan arriba.
+Estas preguntas se desprenden de P-05 y P-07. Las respuestas acordadas se conservan arriba.
 
 - **P-05.a · Indicador de fraude omitido.** ¿Los tres indicadores del catálogo deben recibirse siempre de forma explícita? Si falta uno, ¿se trata como señal obligatoria faltante, como error estructurado o de otra manera? Indique la salida de un caso que podría aprobarse si ese indicador se hubiera recibido como inactivo. Afecta RF-04, RF-05 y CA-12.
 - **P-05.b · Estado no aplicable.** ¿Qué señales, si alguna, pueden declararse no aplicables en E4? ¿Qué tratamiento recibe un intento de declarar no aplicable una de las cuatro obligatorias? Afecta RF-05, RF-07 y CA-13.
+- **P-07.a · Precisión de las señales numéricas.** ¿Los valores de las señales numéricas individuales son enteros de 0 a 100 o también admiten fracciones dentro de ese rango? El contrato ya fija como enteros el puntaje final y los umbrales. Para un caso con puntaje 85, sin fraude y con las demás señales en sus mínimos, indique si `DOC_AUT` en 69,5 se evalúa como valor bajo el mínimo o se informa como error estructurado de entrada. Afecta RF-07 y CA-17.

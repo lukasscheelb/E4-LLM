@@ -2,13 +2,13 @@
 
 **Alternativa A · Desarrollo conducido por especificación.** El caso propone un evaluador independiente de MIRA que considera puntaje de confianza, señales de fraude y umbrales configurables por organización. El futuro componente será local, en Python y verificable con pytest.
 
-**Estado actual:** especificación e historia actualizadas con las respuestas del representante. Quedan dos aclaraciones sobre señales y la aprobación expresa de la revisión documental.
+**Estado actual:** especificación e historia actualizadas con las respuestas del representante. Quedan tres aclaraciones sobre señales y la aprobación expresa de la revisión documental.
 
 | Documento | Contenido |
 |---|---|
 | [Historia de usuario](docs/trabajo/historia-usuario.md) | Criterios Given/When/Then |
 | [Especificación para revisión](docs/trabajo/especificacion.md) | Fuentes de E3, caso de uso y requisitos |
-| [Preguntas al representante](docs/trabajo/preguntas-cliente.md) | Nueve decisiones registradas y dos aclaraciones de contrato |
+| [Preguntas al representante](docs/trabajo/preguntas-cliente.md) | Nueve decisiones registradas y tres aclaraciones de contrato |
 | [Decisión de coordinación](docs/decision.md) | Patrón, agentes, herramientas y Skills |
 | [Bitácora](docs/bitacora.md) | Actividades observadas y plantillas de registro y aprobación |
 | [Evidencia](docs/evidencia/README.md) | Nombres y procedencia de los artefactos |

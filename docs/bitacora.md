@@ -15,6 +15,14 @@
 - **Verificación:** se comprobaron los enlaces locales y las referencias entre ocho requisitos, catorce criterios y las decisiones del representante.
 - **Estado:** revisión documental pendiente de aprobación expresa. Esta actualización no es el commit humano de aprobación. El flujo de agentes, las Skills del proyecto y pytest permanecen sin ejecución en esta actualización.
 
+## Revisión de consistencia y trazabilidad · 2026-11-21
+
+- **Actividad:** se cotejaron P-01 a P-09 con la especificación y la historia en la rama de preparación, que partió de `8e77355`. Se precisaron entradas, salidas, flujos alternativos y errores y se añadió la matriz RF/RNF–CA–preguntas.
+- **Criterios:** se fijaron valores para mínimos, bandas y errores. Se añadieron CA-15 a CA-17 para los extremos del dominio, la concurrencia de señales sin fraude y los valores numéricos fuera de rango.
+- **Pendientes:** se conservaron P-05.a y P-05.b. Se agregó P-07.a para confirmar la precisión de las señales numéricas individuales. Las nueve respuestas acordadas y las referencias a E3 se conservaron.
+- **Verificación documental:** se cotejaron los ocho requisitos y los diecisiete criterios en ambos sentidos y se comprobó la conservación de las nueve respuestas acordadas, los enlaces locales y las referencias a E3.
+- **Estado:** revisión documental asistida por Codex. Pendiente de aclaración y aprobación expresa. Durante esta revisión no se ejecutaron Developer, el flujo multiagente, las Skills del proyecto ni pytest.
+
 ## Plantilla de actividad
 
 Copia por actividad real. Los campos que no apliquen pueden indicarse como tales.
