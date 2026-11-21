@@ -1,0 +1,9 @@
+[project]
+name = "mira-e4"
+version = "0.1.0"
+description = "Evaluador local de casos MIRA E4"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

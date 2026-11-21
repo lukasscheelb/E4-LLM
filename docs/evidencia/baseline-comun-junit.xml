@@ -1,0 +1,3079 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="114" skipped="0" tests="115" time="2.037" timestamp="2026-11-21T20:53:32.128372+00:00" hostname="37a3f6c7b259"><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca01[79]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 79
+
+    @pytest.mark.parametrize("puntaje", [79, 80, 84, 85, 86])
+    def test_ca01(puntaje):
+&gt;       out = evaluar(datos(puntaje))
+              ^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 79, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca01[80]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 80
+
+    @pytest.mark.parametrize("puntaje", [79, 80, 84, 85, 86])
+    def test_ca01(puntaje):
+&gt;       out = evaluar(datos(puntaje))
+              ^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 80, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca01[84]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 84
+
+    @pytest.mark.parametrize("puntaje", [79, 80, 84, 85, 86])
+    def test_ca01(puntaje):
+&gt;       out = evaluar(datos(puntaje))
+              ^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 84, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca01[85]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 85
+
+    @pytest.mark.parametrize("puntaje", [79, 80, 84, 85, 86])
+    def test_ca01(puntaje):
+&gt;       out = evaluar(datos(puntaje))
+              ^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca01[86]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 86
+
+    @pytest.mark.parametrize("puntaje", [79, 80, 84, 85, 86])
+    def test_ca01(puntaje):
+&gt;       out = evaluar(datos(puntaje))
+              ^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 86, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca02" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">def test_ca02():
+        configs = configuraciones()
+        configs["Y"] = {"id": "config-Y", "version": "2", "R": 60, "A": 90}
+        caso = datos(87)
+&gt;       assert evaluar(caso, configs)["decision"] == "APROBACION_AUTOMATICA"
+               ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 87, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}, 'Y': {'A': 90, 'R': 60, 'id': 'config-Y', 'version': '2'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca03[59]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 59
+
+    @pytest.mark.parametrize("puntaje", [59, 60, 61])
+    def test_ca03(puntaje):
+&gt;       assert evaluar(datos(puntaje))["decision"] == ("ESCALAMIENTO_SUPERVISOR" if puntaje &lt; 60 else "REVISION_ASISTIDA")
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 59, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca03[60]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 60
+
+    @pytest.mark.parametrize("puntaje", [59, 60, 61])
+    def test_ca03(puntaje):
+&gt;       assert evaluar(datos(puntaje))["decision"] == ("ESCALAMIENTO_SUPERVISOR" if puntaje &lt; 60 else "REVISION_ASISTIDA")
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 60, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca03[61]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 61
+
+    @pytest.mark.parametrize("puntaje", [59, 60, 61])
+    def test_ca03(puntaje):
+&gt;       assert evaluar(datos(puntaje))["decision"] == ("ESCALAMIENTO_SUPERVISOR" if puntaje &lt; 60 else "REVISION_ASISTIDA")
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 61, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[-1-DOC_AUT-70]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_AUT', minimo = 70, delta = -1
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 69, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[-1-BIO_ROSTRO-75]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_ROSTRO', minimo = 75, delta = -1
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 74, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[-1-CRUCE_MONTO-60]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'CRUCE_MONTO', minimo = 60, delta = -1
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 59, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[-1-CRUCE_FECHA-60]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'CRUCE_FECHA', minimo = 60, delta = -1
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 59, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[0-DOC_AUT-70]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_AUT', minimo = 70, delta = 0
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[0-BIO_ROSTRO-75]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_ROSTRO', minimo = 75, delta = 0
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[0-CRUCE_MONTO-60]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'CRUCE_MONTO', minimo = 60, delta = 0
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[0-CRUCE_FECHA-60]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'CRUCE_FECHA', minimo = 60, delta = 0
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[1-DOC_AUT-70]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_AUT', minimo = 70, delta = 1
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 71, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[1-BIO_ROSTRO-75]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_ROSTRO', minimo = 75, delta = 1
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 76, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[1-CRUCE_MONTO-60]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'CRUCE_MONTO', minimo = 60, delta = 1
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 61, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca04[1-CRUCE_FECHA-60]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'CRUCE_FECHA', minimo = 60, delta = 1
+
+    @pytest.mark.parametrize("senal,minimo", MINIMOS.items())
+    @pytest.mark.parametrize("delta", [-1, 0, 1])
+    def test_ca04(senal, minimo, delta):
+        caso = datos()
+        caso["senales"][senal] = minimo + delta
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 61, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca05[False-59]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 59, activo = False
+
+    @pytest.mark.parametrize("puntaje", [59, 85])
+    @pytest.mark.parametrize("activo", [False, True])
+    def test_ca05(puntaje, activo):
+        caso = datos(puntaje)
+        caso["senales"]["FRA_MEMORIA"] = activo
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 59, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca05[False-85]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 85, activo = False
+
+    @pytest.mark.parametrize("puntaje", [59, 85])
+    @pytest.mark.parametrize("activo", [False, True])
+    def test_ca05(puntaje, activo):
+        caso = datos(puntaje)
+        caso["senales"]["FRA_MEMORIA"] = activo
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca05[True-59]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 59, activo = True
+
+    @pytest.mark.parametrize("puntaje", [59, 85])
+    @pytest.mark.parametrize("activo", [False, True])
+    def test_ca05(puntaje, activo):
+        caso = datos(puntaje)
+        caso["senales"]["FRA_MEMORIA"] = activo
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 59, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca05[True-85]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 85, activo = True
+
+    @pytest.mark.parametrize("puntaje", [59, 85])
+    @pytest.mark.parametrize("activo", [False, True])
+    def test_ca05(puntaje, activo):
+        caso = datos(puntaje)
+        caso["senales"]["FRA_MEMORIA"] = activo
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca06" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">def test_ca06():
+        caso = datos()
+        del caso["senales"]["CRUCE_FECHA"]
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, 'FRA_EDICION': False, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca07" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">def test_ca07():
+        caso = datos(59)
+        caso["senales"].update(FRA_EDICION=True, FRA_SINTETICO=True, DOC_AUT=69)
+        del caso["senales"]["BIO_ROSTRO"]
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 59, 'senales': {'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 69, 'FRA_EDICION': True, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca08[None]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">par = None
+
+    @pytest.mark.parametrize("par", [None, (60, 60), (85, 60), (-1, 85), (60, 101), (60.5, 85)])
+    def test_ca08(par):
+        configs = {"Y": {"id": "Y", "version": "1", "R": 60, "A": 85}}
+        if par is not None:
+            configs.update(configuraciones(*par))
+&gt;       error(evaluar(datos(), configs), "configuracion")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'Y': {'A': 85, 'R': 60, 'id': 'Y', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca08[par1]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">par = (60, 60)
+
+    @pytest.mark.parametrize("par", [None, (60, 60), (85, 60), (-1, 85), (60, 101), (60.5, 85)])
+    def test_ca08(par):
+        configs = {"Y": {"id": "Y", "version": "1", "R": 60, "A": 85}}
+        if par is not None:
+            configs.update(configuraciones(*par))
+&gt;       error(evaluar(datos(), configs), "configuracion")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 60, 'R': 60, 'id': 'config-X', 'version': '1'}, 'Y': {'A': 85, 'R': 60, 'id': 'Y', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca08[par2]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">par = (85, 60)
+
+    @pytest.mark.parametrize("par", [None, (60, 60), (85, 60), (-1, 85), (60, 101), (60.5, 85)])
+    def test_ca08(par):
+        configs = {"Y": {"id": "Y", "version": "1", "R": 60, "A": 85}}
+        if par is not None:
+            configs.update(configuraciones(*par))
+&gt;       error(evaluar(datos(), configs), "configuracion")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 60, 'R': 85, 'id': 'config-X', 'version': '1'}, 'Y': {'A': 85, 'R': 60, 'id': 'Y', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca08[par3]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">par = (-1, 85)
+
+    @pytest.mark.parametrize("par", [None, (60, 60), (85, 60), (-1, 85), (60, 101), (60.5, 85)])
+    def test_ca08(par):
+        configs = {"Y": {"id": "Y", "version": "1", "R": 60, "A": 85}}
+        if par is not None:
+            configs.update(configuraciones(*par))
+&gt;       error(evaluar(datos(), configs), "configuracion")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': -1, 'id': 'config-X', 'version': '1'}, 'Y': {'A': 85, 'R': 60, 'id': 'Y', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca08[par4]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">par = (60, 101)
+
+    @pytest.mark.parametrize("par", [None, (60, 60), (85, 60), (-1, 85), (60, 101), (60.5, 85)])
+    def test_ca08(par):
+        configs = {"Y": {"id": "Y", "version": "1", "R": 60, "A": 85}}
+        if par is not None:
+            configs.update(configuraciones(*par))
+&gt;       error(evaluar(datos(), configs), "configuracion")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 101, 'R': 60, 'id': 'config-X', 'version': '1'}, 'Y': {'A': 85, 'R': 60, 'id': 'Y', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca08[par5]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">par = (60.5, 85)
+
+    @pytest.mark.parametrize("par", [None, (60, 60), (85, 60), (-1, 85), (60, 101), (60.5, 85)])
+    def test_ca08(par):
+        configs = {"Y": {"id": "Y", "version": "1", "R": 60, "A": 85}}
+        if par is not None:
+            configs.update(configuraciones(*par))
+&gt;       error(evaluar(datos(), configs), "configuracion")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60.5, 'id': 'config-X', 'version': '1'}, 'Y': {'A': 85, 'R': 60, 'id': 'Y', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca09" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">def test_ca09():
+        caso = datos(90)
+        caso["senales"]["DOC_AUT"] = 69
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 90, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 69, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca10_aislamiento_os" time="0.003" /><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca11[ausente]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">variante = 'ausente'
+
+    @pytest.mark.parametrize("variante", ["ausente", -1, 101, 80.5, "85", "fraude", "codigo"])
+    def test_ca11(variante):
+        caso = datos()
+        if variante == "ausente":
+            del caso["puntaje"]
+        elif variante == "fraude":
+            caso["senales"]["FRA_EDICION"] = "desconocido"
+        elif variante == "codigo":
+            caso["senales"]["NO_CATALOGADA"] = 80
+        else:
+            caso["puntaje"] = variante
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca11[-1]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">variante = -1
+
+    @pytest.mark.parametrize("variante", ["ausente", -1, 101, 80.5, "85", "fraude", "codigo"])
+    def test_ca11(variante):
+        caso = datos()
+        if variante == "ausente":
+            del caso["puntaje"]
+        elif variante == "fraude":
+            caso["senales"]["FRA_EDICION"] = "desconocido"
+        elif variante == "codigo":
+            caso["senales"]["NO_CATALOGADA"] = 80
+        else:
+            caso["puntaje"] = variante
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': -1, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca11[101]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">variante = 101
+
+    @pytest.mark.parametrize("variante", ["ausente", -1, 101, 80.5, "85", "fraude", "codigo"])
+    def test_ca11(variante):
+        caso = datos()
+        if variante == "ausente":
+            del caso["puntaje"]
+        elif variante == "fraude":
+            caso["senales"]["FRA_EDICION"] = "desconocido"
+        elif variante == "codigo":
+            caso["senales"]["NO_CATALOGADA"] = 80
+        else:
+            caso["puntaje"] = variante
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 101, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca11[80.5]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">variante = 80.5
+
+    @pytest.mark.parametrize("variante", ["ausente", -1, 101, 80.5, "85", "fraude", "codigo"])
+    def test_ca11(variante):
+        caso = datos()
+        if variante == "ausente":
+            del caso["puntaje"]
+        elif variante == "fraude":
+            caso["senales"]["FRA_EDICION"] = "desconocido"
+        elif variante == "codigo":
+            caso["senales"]["NO_CATALOGADA"] = 80
+        else:
+            caso["puntaje"] = variante
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 80.5, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca11[85]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">variante = '85'
+
+    @pytest.mark.parametrize("variante", ["ausente", -1, 101, 80.5, "85", "fraude", "codigo"])
+    def test_ca11(variante):
+        caso = datos()
+        if variante == "ausente":
+            del caso["puntaje"]
+        elif variante == "fraude":
+            caso["senales"]["FRA_EDICION"] = "desconocido"
+        elif variante == "codigo":
+            caso["senales"]["NO_CATALOGADA"] = 80
+        else:
+            caso["puntaje"] = variante
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': '85', 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca11[fraude]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">variante = 'fraude'
+
+    @pytest.mark.parametrize("variante", ["ausente", -1, 101, 80.5, "85", "fraude", "codigo"])
+    def test_ca11(variante):
+        caso = datos()
+        if variante == "ausente":
+            del caso["puntaje"]
+        elif variante == "fraude":
+            caso["senales"]["FRA_EDICION"] = "desconocido"
+        elif variante == "codigo":
+            caso["senales"]["NO_CATALOGADA"] = 80
+        else:
+            caso["puntaje"] = variante
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca11[codigo]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">variante = 'codigo'
+
+    @pytest.mark.parametrize("variante", ["ausente", -1, 101, 80.5, "85", "fraude", "codigo"])
+    def test_ca11(variante):
+        caso = datos()
+        if variante == "ausente":
+            del caso["puntaje"]
+        elif variante == "fraude":
+            caso["senales"]["FRA_EDICION"] = "desconocido"
+        elif variante == "codigo":
+            caso["senales"]["NO_CATALOGADA"] = 80
+        else:
+            caso["puntaje"] = variante
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca12[None]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">omitido = None
+
+    @pytest.mark.parametrize("omitido", [None, *FRAUDES])
+    def test_ca12(omitido):
+        caso = datos()
+        if omitido:
+            del caso["senales"][omitido]
+            error(evaluar(caso))
+        else:
+&gt;           assert evaluar(caso)["decision"] == "APROBACION_AUTOMATICA"
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca12[FRA_EDICION]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">omitido = 'FRA_EDICION'
+
+    @pytest.mark.parametrize("omitido", [None, *FRAUDES])
+    def test_ca12(omitido):
+        caso = datos()
+        if omitido:
+            del caso["senales"][omitido]
+&gt;           error(evaluar(caso))
+                  ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca12[FRA_MEMORIA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">omitido = 'FRA_MEMORIA'
+
+    @pytest.mark.parametrize("omitido", [None, *FRAUDES])
+    def test_ca12(omitido):
+        caso = datos()
+        if omitido:
+            del caso["senales"][omitido]
+&gt;           error(evaluar(caso))
+                  ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca12[FRA_SINTETICO]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">omitido = 'FRA_SINTETICO'
+
+    @pytest.mark.parametrize("omitido", [None, *FRAUDES])
+    def test_ca12(omitido):
+        caso = datos()
+        if omitido:
+            del caso["senales"][omitido]
+&gt;           error(evaluar(caso))
+                  ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca13[DOC_AUT]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_AUT'
+
+    @pytest.mark.parametrize("senal", MINIMOS)
+    def test_ca13(senal):
+        caso = datos()
+        caso["senales"][senal] = "no aplicable"
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:191: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 'no aplicable', ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca13[BIO_ROSTRO]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_ROSTRO'
+
+    @pytest.mark.parametrize("senal", MINIMOS)
+    def test_ca13(senal):
+        caso = datos()
+        caso["senales"][senal] = "no aplicable"
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:191: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 'no aplicable', 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca13[CRUCE_MONTO]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'CRUCE_MONTO'
+
+    @pytest.mark.parametrize("senal", MINIMOS)
+    def test_ca13(senal):
+        caso = datos()
+        caso["senales"][senal] = "no aplicable"
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:191: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 'no aplicable', 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca13[CRUCE_FECHA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'CRUCE_FECHA'
+
+    @pytest.mark.parametrize("senal", MINIMOS)
+    def test_ca13(senal):
+        caso = datos()
+        caso["senales"][senal] = "no aplicable"
+&gt;       error(evaluar(caso))
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:191: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 'no aplicable', 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca14" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">def test_ca14():
+&gt;       out = evaluar(datos(), configuraciones())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca15[0]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 0
+
+    @pytest.mark.parametrize("puntaje", [0, 99, 100])
+    def test_ca15(puntaje):
+&gt;       assert evaluar(datos(puntaje), configuraciones(0, 100))["decision"] == ("APROBACION_AUTOMATICA" if puntaje == 100 else "REVISION_ASISTIDA")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:202: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 0, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 100, 'R': 0, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca15[99]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 99
+
+    @pytest.mark.parametrize("puntaje", [0, 99, 100])
+    def test_ca15(puntaje):
+&gt;       assert evaluar(datos(puntaje), configuraciones(0, 100))["decision"] == ("APROBACION_AUTOMATICA" if puntaje == 100 else "REVISION_ASISTIDA")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:202: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 99, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 100, 'R': 0, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca15[100]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 100
+
+    @pytest.mark.parametrize("puntaje", [0, 99, 100])
+    def test_ca15(puntaje):
+&gt;       assert evaluar(datos(puntaje), configuraciones(0, 100))["decision"] == ("APROBACION_AUTOMATICA" if puntaje == 100 else "REVISION_ASISTIDA")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:202: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 100, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 100, 'R': 0, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca16[59]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 59
+
+    @pytest.mark.parametrize("puntaje", [59, 60])
+    def test_ca16(puntaje):
+        caso = datos(puntaje)
+        caso["senales"]["DOC_AUT"] = 69
+        del caso["senales"]["CRUCE_FECHA"]
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:210: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 59, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_MONTO': 60, 'DOC_AUT': 69, 'FRA_EDICION': False, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca16[60]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">puntaje = 60
+
+    @pytest.mark.parametrize("puntaje", [59, 60])
+    def test_ca16(puntaje):
+        caso = datos(puntaje)
+        caso["senales"]["DOC_AUT"] = 69
+        del caso["senales"]["CRUCE_FECHA"]
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:210: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 60, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_MONTO': 60, 'DOC_AUT': 69, 'FRA_EDICION': False, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca17[-1]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">valor = -1
+
+    @pytest.mark.parametrize("valor", [-1, 0, 69.5, 100, 101])
+    def test_ca17(valor):
+        caso = datos()
+        caso["senales"]["DOC_AUT"] = valor
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': -1, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca17[0]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">valor = 0
+
+    @pytest.mark.parametrize("valor", [-1, 0, 69.5, 100, 101])
+    def test_ca17(valor):
+        caso = datos()
+        caso["senales"]["DOC_AUT"] = valor
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 0, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca17[69.5]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">valor = 69.5
+
+    @pytest.mark.parametrize("valor", [-1, 0, 69.5, 100, 101])
+    def test_ca17(valor):
+        caso = datos()
+        caso["senales"]["DOC_AUT"] = valor
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 69.5, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca17[100]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">valor = 100
+
+    @pytest.mark.parametrize("valor", [-1, 0, 69.5, 100, 101])
+    def test_ca17(valor):
+        caso = datos()
+        caso["senales"]["DOC_AUT"] = valor
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 100, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_ca17[101]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">valor = 101
+
+    @pytest.mark.parametrize("valor", [-1, 0, 69.5, 100, 101])
+    def test_ca17(valor):
+        caso = datos()
+        caso["senales"]["DOC_AUT"] = valor
+&gt;       out = evaluar(caso)
+              ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 101, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[0-DOC_ARIT]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_ARIT', valor = 0
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[0-DOC_LEG]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_LEG', valor = 0
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[0-DOC_IDIOMA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_IDIOMA', valor = 0
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[0-META_FECHA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_FECHA', valor = 0
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[0-META_DISP]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_DISP', valor = 0
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[0-BIO_VIDA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_VIDA', valor = 0
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[100-DOC_ARIT]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_ARIT', valor = 100
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[100-DOC_LEG]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_LEG', valor = 100
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[100-DOC_IDIOMA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_IDIOMA', valor = 100
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[100-META_FECHA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_FECHA', valor = 100
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[100-META_DISP]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_DISP', valor = 100
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[100-BIO_VIDA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_VIDA', valor = 100
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[-1-DOC_ARIT]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_ARIT', valor = -1
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[-1-DOC_LEG]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_LEG', valor = -1
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[-1-DOC_IDIOMA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_IDIOMA', valor = -1
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[-1-META_FECHA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_FECHA', valor = -1
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[-1-META_DISP]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_DISP', valor = -1
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[-1-BIO_VIDA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_VIDA', valor = -1
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[101-DOC_ARIT]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_ARIT', valor = 101
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[101-DOC_LEG]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_LEG', valor = 101
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[101-DOC_IDIOMA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_IDIOMA', valor = 101
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[101-META_FECHA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_FECHA', valor = 101
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[101-META_DISP]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_DISP', valor = 101
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[101-BIO_VIDA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_VIDA', valor = 101
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[60.5-DOC_ARIT]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_ARIT', valor = 60.5
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[60.5-DOC_LEG]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_LEG', valor = 60.5
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[60.5-DOC_IDIOMA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_IDIOMA', valor = 60.5
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[60.5-META_FECHA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_FECHA', valor = 60.5
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[60.5-META_DISP]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_DISP', valor = 60.5
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[60.5-BIO_VIDA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_VIDA', valor = 60.5
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[True-DOC_ARIT]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_ARIT', valor = True
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[True-DOC_LEG]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_LEG', valor = True
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[True-DOC_IDIOMA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_IDIOMA', valor = True
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[True-META_FECHA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_FECHA', valor = True
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[True-META_DISP]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_DISP', valor = True
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[True-BIO_VIDA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_VIDA', valor = True
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[None-DOC_ARIT]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_ARIT', valor = None
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[None-DOC_LEG]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_LEG', valor = None
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[None-DOC_IDIOMA]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'DOC_IDIOMA', valor = None
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[None-META_FECHA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_FECHA', valor = None
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[None-META_DISP]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'META_DISP', valor = None
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_addendum_opcionales[None-BIO_VIDA]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">senal = 'BIO_VIDA', valor = None
+
+    @pytest.mark.parametrize("senal", OPCIONALES)
+    @pytest.mark.parametrize("valor", [0, 100, -1, 101, 60.5, True, None])
+    def test_addendum_opcionales(senal, valor):
+        caso = datos()
+&gt;       original = evaluar(caso)
+                   ^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:231: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[True-puntaje]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'puntaje', valor = True
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': True, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[True-R]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'R', valor = True
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': True, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[True-A]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'A', valor = True
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': True, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[True-DOC_AUT]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'DOC_AUT', valor = True
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': True, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[False-puntaje]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'puntaje', valor = False
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': False, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[False-R]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'R', valor = False
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': False, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[False-A]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'A', valor = False
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': False, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[False-DOC_AUT]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'DOC_AUT', valor = False
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': False, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[85.0-puntaje]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'puntaje', valor = 85.0
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85.0, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[85.0-R]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'R', valor = 85.0
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85, 'R': 85.0, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[85.0-A]" time="0.001"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'A', valor = 85.0
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}
+configs = {'X': {'A': 85.0, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase><testcase classname="docs.evidencia.aceptacion_comun" name="test_enteros_estrictos[85.0-DOC_AUT]" time="0.000"><failure message="AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?">campo = 'DOC_AUT', valor = 85.0
+
+    @pytest.mark.parametrize("campo", ["puntaje", "R", "A", "DOC_AUT"])
+    @pytest.mark.parametrize("valor", [True, False, 85.0])
+    def test_enteros_estrictos(campo, valor):
+        caso, configs = datos(), configuraciones()
+        if campo in ("R", "A"):
+            configs["X"][campo] = valor
+        elif campo == "puntaje":
+            caso[campo] = valor
+        else:
+            caso["senales"][campo] = valor
+&gt;       error(evaluar(caso, configs), "configuracion" if campo in ("R", "A") else "entrada")
+              ^^^^^^^^^^^^^^^^^^^^^^
+
+/audit/docs/evidencia/aceptacion_comun.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+caso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 85.0, ...}}
+configs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}
+
+    def evaluar(caso, configs=None):
+        configs = configuraciones() if configs is None else configs
+        originales = copy.deepcopy((caso, configs))
+        enfoque = os.environ["MIRA_ENFOQUE"]
+        if enfoque == "multi":
+            resultado = mira.evaluar_caso(caso, configs)
+        elif enfoque == "baseline":
+&gt;           resultado = mira.evaluar(caso["organizacion"], caso, configs)
+                        ^^^^^^^^^^^^
+E           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?
+
+/audit/docs/evidencia/aceptacion_comun.py:41: AttributeError</failure></testcase></testsuite></testsuites>

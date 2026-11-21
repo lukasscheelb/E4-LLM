@@ -43,3 +43,13 @@ Los detalles y resultados de cada rol se añaden solo después de observar su ej
 - En un turno posterior, Planificador leyó CAT-SEN local y devolvió el addendum que se anexó sin alterar la propuesta original. Su prompt está conservado en `multi-r0-planificador.md`.
 - Los traspasos internos fueron automáticos por subagentes Codex, a diferencia de los envíos manuales de Copilot previstos en la guía. No se cuentan como intervenciones humanas y deben declararse como diferencia de herramienta al comparar corridas.
 - Se detuvo la corrida para obtener revisión humana del plan y aceptación o corrección del addendum. Developer, pytest, Reviewer y línea base no han empezado.
+
+## Continuación tras aprobación humana
+
+El representante respondió «apruebo, continua» a la solicitud explícita de aprobar plan y addendum. Se registró antes del código en `5a7b12d`. Developer y generalista trabajaron en directorios separados; sus prompts y resultados se conservaron. Reviewer emitió Aprobado en solo lectura. La línea base quedó publicada en rama `codex/linea-base`, commit `79c69fd`.
+
+El detalle de comandos reales, intentos, aislamiento, correcciones de entorno, resultados y límites de métricas está en `docs/linea-base/comparacion.md` y la bitácora. La pausa del control humano divide la corrida y no se oculta en una supuesta medición continua. No se añadieron pruebas, métricas ni fallas ficticias.
+
+## Conservación de la línea base
+
+La rama codex/linea-base se publicó en 79c69fd. Se intentó archivar su worktree gestionado al finalizar las pruebas; la herramienta respondió `The task's primary checkout cannot be removed.`. Se dejó intacto, sin recurrir a borrado manual. Sus archivos y rama siguen disponibles.

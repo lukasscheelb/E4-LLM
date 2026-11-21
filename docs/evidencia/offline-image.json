@@ -1,0 +1,57 @@
+[
+    {
+        "Id": "sha256:935830869c51ed8e82f269f898b5cc5cf5c70466acd785ab01dc1d362a7c97a4",
+        "RepoTags": [
+            "mira-e4-pytest:9.0.2"
+        ],
+        "RepoDigests": [
+            "mira-e4-pytest@sha256:935830869c51ed8e82f269f898b5cc5cf5c70466acd785ab01dc1d362a7c97a4"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-21T20:51:22.669479049Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "PYTHON_VERSION=3.14.10",
+                "PYTHON_SHA256=de414a57119abef52784d8993e341d53aed635fc2b05c2607d9f98a2c5b72032",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1"
+            ],
+            "Cmd": [
+                "python3"
+            ],
+            "WorkingDir": "/work"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 213071798,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:dd57f90311a2567b55ff22eeacff1602fd04ad7566e315957731359eab173b90",
+                "sha256:8fc845bed180f897442794f074a6fc079b1a8bde4881bd39fb19139de69559f1",
+                "sha256:8cfd26f2a283d91a55613451863815614262f690ab3a68942d839a0fa024aedd",
+                "sha256:cf0d544b5f33c53badefbd79aa92e97c64efde6a5d63631aa3dd57eb1da12495",
+                "sha256:f805643724c63fec7e7d5dc83c12d8cf68a5d49c9a5269a699530a8804de4461",
+                "sha256:2278c285bbedd6d9f4a30b6a8e0aa92fa70af98d8cfd94eebe8bea36bc80cdf4"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-21T20:51:23.497693768Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:935830869c51ed8e82f269f898b5cc5cf5c70466acd785ab01dc1d362a7c97a4",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "9zh7koedwj6yxmi2w2n37lssa",
+                    "CreatedAt": "2026-11-21T20:51:25.150342084Z"
+                }
+            ]
+        }
+    }
+]

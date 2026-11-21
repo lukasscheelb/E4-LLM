@@ -1,0 +1,15 @@
+{
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "pytest": "pytest 9.0.2",
+  "packages": [
+    "colorama==0.4.6",
+    "iniconfig==2.3.1",
+    "packaging==26.3",
+    "pluggy==1.7.0",
+    "Pygments==2.21.0",
+    "pytest==9.0.2"
+  ],
+  "timestamp_utc": "2026-11-21T20:45:30.624606+00:00",
+  "network_isolation": "not_accredited_by_this_local_run"
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "enfoque": "multi",
+    "archivo": ".github/skills/pytest-runner/scripts/run_pytest.py",
+    "esperado": "58c5c649bfd10160a48dbabfa3116cbeb50f966a1f4147231a09cd86833310a4",
+    "observado": "58c5c649bfd10160a48dbabfa3116cbeb50f966a1f4147231a09cd86833310a4",
+    "coincide": true
+  },
+  {
+    "enfoque": "multi",
+    "archivo": "pyproject.toml",
+    "esperado": "5a449a7c6bfa3895d5b79b09886942a6267f28bc2f199a9410015bc9c7d8339c",
+    "observado": "5a449a7c6bfa3895d5b79b09886942a6267f28bc2f199a9410015bc9c7d8339c",
+    "coincide": true
+  },
+  {
+    "enfoque": "multi",
+    "archivo": "requirements-dev.txt",
+    "esperado": "693d97bdd0fb5283060c3efadf25a90d0c3b59be09b25fac59f5f1c68a1f993b",
+    "observado": "693d97bdd0fb5283060c3efadf25a90d0c3b59be09b25fac59f5f1c68a1f993b",
+    "coincide": true
+  },
+  {
+    "enfoque": "multi",
+    "archivo": "src/mira/__init__.py",
+    "esperado": "a7584c03f6eb2501ab16ef65c016ddffb990d04075ff1afd9755f144095b6275",
+    "observado": "a7584c03f6eb2501ab16ef65c016ddffb990d04075ff1afd9755f144095b6275",
+    "coincide": true
+  },
+  {
+    "enfoque": "multi",
+    "archivo": "src/mira/evaluador.py",
+    "esperado": "3ae2b343b33ef8f88c7cd9089ed423c65460853de511e76a4d7a54be9d85e11b",
+    "observado": "3ae2b343b33ef8f88c7cd9089ed423c65460853de511e76a4d7a54be9d85e11b",
+    "coincide": true
+  },
+  {
+    "enfoque": "multi",
+    "archivo": "tests/conftest.py",
+    "esperado": "00cb296871206fecc24a89915890ccb00f503b9ab579bf41ff0ee711432d2a19",
+    "observado": "00cb296871206fecc24a89915890ccb00f503b9ab579bf41ff0ee711432d2a19",
+    "coincide": true
+  },
+  {
+    "enfoque": "multi",
+    "archivo": "tests/test_aceptacion.py",
+    "esperado": "e5066300b91a2681d9aac34e541167d05714f9a0af9b20ff34d86ab45ef55538",
+    "observado": "e5066300b91a2681d9aac34e541167d05714f9a0af9b20ff34d86ab45ef55538",
+    "coincide": true
+  },
+  {
+    "enfoque": "multi",
+    "archivo": "tests/test_validacion.py",
+    "esperado": "3bf2ae3f5f1c06b15b8c361ed2d10c509cd9965a35a2afdd4f4d6a5322f361fb",
+    "observado": "3bf2ae3f5f1c06b15b8c361ed2d10c509cd9965a35a2afdd4f4d6a5322f361fb",
+    "coincide": true
+  },
+  {
+    "enfoque": "baseline",
+    "archivo": "src/mira/__init__.py",
+    "esperado": "37fca68182245f097299742b7f9e4c7178ec0b48fd9d89c48985a43899970b69",
+    "observado": "37fca68182245f097299742b7f9e4c7178ec0b48fd9d89c48985a43899970b69",
+    "coincide": true
+  },
+  {
+    "enfoque": "baseline",
+    "archivo": "src/mira/evaluador.py",
+    "esperado": "5e183594b5eea93e6f4b30d198d7f1d45a0a10dd1a632f97bd275af4eaf26f47",
+    "observado": "5e183594b5eea93e6f4b30d198d7f1d45a0a10dd1a632f97bd275af4eaf26f47",
+    "coincide": true
+  },
+  {
+    "enfoque": "baseline",
+    "archivo": "tests/test_evaluador.py",
+    "esperado": "15ae34f6079013888a38c235f4a024808b6c332519138310c9773459b2828a3d",
+    "observado": "15ae34f6079013888a38c235f4a024808b6c332519138310c9773459b2828a3d",
+    "coincide": true
+  },
+  {
+    "enfoque": "baseline",
+    "archivo": "pyproject.toml",
+    "esperado": "775bb2378ea029cf4f47afe3e31e02b24f7cb4c9a8349e751f82de723f82a96a",
+    "observado": "775bb2378ea029cf4f47afe3e31e02b24f7cb4c9a8349e751f82de723f82a96a",
+    "coincide": true
+  },
+  {
+    "enfoque": "baseline",
+    "archivo": "requirements-dev.txt",
+    "esperado": "a51bf3eba4220a8716d7830322c44825a5d4ac081a78fdba353e43b69f2e721f",
+    "observado": "a51bf3eba4220a8716d7830322c44825a5d4ac081a78fdba353e43b69f2e721f",
+    "coincide": true
+  },
+  {
+    "enfoque": "baseline",
+    "archivo": ".gitignore",
+    "esperado": "af75a1e952b8047b603f25e67eafec484d7d025dc08fb39e35bea61e02abb070",
+    "observado": "af75a1e952b8047b603f25e67eafec484d7d025dc08fb39e35bea61e02abb070",
+    "coincide": true
+  }
+]

@@ -28,3 +28,11 @@ La configuración usa los alias de VS Code y el destino `vscode` para los botone
 | [pytest-runner](../.github/skills/pytest-runner/SKILL.md) | Script Python que invoca pytest con el mismo intérprete, devuelve el código de salida y admite JUnit. | Developer |
 
 El criterio de avance es la evidencia de la etapa anterior. Para la comparación académica, se congela la revisión aprobada y se aplica el mismo protocolo de verificación a ambos enfoques. [Metodología](linea-base/README.md).
+
+## Herramienta y coordinación efectivamente utilizadas · multi-r0
+
+La corrida real utilizó cuatro subagentes separados de Codex para los cuatro roles. Cada uno leyó su perfil y sus Skills; el cumplimiento de las restricciones fue por instrucciones, no por carga de los perfiles ni por los alias `tools` de VS Code. Planificador y Reviewer devolvieron sus archivos en el chat y el coordinador los guardó sin cambiar contenido (normalización de espacios finales en el plan). Reviewer no escribió archivos ni ejecutó pruebas.
+
+Los traspasos de esta corrida fueron automáticos mediante el coordinador Codex, autorizados por el encargo humano, y se realizaron con archivos de `docs/trabajo/` como insumos explícitos. Se conserva el patrón secuencial de especialistas y los dos controles humanos: aprobación documental y aprobación del plan. Esta diferencia respecto de los botones manuales previstos en VS Code afecta el conteo de intervenciones y está declarada en la comparación.
+
+La línea base fue un generalista sin historial de esta corrida ni delegación, en rama y worktree separados. Un subagente auxiliar posterior preparó únicamente la evaluación común independiente; no participó en la producción de la solución, ni constituye un quinto rol del flujo de ingeniería. La evaluación fue posterior a las entregas y no ciega, como declara su metodología.

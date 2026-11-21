@@ -1,0 +1,6 @@
+Working directory: C:\Users\lukas\Documents\ChatGPT\LLM - E4
+Command arguments: ['C:\\Users\\lukas\\Documents\\ChatGPT\\LLM - E4\\.venv\\Scripts\\python.exe', '-m', 'pytest', '-q', '--junitxml', 'docs\\evidencia\\multi-r0-developer-junit.xml', 'tests']
+........................................................................ [ 41%]
+........................................................................ [ 83%]
+.............................                                            [100%]
+173 passed in 0.22s

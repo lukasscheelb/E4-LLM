@@ -1,0 +1,16 @@
+{
+  "python": "3.14.10 (main, Nov  5 2026, 07:57:36) [GCC 14.2.0]",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "interfaces": [
+    "lo"
+  ],
+  "rutas": "Iface\tDestination\tGateway \tFlags\tRefCnt\tUse\tMetric\tMask\t\tMTU\tWindow\tIRTT                                                       \n",
+  "conexion_externa_bloqueada": {
+    "tipo": "OSError",
+    "mensaje": "[Errno 101] Network is unreachable",
+    "errno": 101
+  },
+  "pytest": "pytest 9.0.2",
+  "enfoque": "multi",
+  "objetivo": "/audit/docs/evidencia/aceptacion_comun.py"
+}
