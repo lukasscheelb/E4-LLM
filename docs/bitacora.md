@@ -30,6 +30,14 @@
 - **Verificación documental:** se contrastaron los ocho requisitos y los 17 criterios con el registro de respuestas y se cotejó la distinción entre señal numérica ausente, indicador de fraude omitido y valor inválido.
 - **Estado:** queda pendiente la aprobación expresa del commit documental. En esta actualización no se implementó el evaluador ni se ejecutaron Developer, pytest, las Skills del proyecto o el flujo multiagente.
 
+## Verificación de la aprobación previa
+
+- **Decisión humana:** Lukas Scheel aprobó la especificación y la historia del commit [`2c625d6`](https://github.com/lukasscheelb/E4-LLM/commit/2c625d6446b6fdba4cdc361c77f71235c4c4b45e). El commit independiente [`cadb048`](https://github.com/lukasscheelb/E4-LLM/commit/cadb048819b191eac705be26ddae2575986139f9) registró la aprobación y su procedencia. El representante confirmó que este registro satisface el requisito de la pauta.
+- **Parentesco en Git:** `git rev-parse cadb048^` devolvió `2c625d6446b6fdba4cdc361c77f71235c4c4b45e`. Tras sincronizar la rama, `git merge-base --is-ancestor cadb048 HEAD` devolvió código 0.
+- **Alcance:** `git diff-tree --no-commit-id --name-status -r cadb048` mostró un único archivo modificado, `docs/bitacora.md`. El diff de la especificación, la historia y las preguntas entre la revisión aprobada y `HEAD` estuvo vacío.
+- **Orden de ejecución:** `git log --all --format= --name-only` mostró documentación y recursos de agentes y Skills. El único archivo Python del historial era el script reutilizable de `pytest-runner`. La rama estaba limpia antes de preparar la guía. El registro de aprobación precede a cualquier código o prueba del evaluador en el historial inspeccionado.
+- **Estado observado:** se verificó Git y se preparó el inicio de la corrida en VS Code. El envío inicial a Analista y la ejecución de agentes, Skills y pytest están pendientes.
+
 ## Plantilla de actividad
 
 Copia por actividad real. Los campos que no apliquen pueden indicarse como tales.

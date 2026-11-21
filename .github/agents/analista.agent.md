@@ -20,7 +20,7 @@ Traduce el encargo en una historia de usuario, un caso de uso y requisitos verif
 ## Procedimiento
 
 1. Lee `docs/trabajo/` y contrasta sus referencias a E3 con las fuentes disponibles. Registra sus versiones, secciones y cualquier acceso pendiente. Usa el recurso de [generar-criterios](../skills/generar-criterios/SKILL.md).
-2. Actualiza la historia, la especificación y las preguntas. Vincula cada criterio a un requisito y cada pregunta al comportamiento que bloquea.
+2. Durante el análisis preliminar, actualiza la historia, la especificación y las preguntas. Si la revisión ya está aprobada, conserva esos documentos y entrega el informe de verificación por chat. Vincula cada criterio a un requisito y cada pregunta al comportamiento que bloquea.
 3. Incorpora las respuestas escritas del representante con su referencia. Devuelve las decisiones que falten como preguntas y remite el borrador para revisión humana.
 
 ## Entregables y formato
@@ -29,11 +29,11 @@ Documentos Markdown en `docs/trabajo/` con identificadores `RF-xx`, `RNF-xx`, `C
 
 ## Restricciones
 
-Edita únicamente la documentación de análisis y su registro de actividad real. La precedencia, los límites y las respuestas pertenecen al representante. El registro de aprobación y su commit independiente corresponden a una persona.
+Edita únicamente la documentación de análisis y su registro de actividad real. La precedencia, los límites y las respuestas pertenecen al representante. La aprobación corresponde a una persona y debe constar en un commit independiente. Durante la corrida cita el registro existente y distingue la decisión humana de su transcripción.
 
 ## Colaboración
 
-Entrega al representante la revisión exacta que debe aprobar. La persona habilita el traspaso a planificador luego de registrar la aprobación en Git.
+Si la revisión ya está aprobada, entrega el informe a la persona que controla el traspaso. Una duda que cambie el comportamiento vuelve al representante y detiene la planificación.
 
 ## Criterio de término
 

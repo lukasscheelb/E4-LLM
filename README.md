@@ -2,7 +2,7 @@
 
 **Alternativa A · Desarrollo conducido por especificación.** El caso propone un evaluador independiente de MIRA que considera puntaje de confianza, señales de fraude y umbrales configurables por organización. El futuro componente será local, en Python y verificable con pytest.
 
-**Estado actual:** especificación e historia actualizadas con las respuestas del representante. Las tres aclaraciones de contrato están aceptadas. Está pendiente la aprobación expresa de la revisión documental.
+**Estado actual:** Lukas Scheel aprobó la revisión documental. El registro de aprobación precede a la implementación y la primera corrida en VS Code está preparada.
 
 | Documento | Contenido |
 |---|---|
@@ -14,13 +14,27 @@
 | [Evidencia](docs/evidencia/README.md) | Nombres y procedencia de los artefactos |
 | [Línea base](docs/linea-base/README.md) | Comparación con un agente generalista |
 
-## Ejecutar el flujo en VS Code
+## Primera corrida multiagente en VS Code
 
-1. Abre la raíz de E4 en la rama de preparación. Inicia sesión en GitHub Copilot y abre Chat. Ejecuta **Chat: Open Customizations** para verificar que aparezcan los cuatro agentes y las tres Skills del workspace.
-2. Selecciona **Local** como destino de sesión para usar los botones configurados en `.github/agents/`. Si tu versión solo ofrece **Copilot** y reconoce los agentes, selecciona a cada agente manualmente y pega el texto del `prompt` de su traspaso con las referencias a los archivos y commits. En la sesión de **reviewer**, verifica que el selector de herramientas solo muestre lectura y búsqueda antes de enviar. En Copilot, los botones de `handoffs` de Local no están disponibles. Si la Skill pedida no aparece al escribir `/`, adjunta su `SKILL.md` y su recurso y solicita aplicar el procedimiento documentado. Registra cómo se cargó o consultó. [Agentes personalizados](https://code.visualstudio.com/docs/agent-customization/custom-agents) · [Agent Skills](https://code.visualstudio.com/docs/agent-customization/agent-skills).
-3. Elige **analista**. Prompt inicial para una futura sesión: «Revisa la historia, la especificación preliminar y las preguntas en `docs/trabajo/` contra las fuentes de E3. Aplica `generar-criterios` a las revisiones que propongas. Registra los puntos pendientes y detente en la revisión humana». Si el agente no puede acceder a E3, adjunta las fuentes citadas. Conserva el texto realmente enviado y la evidencia en la bitácora.
-4. Presenta al representante el commit documental que incorpora sus respuestas y las tres aclaraciones aceptadas. Pídele que apruebe expresamente esa revisión por su hash. Una persona transcribe la aprobación y la referencia al commit en la bitácora y crea un **segundo commit independiente** dedicado a la aprobación, antes de cualquier implementación. Para ese segundo commit, usa `git add -- docs/bitacora.md` y comprueba con `git diff --cached --name-only` que solo se incluyó ese archivo. Conserva ambos hashes y facilita al planificador la evidencia de Git y los documentos aprobados. Mientras falte la aprobación, detén el flujo aquí.
-5. Selecciona el traspaso a **planificador** y envía el prompt. Cada botón solo prepara el mensaje porque todos usan `send: false`. Revisa el plan, guárdalo en `docs/trabajo/plan.md` y pasa a **developer** con las rutas y los hashes. Developer verifica el prerrequisito, implementa y ejecuta la Skill `pytest-runner` con pytest disponible.
-6. Envía a **reviewer** la revisión aprobada, el plan, los archivos o diff y la evidencia de pruebas. Guarda su veredicto desde el chat. Tras un rechazo, se permiten hasta dos ciclos Developer → Reviewer. La primera entrega se registra como revisión inicial, y las correcciones como ciclo 1 y ciclo 2. Tras el último rechazo, escala a la persona responsable. Los botones son sugerencias estáticas, así que la persona controla cuándo enviarlos y registra cada intervención.
+**Revisión aprobada:** `2c625d6446b6fdba4cdc361c77f71235c4c4b45e`. **Registro de aprobación:** `cadb048819b191eac705be26ddae2575986139f9`. Lukas Scheel aprobó la revisión y autorizó a Codex a registrar su declaración. La [bitácora](docs/bitacora.md) documenta la procedencia y la comprobación de Git.
 
-Codex se utilizó para preparar los archivos. La guía de traspasos describe GitHub Copilot Chat en VS Code. La etapa actual termina al publicar la revisión documental para aprobación humana.
+1. Abre la raíz de E4 en la rama `codex/preparacion-e4` actualizada. Inicia sesión en GitHub Copilot, abre Chat y usa **Chat: Open Customizations** para localizar los cuatro agentes y las tres Skills del workspace.
+2. Inicia una sesión **Local**, si está disponible, para usar los botones de handoff. Cada botón prepara el mensaje y la persona lo revisa y pulsa **Enviar**. Si usas una sesión **Copilot** que lista los agentes pero carece de esos botones, selecciona manualmente al siguiente agente y pega el prompt del handoff con sus referencias. Registra cuál variante usaste. [Agentes personalizados](https://code.visualstudio.com/docs/agent-customization/custom-agents).
+3. Elige **analista** y envía el prompt inicial que aparece abajo. Invoca `generar-criterios` desde el selector de Skills si está disponible. Si no aparece, adjunta su `SKILL.md` y `references/criterio.md` y pide que aplique el procedimiento. Distingue en la bitácora una carga de Skill observada de una consulta explícita de sus archivos. [Agent Skills](https://code.visualstudio.com/docs/agent-customization/agent-skills).
+
+### Prompt inicial para analista
+
+> Verifica la historia, la especificación y las decisiones P-01 a P-09 y sus tres aclaraciones en `docs/trabajo/`. Usa la revisión aprobada `2c625d6446b6fdba4cdc361c77f71235c4c4b45e` y el registro `cadb048819b191eac705be26ddae2575986139f9`. Aplica `generar-criterios` y su plantilla a los 17 criterios Given/When/Then. Entrega en el chat un informe con fuentes, criterios revisados, hallazgos y la recomendación de traspaso. Preserva los documentos aprobados. Si un hallazgo cambia una regla o un resultado esperado, documenta la pregunta y detén el traspaso.
+
+### Handoffs y evidencia
+
+Usa un identificador de corrida, por ejemplo `multi-01`. Conserva en `docs/evidencia/` la transcripción o los extractos verificables de cada etapa y el mensaje exacto de cada traspaso. Registra en `docs/bitacora.md` el agente y destino de sesión, modelo, hashes, prompt literal, Skill y recurso utilizados, quién autorizó o envió cada handoff, resultado y enlace al artefacto. Registra horarios, métricas e incidentes MAST solo cuando haya datos observados que los respalden.
+
+| Etapa | Acción y evidencia |
+|---|---|
+| Analista → Planificador | Guarda el informe de Analista y la evidencia de cómo aplicó `generar-criterios`. La persona comprueba que se preservaron los documentos aprobados y revisa los hallazgos. Si permiten avanzar, envía el handoff con ambos hashes, el informe y las rutas aprobadas. |
+| Planificador → Developer | Pide diseño técnico, tareas y matriz de los ocho requisitos y 17 criterios con `verificar-trazabilidad`. Guarda su salida Markdown en `docs/trabajo/plan.md` tras revisarla. Conserva la evidencia del uso de la Skill y envía el handoff con el plan, los hashes y cualquier decisión humana registrada. |
+| Developer → Reviewer | Pide verificar que el registro de aprobación sea ancestro de `HEAD` y que los documentos aprobados coincidan con su revisión. Luego debe implementar el evaluador local en Python y ejecutar `pytest-runner`. Guarda comando literal, intérprete y versión de pytest, salida, código de retorno, conteos e informe JUnit si se generó. Adjunta la matriz, el hash o diff reproducible del código probado, y el mensaje de traspaso a Reviewer. |
+| Reviewer → cierre o corrección | Comprueba que Reviewer disponga solo de lectura y búsqueda. La persona guarda el veredicto que el agente entrega por chat con las referencias a requisitos, código y evidencia. Tras un rechazo, la persona puede enviar la devolución a Developer hasta dos veces. Registra la primera revisión como inicial y las correcciones como ciclos 1 y 2. Ante un nuevo rechazo tras el ciclo 2, eleva los hallazgos a la persona responsable. |
+
+Si durante la corrida cambia un comportamiento aprobado, vuelve al representante antes de implementar ese cambio. La primera corrida comienza cuando la persona envía el prompt a Analista desde VS Code.

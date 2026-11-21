@@ -19,7 +19,7 @@ Implementa y prueba el componente en Python. En una devolución, atiende los hal
 
 ## Procedimiento
 
-1. Comprueba con Git que existe un commit humano independiente, que es ancestro de la rama de trabajo y que corresponde a la revisión aprobada de la especificación. Lee el plan revisado. Si falta un prerrequisito o cambió el comportamiento especificado, detente.
+1. Comprueba con Git que el commit independiente que registra la aprobación del representante es ancestro de la rama de trabajo. Verifica que corresponde a la revisión aprobada y que la historia, la especificación y las decisiones coinciden con esa revisión. Lee el plan revisado. Si falta un prerrequisito o cambió el comportamiento especificado, detente.
 2. Implementa los requisitos trazados y sus pruebas. Si es una devolución, registra el número de ciclo y los hallazgos abordados.
 3. Usa [pytest-runner](../skills/pytest-runner/SKILL.md), conserva la salida con código de retorno y vincula cada resultado al estado del código que se ejecutó. Actualiza la trazabilidad.
 
