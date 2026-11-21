@@ -1,6 +1,6 @@
 # Especificación para revisión · Evaluación de casos MIRA
 
-**Estado: respuestas incorporadas, pendiente de aprobación humana.** Componente académico independiente, Alternativa A del Entregable 4.
+**Estado: respuestas y aclaraciones aceptadas e incorporadas. Pendiente de aprobación humana de esta revisión.** Componente académico independiente, Alternativa A del Entregable 4.
 
 ## Fuentes inspeccionadas
 
@@ -35,7 +35,7 @@ El representante confirmó los cuatro mínimos fijos y la obligatoriedad de esta
 **Flujo principal.**
 
 1. Localizar la configuración efectiva de la organización indicada y validar su estructura y sus umbrales.
-2. Validar el puntaje y los valores o estados de las señales recibidas. Identificar ausencias de las señales obligatorias.
+2. Validar el puntaje y los valores o estados de las señales recibidas. Identificar ausencias de las cuatro señales numéricas obligatorias.
 3. Determinar la banda del puntaje y todas las alertas. Usar la tabla de decisión para elegir la ruta.
 4. Construir la salida con la decisión, los motivos ordenados, el desglose y la configuración aplicada.
 
@@ -43,8 +43,8 @@ El representante confirmó los cuatro mínimos fijos y la obligatoriedad de esta
 
 | Condición | Resultado observable |
 |---|---|
-| Puntaje desde R y señal obligatoria faltante o bajo su mínimo, con los indicadores de fraude inactivos | Revisión asistida. Se conservan las alertas y la banda de puntaje. |
-| Puntaje bajo R con señales obligatorias faltantes o bajo mínimo | Escalamiento a supervisor. Se conservan el motivo de puntaje y las alertas adicionales. |
+| Puntaje desde R y señal numérica obligatoria faltante o bajo su mínimo, con los indicadores de fraude inactivos | Revisión asistida. Se conservan las alertas y la banda de puntaje. |
+| Puntaje bajo R con señales numéricas obligatorias faltantes o bajo mínimo | Escalamiento a supervisor. Se conservan el motivo de puntaje y las alertas adicionales. |
 | Fraude activo con cualquier puntaje válido | Escalamiento a supervisor. El puntaje se conserva y el fraude encabeza el orden de motivos. |
 | Entrada inválida o configuración ausente o inválida | Error estructurado según la tabla de errores. La evaluación termina sin emitir una decisión de negocio. |
 
@@ -56,8 +56,8 @@ El representante confirmó los cuatro mínimos fijos y la obligatoriedad de esta
 |---|---|---|
 | Organización | Identifica de forma inequívoca a qué organización pertenece la evaluación. La selección de configuración se hace por organización. | P-06 |
 | Puntaje final | Obligatorio. Entero de 0 a 100 inclusive y calculado previamente. Se utiliza sin redondeo ni ajuste por fraude. | P-01, P-02, P-05, P-07 |
-| Señales numéricas | Se identifican mediante códigos del CAT-SEN v3 y tienen escala de 0 a 100. Los cuatro códigos de la tabla de mínimos siempre aplican. Omitir uno de esos cuatro genera ausencia. Enviar un valor inválido genera un error de entrada. La admisión de fracciones sigue pendiente en P-07.a. | P-04, P-05, P-07, F-03 |
-| Indicadores de fraude | `FRA_EDICION`, `FRA_MEMORIA` y `FRA_SINTETICO` tienen dos estados cuando se reciben, activo e inactivo. Omitir un indicador se distingue de declararlo inactivo. La consecuencia de la omisión sigue pendiente en P-05.a. | P-05, P-07, F-03 |
+| Señales numéricas | Se identifican mediante códigos del CAT-SEN v3. Solo admiten enteros de 0 a 100 inclusive. Las cuatro señales con mínimo son obligatorias y su omisión se trata como ausencia. El estado «no aplicable» queda fuera del contrato. Una señal presente con un valor inválido produce un error de entrada. | P-04, P-05, P-05.b, P-07, P-07.a, F-03 |
+| Indicadores de fraude | `FRA_EDICION`, `FRA_MEMORIA` y `FRA_SINTETICO` deben recibirse explícitamente como activos o inactivos. La omisión de cualquiera de los tres es un error de entrada. | P-05, P-05.a, P-07, F-03 |
 | Configuración efectiva | Una configuración explícita de la organización, con identificador, versión y umbrales enteros R y A. Debe cumplir `0 ≤ R < A ≤ 100`. Los cortes 60 y 85 son de referencia y requieren configuración explícita. | P-02, P-06, P-08, P-09 |
 
 El contrato técnico de Python definirá la representación de estos datos. El procedimiento externo establece que la configuración ya está aprobada y efectiva al entregarla al evaluador.
@@ -68,11 +68,11 @@ El contrato técnico de Python definirá la representación de estos datos. El p
 |---|---|---|
 | RF-01 | Usar el puntaje final recibido. Los puntajes y umbrales son enteros entre 0 y 100. Los valores fraccionarios son inválidos y el puntaje se conserva en el resultado. | P-02, P-07, P-09 |
 | RF-02 | Usar exclusivamente la configuración explícita y efectiva de la organización. Los umbrales cumplen `0 ≤ R < A ≤ 100`. Los valores de referencia 60 y 85 pueden configurarse explícitamente. Aplicar las tres rutas de la tabla de decisión. | P-01, P-02, P-03, P-06, P-08 |
-| RF-03 | Evaluar las cuatro señales numéricas obligatorias con los mínimos fijos de la tabla, para todas las organizaciones y procesos de E4. La igualdad con el mínimo cumple. | P-04, P-05 |
-| RF-04 | Escalar a supervisor si hay fraude activo, cualquiera sea el puntaje. El fraude conserva el puntaje original. | P-03, P-05 |
-| RF-05 | Distinguir una señal obligatoria faltante de un dato inválido, un indicador recibido explícitamente como inactivo y un estado no aplicable autorizado. Las cuatro señales obligatorias siempre aplican. | P-04, P-05, P-07 |
+| RF-03 | Evaluar las cuatro señales numéricas obligatorias con los mínimos fijos de la tabla, para todas las organizaciones y procesos de E4. La igualdad con el mínimo cumple. Evaluar los mínimos sobre valores del dominio entero definido para las señales. | P-04, P-05, P-07.a |
+| RF-04 | Exigir los tres indicadores de fraude explícitos. En evaluaciones válidas, escalar a supervisor si hay fraude activo y conservar el puntaje original. | P-03, P-05, P-05.a |
+| RF-05 | Tratar la omisión de alguna de las cuatro señales numéricas obligatorias como una condición de negocio. Distinguirla de un valor inválido, de un indicador de fraude explícitamente inactivo y de la omisión de un indicador de fraude. Excluir el estado «no aplicable». | P-04, P-05, P-05.a, P-05.b, P-07 |
 | RF-06 | Entregar una decisión explicable con el motivo principal, todos los motivos concurrentes en orden estable, el puntaje recibido, el desglose de señales y la configuración aplicada. | P-03, P-05, P-09 |
-| RF-07 | Informar errores estructurados ante puntaje faltante o inválido, tipos o valores de señal inválidos, identificadores desconocidos y configuración ausente o incoherente. Estos errores carecen de decisión de negocio. | P-03, P-06, P-07, P-09 |
+| RF-07 | Informar errores estructurados ante una entrada o configuración inválida. Incluye puntaje faltante o inválido, indicador de fraude omitido, tipo, estado o valor de señal inválidos, identificador de señal desconocido y configuración ausente o incoherente. Estos errores carecen de decisión de negocio. | P-03, P-05.a, P-05.b, P-06, P-07, P-07.a, P-09 |
 | RNF-01 | Evaluador independiente en Python, reproducible localmente y verificable con pytest, sin Bonsai ni servicios externos. | Encargo E4 |
 
 ## Tabla de decisión
@@ -82,11 +82,11 @@ En los casos válidos se aplica la primera fila que corresponda. R es el umbral 
 | Prioridad | Condición | Decisión |
 |---:|---|---|
 | 1 | Algún indicador de fraude activo o puntaje < R | Escalamiento a supervisor |
-| 2 | Sin la condición anterior y con alguna señal obligatoria faltante o bajo su mínimo | Revisión asistida |
+| 2 | Sin la condición anterior y con alguna señal numérica obligatoria faltante o bajo su mínimo | Revisión asistida |
 | 3 | Sin alertas y R ≤ puntaje < A | Revisión asistida |
 | 4 | Sin alertas y puntaje ≥ A | Aprobación automática |
 
-La presencia simultánea de varias condiciones conserva todos los motivos. El orden confirmado es fraude activo, puntaje bajo R, señal obligatoria faltante, mínimo incumplido y banda restante de puntaje. Dentro de una categoría con varios motivos por señal, se ordena por identificador. El motivo principal corresponde a la regla que determina la ruta, con ese mismo desempate.
+La presencia simultánea de varias condiciones conserva todos los motivos. El orden confirmado es fraude activo, puntaje bajo R, señal numérica obligatoria faltante, mínimo incumplido y banda restante de puntaje. Dentro de una categoría con varios motivos por señal, se ordena por identificador. El motivo principal corresponde a la regla que determina la ruta, con ese mismo desempate.
 
 ## Salidas
 
@@ -105,10 +105,12 @@ El rechazo corresponde a una persona. El desglose describe la evaluación de se�
 | Condición | Resultado |
 |---|---|
 | Puntaje ausente, fuera de 0–100, fraccionario o con tipo inválido | Error estructurado de entrada. |
-| Señal recibida con código desconocido, tipo inválido o valor fuera de su dominio | Error estructurado de entrada. |
+| Falta cualquiera de los tres indicadores de fraude | Error estructurado de entrada (P-05.a). |
+| Una señal declara el estado «no aplicable» | Error estructurado de entrada (P-05.b). |
+| Señal con código desconocido, tipo o estado inválido, o señal numérica con valor fraccionario o fuera de 0–100 | Error estructurado de entrada (P-07 y P-07.a). |
 | Configuración de la organización ausente, con estructura inválida o con umbrales que incumplen `0 ≤ R < A ≤ 100` o el tipo entero | Error estructurado de configuración. Se mantiene el aislamiento entre organizaciones. |
 
-En los tres casos la salida contiene el error y carece de decisión de negocio. La ausencia de una de las cuatro señales obligatorias activa el flujo alternativo correspondiente. La estructura concreta del error pertenece al diseño técnico.
+Para todas estas condiciones de error, la salida contiene el error y carece de decisión de negocio. La ausencia de una de las cuatro señales numéricas obligatorias activa el flujo alternativo correspondiente. La estructura concreta del error pertenece al diseño técnico.
 
 ## Trazabilidad de aceptación
 
@@ -116,15 +118,15 @@ En los tres casos la salida contiene el error y carece de decisión de negocio. 
 |---|---|---|
 | RF-01 | CA-01, CA-03, CA-05, CA-11, CA-15 | P-01, P-02, P-05, P-07, P-09 |
 | RF-02 | CA-01, CA-02, CA-03, CA-07, CA-08, CA-09, CA-14, CA-15, CA-16 | P-01, P-02, P-03, P-05, P-06, P-07, P-08, P-09 |
-| RF-03 | CA-04, CA-07, CA-16 | P-04, P-05, P-09 |
-| RF-04 | CA-05, CA-07, CA-12 | P-02, P-03, P-05, P-09. P-05.a pendiente. |
-| RF-05 | CA-06, CA-07, CA-11, CA-12, CA-13, CA-16 | P-03, P-04, P-05, P-07, P-09. P-05.a y P-05.b pendientes. |
+| RF-03 | CA-04, CA-07, CA-16, CA-17 | P-04, P-05, P-07.a, P-09 |
+| RF-04 | CA-05, CA-07, CA-12 | P-02, P-03, P-05, P-05.a, P-09 |
+| RF-05 | CA-06, CA-07, CA-11, CA-12, CA-13, CA-16 | P-03, P-04, P-05, P-05.a, P-05.b, P-07, P-09 |
 | RF-06 | CA-04, CA-05, CA-06, CA-07, CA-09, CA-16 | P-02, P-03, P-04, P-05, P-09 |
-| RF-07 | CA-08, CA-11, CA-13, CA-17 | P-03, P-06, P-07, P-09. P-05.b y P-07.a pendientes. |
+| RF-07 | CA-08, CA-11, CA-12, CA-13, CA-17 | P-03, P-05.a, P-05.b, P-06, P-07, P-07.a, P-09 |
 | RNF-01 | CA-10 | Encargo E4 |
 
-Los identificadores remiten a la [historia de usuario](historia-usuario.md) y al [registro de respuestas](preguntas-cliente.md). Los criterios de aclaraciones se completan con el resultado esperado cuando el representante responda.
+Los identificadores remiten a la [historia de usuario](historia-usuario.md) y al [registro de respuestas](preguntas-cliente.md). CA-12, CA-13 y CA-17 incorporan las aclaraciones aceptadas y definen sus resultados esperados.
 
-## Aclaraciones antes de la aprobación
+## Aprobación de la revisión
 
-Las nueve decisiones ya constan en el [registro del representante](preguntas-cliente.md). Falta precisar el tratamiento de un indicador de fraude omitido (P-05.a), las exclusiones permitidas bajo el estado no aplicable (P-05.b) y si las señales numéricas admiten valores fraccionarios (P-07.a). CA-12 y CA-13 quedan pendientes. CA-17 fija los casos fuera de rango y deja el caso fraccionario sujeto a la aclaración. La aprobación expresa de la revisión documental se registrará en un commit humano independiente.
+El [registro del representante](preguntas-cliente.md) contiene las respuestas P-01 a P-09 y la aceptación expresa de P-05.a, P-05.b y P-07.a. La aprobación del commit documental completo requiere una declaración expresa del representante y un commit humano independiente.

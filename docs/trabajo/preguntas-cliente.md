@@ -1,6 +1,6 @@
 # Preguntas al representante del cliente
 
-**Estado:** respuestas acordadas con el representante e incorporadas a la historia y la especificación. Las aclaraciones de contrato al final del documento y la aprobación expresa de la revisión siguen pendientes.
+**Estado:** respuestas acordadas con el representante e incorporadas a la historia y la especificación. El representante también aceptó las tres aclaraciones de contrato. La aprobación expresa de la revisión documental sigue pendiente.
 
 **Representante:** usuario de esta conversación, quien declaró actuar como representante del cliente.
 **Fecha:** 21 de noviembre de 2026 (America/Santiago).
@@ -61,7 +61,7 @@ Con R = 60 y A = 85, sin otras alertas:
 
 Las salidas de negocio son aprobación automática, revisión asistida y escalamiento a supervisor. El rechazo siempre es una decisión humana; el componente no rechaza automáticamente.
 
-Un puntaje inferior al umbral de revisión siempre provoca escalamiento a supervisor, incluso cuando además existe fraude activo, un mínimo incumplido o una señal obligatoria faltante. El resultado conserva todos los motivos concurrentes.
+En una evaluación válida, un puntaje inferior al umbral de revisión siempre provoca escalamiento a supervisor, incluso cuando además existe fraude activo, un mínimo incumplido o una señal numérica obligatoria faltante. El resultado conserva todos los motivos concurrentes.
 
 Los errores de entrada o configuración se informan como errores estructurados, sin emitir una decisión de negocio.
 
@@ -92,14 +92,14 @@ El fraude activo cambia la ruta sin descontar ni modificar el puntaje.
 
 Se distinguen estos estados:
 
-- **Señal obligatoria faltante:** no se recibió el dato requerido; constituye una condición de ausencia.
-- **Indicador de fraude inactivo:** se recibió explícitamente y no genera una alerta de fraude. Su ausencia no equivale a inactividad.
-- **Señal no aplicable:** queda excluida únicamente cuando el contrato permite ese estado. Las cuatro señales obligatorias de P-04 no pueden excluirse como no aplicables.
+- **Señal numérica obligatoria faltante:** no se recibió uno de los cuatro datos requeridos por P-04. Su ausencia se considera para elegir la ruta de negocio.
+- **Indicador de fraude inactivo:** se recibió explícitamente y no genera una alerta de fraude. Si falta un indicador, se devuelve el error de entrada definido en P-05.a.
+- **Estado no aplicable:** queda excluido del contrato según P-05.b.
 
-La clasificación sigue esta prioridad:
+Para entradas y configuraciones válidas, la clasificación sigue esta prioridad:
 
 1. Fraude activo o puntaje inferior a R: **escalamiento a supervisor**.
-2. Sin las condiciones anteriores, señal obligatoria faltante o mínimo incumplido: **revisión asistida**.
+2. Sin las condiciones anteriores, señal numérica obligatoria faltante o mínimo incumplido: **revisión asistida**.
 3. Sin alertas, puntaje desde R inclusive hasta A exclusive: **revisión asistida**.
 4. Sin alertas, puntaje desde A inclusive: **aprobación automática**.
 
@@ -107,7 +107,7 @@ La clasificación sigue esta prioridad:
 |---|---|---|
 | Fraude activo, con cualquier puntaje válido | Escalamiento a supervisor | Fraude y demás condiciones detectadas |
 | Mínimo incumplido, puntaje ≥ R, sin fraude | Revisión asistida | Mínimo incumplido y banda de puntaje |
-| Señal obligatoria faltante, puntaje ≥ R, sin fraude | Revisión asistida | Señal faltante y banda de puntaje |
+| Señal numérica obligatoria faltante, puntaje ≥ R, sin fraude | Revisión asistida | Señal faltante y banda de puntaje |
 | Puntaje < R, con mínimos incumplidos o señales faltantes | Escalamiento a supervisor | Riesgo alto y todas las alertas adicionales |
 | Fraude, mínimo incumplido y ausencia concurrentes | Escalamiento a supervisor | Todos los motivos detectados |
 
@@ -141,7 +141,7 @@ Las siguientes condiciones producen un error estructurado, sin decisión de nego
 - Identificadores de señales desconocidos.
 - Configuración ausente o incoherente.
 
-La ausencia de una señal obligatoria tiene el tratamiento de negocio definido en P-05. Se distingue de una señal presente cuyo valor es inválido.
+La ausencia de una de las cuatro señales numéricas obligatorias tiene el tratamiento de negocio definido en P-05. Los indicadores de fraude omitidos y los valores numéricos presentes inválidos se tratan conforme a P-05.a y P-07.a.
 
 ## P-08 · Gobernanza de umbrales
 
@@ -177,10 +177,18 @@ Para resolver empates entre motivos, se utiliza un orden estable: **fraude activ
 
 Cuando una entrada o configuración es inválida, se devuelve el error estructurado correspondiente y no una decisión de negocio.
 
-## Aclaraciones de contrato pendientes
+## Aclaraciones de contrato aceptadas
 
-Estas preguntas se desprenden de P-05 y P-07. Las respuestas acordadas se conservan arriba.
+El representante aceptó expresamente las tres propuestas en el chat de trabajo de E4 con la declaración «Acepto P-05.a, P-05.b y P-07.a tal como están formuladas». La aprobación de la revisión documental se registra por separado.
 
-- **P-05.a · Indicador de fraude omitido.** ¿Los tres indicadores del catálogo deben recibirse siempre de forma explícita? Si falta uno, ¿se trata como señal obligatoria faltante, como error estructurado o de otra manera? Indique la salida de un caso que podría aprobarse si ese indicador se hubiera recibido como inactivo. Afecta RF-04, RF-05 y CA-12.
-- **P-05.b · Estado no aplicable.** ¿Qué señales, si alguna, pueden declararse no aplicables en E4? ¿Qué tratamiento recibe un intento de declarar no aplicable una de las cuatro obligatorias? Afecta RF-05, RF-07 y CA-13.
-- **P-07.a · Precisión de las señales numéricas.** ¿Los valores de las señales numéricas individuales son enteros de 0 a 100 o también admiten fracciones dentro de ese rango? El contrato ya fija como enteros el puntaje final y los umbrales. Para un caso con puntaje 85, sin fraude y con las demás señales en sus mínimos, indique si `DOC_AUT` en 69,5 se evalúa como valor bajo el mínimo o se informa como error estructurado de entrada. Afecta RF-07 y CA-17.
+### P-05.a · Indicador de fraude omitido
+
+`FRA_EDICION`, `FRA_MEMORIA` y `FRA_SINTETICO` deben recibirse explícitamente como activos o inactivos. Si falta cualquiera, se devuelve un error estructurado de entrada sin decisión de negocio. En un caso que cumple los requisitos de aprobación, reemplazar un indicador inactivo por su omisión cambia el resultado de aprobación a error de entrada. Aplica a RF-04, RF-05, RF-07 y CA-12.
+
+### P-05.b · Estado no aplicable
+
+E4 no admite el estado «no aplicable». Declararlo para cualquiera de las cuatro señales numéricas obligatorias devuelve un error estructurado de entrada sin decisión de negocio. La ausencia de una de esas señales sigue la ruta de negocio de P-05. Aplica a RF-05, RF-07 y CA-13.
+
+### P-07.a · Dominio de las señales numéricas
+
+Las señales numéricas solo admiten enteros entre 0 y 100, ambos inclusive. Los valores fraccionarios y fuera de rango devuelven un error estructurado de entrada sin decisión de negocio. Por ejemplo, `DOC_AUT` con valor 69,5 produce un error de entrada. Aplica a RF-03, RF-07 y CA-17.
