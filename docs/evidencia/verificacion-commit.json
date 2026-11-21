@@ -1,0 +1,61 @@
+{
+  "commit_codigo": "539ddf4",
+  "archivos": [
+    {
+      "archivo": ".github/skills/pytest-runner/scripts/run_pytest.py",
+      "sha256_probado": "58c5c649bfd10160a48dbabfa3116cbeb50f966a1f4147231a09cd86833310a4",
+      "sha256_blob_git": "ed52ebfafef7de35b8ebfdc24c15a04ecebe2878cd74141e0869528d771ee287",
+      "bytes_identicos": false,
+      "contenido_identico_normalizando_CRLF_LF": true
+    },
+    {
+      "archivo": "pyproject.toml",
+      "sha256_probado": "5a449a7c6bfa3895d5b79b09886942a6267f28bc2f199a9410015bc9c7d8339c",
+      "sha256_blob_git": "5a449a7c6bfa3895d5b79b09886942a6267f28bc2f199a9410015bc9c7d8339c",
+      "bytes_identicos": true,
+      "contenido_identico_normalizando_CRLF_LF": true
+    },
+    {
+      "archivo": "requirements-dev.txt",
+      "sha256_probado": "693d97bdd0fb5283060c3efadf25a90d0c3b59be09b25fac59f5f1c68a1f993b",
+      "sha256_blob_git": "693d97bdd0fb5283060c3efadf25a90d0c3b59be09b25fac59f5f1c68a1f993b",
+      "bytes_identicos": true,
+      "contenido_identico_normalizando_CRLF_LF": true
+    },
+    {
+      "archivo": "src/mira/__init__.py",
+      "sha256_probado": "a7584c03f6eb2501ab16ef65c016ddffb990d04075ff1afd9755f144095b6275",
+      "sha256_blob_git": "a7584c03f6eb2501ab16ef65c016ddffb990d04075ff1afd9755f144095b6275",
+      "bytes_identicos": true,
+      "contenido_identico_normalizando_CRLF_LF": true
+    },
+    {
+      "archivo": "src/mira/evaluador.py",
+      "sha256_probado": "3ae2b343b33ef8f88c7cd9089ed423c65460853de511e76a4d7a54be9d85e11b",
+      "sha256_blob_git": "3ae2b343b33ef8f88c7cd9089ed423c65460853de511e76a4d7a54be9d85e11b",
+      "bytes_identicos": true,
+      "contenido_identico_normalizando_CRLF_LF": true
+    },
+    {
+      "archivo": "tests/conftest.py",
+      "sha256_probado": "00cb296871206fecc24a89915890ccb00f503b9ab579bf41ff0ee711432d2a19",
+      "sha256_blob_git": "00cb296871206fecc24a89915890ccb00f503b9ab579bf41ff0ee711432d2a19",
+      "bytes_identicos": true,
+      "contenido_identico_normalizando_CRLF_LF": true
+    },
+    {
+      "archivo": "tests/test_aceptacion.py",
+      "sha256_probado": "e5066300b91a2681d9aac34e541167d05714f9a0af9b20ff34d86ab45ef55538",
+      "sha256_blob_git": "e5066300b91a2681d9aac34e541167d05714f9a0af9b20ff34d86ab45ef55538",
+      "bytes_identicos": true,
+      "contenido_identico_normalizando_CRLF_LF": true
+    },
+    {
+      "archivo": "tests/test_validacion.py",
+      "sha256_probado": "3bf2ae3f5f1c06b15b8c361ed2d10c509cd9965a35a2afdd4f4d6a5322f361fb",
+      "sha256_blob_git": "3bf2ae3f5f1c06b15b8c361ed2d10c509cd9965a35a2afdd4f4d6a5322f361fb",
+      "bytes_identicos": true,
+      "contenido_identico_normalizando_CRLF_LF": true
+    }
+  ]
+}

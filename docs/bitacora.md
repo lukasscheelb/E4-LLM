@@ -129,3 +129,10 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 - **Intervenciones humanas:** encargo inicial y aprobación concreta del plan están conservados. Traspasos automáticos y mensajes del coordinador no se presentan como acciones humanas. Los permisos de herramienta no tienen aquí conteo global completo; esa métrica queda limitada explícitamente.
 - **Fallas:** incidencias reales de entorno y evaluación conservadas; no se inventaron fallas MAST ni rechazos humanos para satisfacer la rúbrica. No hubo ciclo Developer–Reviewer de corrección (0 de máximo 2).
 - **Estado:** siete pasos solicitados desarrollados y evidenciados. El cierre funcional no completa el informe PDF, PPT, demo, taxonomía MAST ni las métricas experimentales que no pudieron medirse homogéneamente. No se hizo merge a main ni etiqueta final de entrega.
+
+## Verificación posterior al commit de implementación
+
+- Código, pruebas y evidencia publicados en `539ddf4`; árbol limpio después del push.
+- Se cotejaron los ocho archivos del manifiesto contra sus bytes locales probados y contra los blobs Git. Los hashes locales siguen coincidiendo exactamente. Git normaliza CRLF/LF en algunos archivos; sus hashes de blob pueden diferir por ese motivo, pero el contenido coincide íntegramente al normalizar únicamente los finales de línea.
+- Evidencia: `docs/evidencia/verificacion-commit.json`, con ambos hashes y resultado por archivo. No hubo cambio de lógica ni nueva ejecución necesaria por este cotejo documental.
+- Logs/JUnit originales conservan los espacios finales producidos por pytest; la comprobación de whitespace se aplicó a código y documentación excluyendo esos artefactos crudos para no alterar evidencia.
