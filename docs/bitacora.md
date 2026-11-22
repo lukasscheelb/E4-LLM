@@ -171,3 +171,16 @@ Este bloque se completa únicamente después de recibir aprobación expresa para
 - **Archivos:** PDF y PPTX regenerados en sus rutas originales; manifest y ZIP actualizados con las nuevas copias. Se añadieron propiedades neutras de publicación sin atribuir un editor o fabricante distinto. Temas internos con nombre neutro.
 - **Verificación:** informe de diez páginas y presentación de diez diapositivas; texto extraído, notas y XML de propiedades sin los términos revisados. PDF renderizado e inspeccionado; diapositivas sin cambios visibles de composición, notas verificadas. PPTX pasó integridad, geometría e importación tras normalizar sus propiedades. Código y resultados de pruebas sin cambios.
 - **Versionado:** cambios en main; la etiqueta histórica entrega-3 no se mueve. El historial y los registros originales del repositorio se conservan.
+
+## Verificación complementaria en VS Code
+
+- **Alcance:** revisión de la implementación entregada sobre `main` en `2952d3a`, con la aprobación documental existente `cadb048`.
+- **Analista → Planificador:** [análisis de los 17 criterios](trabajo/analisis-vscode.md) y [revisión de trazabilidad](trabajo/plan-vscode.md), a partir de las respuestas que compartió el usuario.
+- **Developer → Reviewer:** [traspaso](trabajo/implementacion-vscode.md), [log local](evidencia/vscode-developer.log) y [JUnit](evidencia/vscode-developer-junit.xml). Resultado verificado: 173 aprobadas, retorno 0.
+- **Cierre:** el usuario compartió un [veredicto favorable de Reviewer](trabajo/revision-vscode.md) en la revisión inicial. CA-10 se respalda con la evidencia histórica sin red. Esta verificación conservó el código y los artefactos de la corrida histórica.
+
+## Corrección solicitada por el equipo · 2026-11-22
+
+- **Decisión humana:** al revisar la observación de Reviewer sobre la ruta de importación omitida en el [log inicial](evidencia/vscode-developer.log), el usuario respondió «Devolver para corregir la evidencia».
+- **Corrección y nueva ejecución:** se registró y comprobó la ruta absoluta del módulo en el mismo proceso de pytest, antes y después de ejecutar la suite. [Log corregido](evidencia/vscode-developer-r1.log) · [JUnit nuevo](evidencia/vscode-developer-r1-junit.xml). Resultado: 173 aprobadas, retorno 0. La devolución ocurrió en la verificación complementaria de VS Code y se conserva aparte del historial de la corrida original.
+- **Verificación adicional:** se reprodujo F-02 con dos checkouts temporales y se midieron tres ejecuciones funcionales por enfoque en condiciones comunes. [Datos y salidas](evidencia/verificacion-comparable-2026-11-22.json). El tiempo total de desarrollo y los tokens comparables siguen sin medición.

@@ -56,3 +56,14 @@ En este caso ambos enfoques llegaron al mismo cumplimiento de aceptación. La se
 Se añadió una guardia explícita `MIRA_SOURCE_ROOT` a la evaluación común y se preservó su versión anterior en `docs/evidencia/historico/aceptacion_comun-v1.py`. El manifiesto histórico corresponde a esa copia; el actual está en `cierre-evaluacion-manifiesto.json`. Las nuevas ejecuciones `cierre-multi` y `cierre-baseline` obtuvieron 115/115 cada una, retornos 0, con ruta de módulo y red aislada verificadas. No cambió el evaluador ni sus suites propias. Estos resultados no reemplazan los históricos ni completan retrospectivamente las métricas ausentes.
 
 Se realizó un análisis interpretativo posterior de dos episodios en `docs/entrega/fallas.md`, con fuente primaria MAST y límites explícitos. No se modifica la afirmación histórica de que durante la corrida no se habían clasificado fallas ni se presenta una interpretación posterior como anotación certificada.
+
+## Medición complementaria en el mismo entorno · 2026-11-22
+
+Se evaluaron las dos implementaciones publicadas con la misma suite funcional, el mismo intérprete y la misma versión de pytest. Se hicieron tres ejecuciones por enfoque, alternando el orden. El reloj de pared incluye el arranque, la colección y la ejecución de pytest.
+
+| Enfoque | Resultados por repetición | Mediana de tiempo de pared |
+|---|---|---:|
+| Multiagente | 114 aprobadas, 1 deseleccionada, retorno 0 en las tres | 1,254 s |
+| Generalista | 114 aprobadas, 1 deseleccionada, retorno 0 en las tres | 1,244 s |
+
+Se excluyó CA-10 para esta medición en Windows, porque la red no estaba aislada. CA-10 conserva su prueba histórica en Docker. La diferencia de 0,010 s entre medianas no permite inferir una ventaja. Estos tiempos corresponden a pytest. El tiempo total de desarrollo y los tokens comparables siguen sin medición. [Ejecuciones, comandos y muestras](../evidencia/verificacion-comparable-2026-11-22.json).
