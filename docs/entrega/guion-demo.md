@@ -4,17 +4,21 @@
 
 | Diapositiva | Persona | Segundos |
 |---|---|---:|
-| 1 Portada | Lukas | 40 |
-| 2 Caso | Lukas | 80 |
-| 3 Roles y archivos | Francisca | 75 |
-| 4 Skills | Francisca | 60 |
-| 5 Aprobaciones | Francisca | 45 |
-| 6 Demostración | Sebastian | 360 |
-| 7 Resultados | Sebastian | 60 |
-| 8 Incidencias | Francisca | 50 |
-| 9 Discusión | Lukas | 80 |
-| 10 Aprendizajes | Sebastian | 50 |
+| 1 Portada | Lukas | 25 |
+| 2 Caso, alcance y reglas | Lukas | 95 |
+| 3 Arquitectura y controles humanos | Francisca | 85 |
+| 4 Contratos, herramientas y skills | Francisca | 95 |
+| 5 Demo: entrada y traspasos | Sebastian | 80 |
+| 6 Demo: API y fronteras | Sebastian | 170 |
+| 7 Demo: pruebas y entorno | Sebastian | 110 |
+| 8 Resultados frente a línea base | Sebastian | 90 |
+| 9 Fallas y devolución humana complementaria | Francisca | 90 |
+| 10 Aprendizajes y cierre | Lukas | 60 |
 | **Total** | **Todo el equipo** | **900** |
+
+Diez diapositivas, sin anexos adicionales. Bloques de la pauta: caso 120 s, diseño 180 s, demostración 360 s, resultados y fallas 180 s, cierre 60 s. P1 se apoya en 3–4, P2 en 5–7 y P3 en 8–9. Las preguntas de preparación posteriores apoyan P4. Esta tabla planifica P5, pero no acredita un ensayo realizado.
+
+La diapositiva 8 distingue la suite común histórica sin red de la medición funcional posterior del 22/11. La 9 distingue la falla histórica de evaluación de la devolución humana complementaria documentada en revision-vscode.md. La revisión de cierre de esta devolución permanece pendiente según ese registro.
 
 Es una asignación propuesta, no un ensayo realizado. Todos deben poder responder sobre cualquier parte. Reservar cinco minutos adicionales para preguntas, según la pauta.
 

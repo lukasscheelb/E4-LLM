@@ -1,0 +1,9 @@
+{
+  "fecha": "2026-11-22",
+  "archivo": "output/pdf/Informe_MIRA_E4.pdf",
+  "sha256": "bb5a788ed7504af350f3b546782590e54b4dfa0448ce76009de628c62ea6f43c",
+  "evidencia_incorporada_commit": "68e66e110583442d350b6e9cd6e3d64971bc7858",
+  "paginas": 10,
+  "verificacion": "Extraccion de texto y revision de renders de las 10 paginas",
+  "alcance": "Integra evidencia final sin ejecutar nuevamente agentes ni pruebas; conserva revision complementaria de cierre pendiente."
+}

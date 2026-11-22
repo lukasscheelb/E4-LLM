@@ -2,17 +2,19 @@
 
 Lukas Scheel (representante de negocio), Francisca Meyer y Sebastian Rodriguez.
 
+Actualización documental con evidencia final del commit 68e66e1, 22-11-2026.
+
 ## 6.1 Resumen ejecutivo
 
 El sistema llevó una necesidad de MIRA a una API Python implementada, probada y revisada. Cuatro agentes separados realizaron análisis, planificación, desarrollo y revisión. Lukas Scheel aprobó la revisión documental y después el plan. La solución usa el puntaje recibido, aplica umbrales por organización y explica la ruta sin rechazar automáticamente.
 
-La suite propia aprobó 173 pruebas. Una evaluación común posterior aprobó 115 pruebas y los 17 criterios en ambas soluciones, multiagente y generalista. La separación aportó artefactos y revisión independiente, pero esta corrida no demuestra una mejora funcional ni ahorro de costo frente al generalista. Recomendamos medir futuras corridas con el mismo protocolo desde el inicio y verificar la procedencia de cada implementación antes de comparar.
+La suite propia y su verificación complementaria aprobaron 173 pruebas. Una evaluación común histórica aprobó 115 pruebas y los 17 criterios en ambas soluciones. El equipo devolvió una evidencia incompleta y obtuvo un registro corregido. Tres repeticiones funcionales por enfoque dieron tiempos de pytest similares. La separación aportó trazabilidad y revisión independiente, pero no demuestra ahorro de desarrollo o tokens. Recomendamos medir el proceso completo desde el inicio.
 
 ## 6.2 Alternativa elegida y caso
 
 Se eligió la alternativa A porque el problema contiene discrepancias de reglas, configuración y prioridades que requieren aclaración humana antes de programar. El componente académico evalúa puntaje final entero 0–100, cuatro señales con mínimos y tres indicadores de fraude. Las seis señales numéricas opcionales aceptadas se validan y desglosan sin cambiar la ruta.
 
-Equipo: Lukas Scheel (representante de negocio), Francisca Meyer y Sebastian Rodriguez. El sistema utiliza cuatro agentes de Codex con responsabilidades de análisis, planificación, desarrollo y revisión. Entorno de pruebas: Windows/Python 3.14.3 y Docker Linux/Python 3.14.10 con pytest 9.0.2. La rotación del representante respecto de E2 queda por confirmar.
+Equipo: Lukas Scheel (representante de negocio), Francisca Meyer y Sebastian Rodriguez. El sistema utiliza cuatro agentes de Codex con responsabilidades de análisis, planificación, desarrollo y revisión. Entorno de pruebas: Windows/Python 3.14.3 y Docker Linux/Python 3.14.10 con pytest 9.0.2. La rotación del representante respecto de E2 queda por confirmar. La verificación comparable del 22-11-2026 utilizó Windows, Python 3.13.9 y pytest 9.0.2, según la evidencia final de 68e66e1.
 
 ## 6.3 Diseño del sistema multiagente
 
@@ -44,17 +46,17 @@ La verificación utilizó Docker y una imagen con dependencias preparadas antes 
 
 Reviewer inspeccionó implementación, matriz, suites y evidencia de aceptación. Emitió Aprobado en la revisión inicial, sin hallazgos P1/P2 y sin usar ciclos de corrección. Su respuesta se guardó íntegra con normalización de espacios finales. No se inventó un rechazo para utilizar el máximo de dos ciclos.
 
-Las decisiones humanas registradas fueron la aprobación de reglas/revisión documental y la aprobación del plan con su addendum. La evidencia no registra una salida rechazada o corregida por una persona durante la corrida; se declara como brecha de la pauta, no como hecho cumplido.
+La corrida original registra aprobación documental y autorización del plan. En la verificación complementaria de VS Code, Reviewer aprobó inicialmente con una observación: el log omitía la ruta del módulo importado. El equipo decidió «Devolver para corregir la evidencia». La repetición sobre 2952d3a comprobó mira.__file__ antes y después de pytest en el mismo proceso: 173/173 y retorno 0, sin cambiar código ni pruebas. Log y JUnit r1 conservan la corrección. Ocurrió después de la corrida original y queda disponible para revisión de cierre [2].
 
 El generalista trabajó en una sesión sin historial y una rama separada desde cadb048. No recibió los productos multiagente. Su implementación y autoevaluación quedaron en 79c69fd. La misma evaluación externa se aplicó después a ambas entregas.
 
 ## 6.5 Resultados y utilidad
 
-Las suites propias tienen tamaños diferentes. El número de pruebas no permite concluir que una solución tenga más calidad. La suite común posterior utilizó adaptadores de firma y vocabulario, sin cambiar la lógica; ambos enfoques aprobaron 115/115, incluidos los 17 CA. Los siete RF y RNF-01 quedaron cubiertos en esta evaluación.
+Las suites propias tienen tamaños diferentes; contar 173 frente a 124 pruebas no demuestra mayor calidad. La suite común histórica, posterior y no ciega, aprobó 115/115 en ambos enfoques, con adaptadores de firma y vocabulario sin cambiar la lógica. Incluye 17 CA, siete RF y RNF-01, con CA-10 acreditado mediante aislamiento real en Docker.
 
-El tiempo de 258 segundos del generalista mide su sesión, no el experimento entero. Para el multiagente no existe un intervalo completo equivalente: hubo espera humana y preparación compartida. Los contadores de tokens y el total de permisos de herramientas no estuvieron disponibles. No se reconstruyen métricas ficticias a partir de logs parciales.
+La medición complementaria de 68e66e1 alternó tres ejecuciones por enfoque en Windows con Python 3.13.9 y pytest 9.0.2. Cada una obtuvo 114 aprobadas, una deseleccionada y retorno 0. Se excluyó CA-10 por falta de aislamiento en Windows. El reloj de pared incluye arranque, colección y ejecución: medianas 1,254 s multiagente y 1,244 s generalista. La diferencia de 0,010 s no acredita ventaja [3].
 
-La suite común se escribió después de desarrollar, no fue ciega ni quedó congelada antes de las corridas. El resultado aporta evidencia de aceptación, pero una sola comparación no permite inferir superioridad estadística. La ventaja observada del multiagente es la separación de responsabilidades y revisión; no se demuestra ahorro de tiempo o tokens.
+Estos tiempos miden pytest, no resolución del caso. Los 258 s históricos del generalista y la ventana incompleta multiagente no son comparables. Siguen ausentes el tiempo total de desarrollo, tokens y permisos completos. Hubo una corrida de desarrollo por enfoque; repetir pruebas no aumenta esa muestra. La suite común se creó después de desarrollar. La separación aporta control y trazabilidad, sin ahorro de costo o superioridad funcional demostrados.
 
 ## 6.6 Análisis de fallas y correcciones
 
@@ -62,9 +64,9 @@ La clasificación se usa como interpretación analítica, no como anotación cer
 
 F-01: la primera salida del Planificador omitió el aporte complementario de catálogo. Es compatible con FM-2.5, consideración insuficiente de otra entrada, pero no se conoce con certeza cuándo recibió ese mensaje. No puede descartarse una carrera de entrega. La corrección real fue un segundo turno y un addendum, no una decisión inventada del cliente. Se refuerza el perfil con un inventario de aportes y cierre de hallazgos.
 
-F-02: la primera evaluación común del generalista importó el src multiagente por el descubrimiento de configuración de pytest. Produjo 114 fallos de AttributeError que no medían la lógica del generalista. Es compatible con FM-3.3, verificación incorrecta, en la capa de evaluación posterior. Se fijó el archivo de configuración y ambas repeticiones dieron 115/115. Se refuerza la skill para comprobar la ruta del módulo antes de aceptar evidencia.
+F-02: pytest descubrió la configuración de otro checkout e importó el src multiagente al evaluar al generalista. Los 114 AttributeError históricos no medían su lógica. Se fijó la configuración y ambas repeticiones dieron 115/115. Es compatible con FM-3.3, verificación incorrecta, en la evaluación posterior. El complemento de 68e66e1 reprodujo cinco fallos seleccionados sin guardia; con MIRA_SOURCE_ROOT, la colección rechazó el módulo ajeno antes de aceptar resultados. La ruta correcta permitió después tres ejecuciones funcionales válidas por enfoque [3].
 
-Las causas operativas y sus límites están en docs/entrega/fallas.md. Los cambios preventivos de perfil/skill no prueban que una línea omitida haya causado por sí sola el incidente. Por ello no afirmamos cumplir el nivel máximo de dos fallas MAST con atribución causal plena. El fallo de temporales del contenedor se conserva como incidencia adicional de entorno.
+El perfil del Planificador y la skill de trazabilidad incorporaron controles preventivos, con diff y nuevas ejecuciones en docs/entrega/fallas.md. La reproducción de F-02 confirma el problema operativo de importación, pero no prueba que una omisión en una línea de agente o skill sea la causa exclusiva. No se afirma el nivel máximo de dos fallas MAST con causalidad plena. La devolución humana de evidencia pertenece al complemento de VS Code, no al historial original. El fallo de temporales del contenedor se conserva como incidencia adicional de entorno.
 
 ## 6.7 Discusión
 
@@ -72,22 +74,22 @@ Cuatro roles hicieron visibles las transiciones de análisis, diseño, construcc
 
 El contexto se preservó mediante archivos, hashes y decisiones explícitas. La información de catálogo mostró el límite de enviar una actualización mientras un agente ya está cerrando su respuesta. Un inventario de aportes pendientes puede reducir omisiones, pero debe comprobarse en corridas futuras.
 
-El control humano fue concreto en dos revisiones, con referencias a commits. La solicitud general de continuar no se usó para aprobar anticipadamente un plan todavía inexistente. Aun así, aprobar un mensaje no demuestra por sí solo la profundidad de la lectura humana; esa calidad de revisión no está medida.
+El control humano fue concreto en la aprobación documental y del plan. El complemento añadió una devolución explícita por evidencia incompleta y una nueva ejecución con ruta verificada. Esto muestra una intervención sobre un resultado observable, sin convertirla en rechazo retrospectivo de la corrida original. Tampoco acredita por sí solo la profundidad de toda lectura humana. La revisión de cierre de ese complemento sigue pendiente según el registro [2].
 
 El aislamiento de red, la selección del módulo y la identidad del código probado forman parte del experimento, no solo del producto. Una suite correcta puede producir una comparación inválida si importa otra implementación. Las verificaciones de entorno deben ser anteriores al conteo de resultados.
 
-La ausencia de versión exacta del modelo, consumo completo de tokens y tiempos homogéneos reduce la reproducibilidad experimental. El repositorio permite reproducir reglas y pruebas, pero no reconstruye retrospectivamente todo el costo cognitivo o de coordinación. La siguiente corrida debería medirlo desde el primer despacho y congelar la suite común antes de desarrollar.
+La medición complementaria homogeneizó el entorno de pytest y alternó tres repeticiones; no midió el desarrollo ni el costo de coordinación. La ausencia de versión exacta del modelo, tokens completos y tiempo total simétrico limita la reproducibilidad experimental. La próxima corrida debería fijar instrumento, modelo y suite común antes de desarrollar y medir desde el primer despacho. Los tiempos casi iguales de las pruebas no justifican una conclusión de eficiencia global.
 
 ## 6.8 Conclusiones
 
 Se completó el recorrido funcional de la alternativa A con reglas aclaradas, aprobación previa, cuatro roles separados, código, pruebas y revisión. El aprendizaje principal es vincular cada decisión con una revisión y cada resultado con el estado que realmente se ejecutó.
 
-La próxima iteración fijaría desde el inicio la herramienta y modelo, una medición simétrica y el inventario de aportes entre agentes. Mantendría los controles humanos y la comparación honesta: en este caso ambas soluciones cumplieron la aceptación, sin evidencia suficiente de ahorro del enfoque multiagente.
+La verificación final agregó una devolución humana de evidencia, su repetición corregida y una medición funcional comparable. El aprendizaje es comprobar qué módulo se ejecuta antes de aceptar sus resultados. Una nueva corrida debería instrumentar tiempo total y tokens desde el inicio y congelar la suite común antes de desarrollar. Ambas soluciones cumplen la aceptación; no existe evidencia suficiente de ahorro del enfoque multiagente.
 
 ## Anexos Referencias y límites de entrega
 
 [1] Cemri et al. Why Do Multi-Agent LLM Systems Fail? arXiv:2503.13657v2, 2025. https://arxiv.org/html/2503.13657v2 (consulta 21-11-2026).
 
-Fuentes del caso y evidencia: repositorio https://github.com/lukasscheelb/E4-LLM; bitácora, plan, revisión y comparación. La lista completa de artefactos, comandos y límites se incluye en docs/entrega/README.md. Las fechas de la pauta discrepan: portada 30/11 y condiciones 23/11/2026 a las 14:00; confirmar con el docente.
+[2] Evidencia final del repositorio E4-LLM, commit 68e66e110583442d350b6e9cd6e3d64971bc7858 (22-11-2026): docs/bitacora.md y docs/trabajo/revision-vscode.md. Corrección: docs/evidencia/vscode-developer-r1.log y vscode-developer-r1-junit.xml. Código evaluado: 2952d3a. Revisión de cierre complementaria pendiente.
 
-Datos no acreditados: rotación del representante respecto de E2, acceso efectivo del docente, ensayo oral realizado y corrección humana de una salida. El informe conserva estas verificaciones como pendientes.
+[3] docs/evidencia/verificacion-comparable-2026-11-22.json: reproducción de F-02, comandos, seis muestras y medianas; interpretación en docs/linea-base/comparacion.md. Pendientes externos: rotación del representante respecto de E2, acceso efectivo del docente y ensayo oral. La pauta discrepa entre portada 30/11 y plazo 23/11/2026 a las 14:00; confirmar con el docente.

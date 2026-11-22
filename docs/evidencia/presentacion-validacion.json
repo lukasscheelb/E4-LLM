@@ -1,0 +1,30 @@
+{
+  "fecha_local": "2026-11-22",
+  "artefacto": "output/presentacion/Presentacion_MIRA_E4.pptx",
+  "sha256": "e2a2e142b08177411aa31db013be77c116e0b53f82f994b645b220abdf6e958d",
+  "diapositivas": 10,
+  "anexos": 0,
+  "fondo": "salmon #F7C4B9",
+  "duracion_planificada_segundos": 900,
+  "demostracion_planificada_segundos": 360,
+  "tablas_nativas": [
+    4
+  ],
+  "grafico_nativo": [
+    8
+  ],
+  "fuentes": [
+    "output/pdf/Informe_MIRA_E4.pdf",
+    "docs/entrega/informe.md",
+    "docs/linea-base/comparacion.md",
+    "docs/trabajo/revision-vscode.md"
+  ],
+  "validaciones": {
+    "integridad_paquete": "pass",
+    "geometria_y_fuentes": "pass, sin advertencias",
+    "datos_grafico_y_workbook": "pass",
+    "renders": "10 revisados",
+    "powerpoint": "apertura sin reparacion e inspeccion de portada, tabla 4 y grafico 8"
+  },
+  "alcance": "Planifica exposicion, no acredita ensayo, demo en vivo ni revision de cierre complementaria."
+}

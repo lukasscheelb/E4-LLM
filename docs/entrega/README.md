@@ -15,7 +15,7 @@ Identificación proporcionada por el usuario. Falta confirmar quién representó
 ## Artefactos
 
 - `output/pdf/Informe_MIRA_E4.pdf`: informe de diez páginas con portada y ocho secciones dentro de sus máximos.
-- `output/presentacion/Presentacion_MIRA_E4.pptx`: diez diapositivas editables con notas y reparto propuesto de quince minutos.
+- `output/presentacion/Presentacion_MIRA_E4.pptx`: diez diapositivas editables, con fondo salmón y contenido técnico actualizado, con notas y reparto propuesto de quince minutos.
 - `docs/entrega/informe.md` y `contenido.json`: fuentes del informe.
 - `docs/entrega/diagrama.mmd`: sistema, archivos, decisiones humanas y correcciones máximas.
 - `docs/entrega/agentes.md`: tabla de entradas, salidas, herramientas, término y skills.
@@ -30,7 +30,7 @@ Los artefactos originales de la corrida, la bitácora y los prompts están en `d
 
 La ejecución multiagente utilizó agentes de Codex separados, siguiendo perfiles por instrucciones. El identificador exacto del modelo y la versión de la app no estuvieron expuestos. Pruebas del producto: Python 3.14.3 local y 3.14.10 Linux; pytest 9.0.2 en la evaluación común; Docker 29.9.2. El generalista usó inicialmente pytest 9.2.0 en su suite Windows; la comparación aislada usó 9.0.2 para ambos.
 
-Se revisaron las diez diapositivas renderizadas y las páginas del informe PDF.
+Se revisaron las diez diapositivas renderizadas. La presentación renovada se abrió en PowerPoint sin avisos de reparación el 22-11-2026 y se inspeccionaron la portada, la tabla de agentes y el gráfico en modo presentación. El informe PDF conserva su validación anterior.
 
 ## Reproducción rápida
 
