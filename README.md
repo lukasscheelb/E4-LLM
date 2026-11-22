@@ -10,9 +10,9 @@
 
 **Entrada del caso:** el cliente necesita que MIRA use el puntaje del caso, las señales de fraude y los umbrales de cada organización para decidir la ruta y explicar el motivo. El comportamiento exacto está en la especificación aprobada.
 
-**Estado actual:** revisión documental y plan aprobados por Lukas Scheel; implementación y pruebas reales completadas. Los cuatro roles del sistema se ejecutan como agentes de Codex. Suite propia: 173/173; suite común de aceptación: 115/115, con aislamiento de red verificado en Docker. Veredicto independiente en [la revisión](docs/trabajo/revision.md) y [comparación con un generalista](docs/linea-base/comparacion.md).
+**Estado actual:** revisión documental y plan aprobados por Lukas Scheel; implementación y pruebas reales completadas. Suite propia: 173/173; suite común de aceptación: 115/115, con aislamiento de red verificado en Docker. Veredicto independiente en [la revisión](docs/trabajo/revision.md) y [comparación con un generalista](docs/linea-base/comparacion.md).
 
-La corrida entregada utilizó agentes de Codex separados, siguiendo los perfiles del repositorio por instrucciones; no se presenta como una corrida de GitHub Copilot/VS Code. Los traspasos entre subagentes fueron coordinados automáticamente, con aprobación humana previa de la especificación y control humano adicional del plan. La guía VS Code de abajo se conserva como alternativa de reproducción, no como evidencia de esa herramienta.
+La corrida entregada se realizó con cuatro agentes separados de Codex, siguiendo los perfiles del repositorio por instrucciones; no se presenta como una corrida de GitHub Copilot/VS Code. Los traspasos entre subagentes fueron coordinados automáticamente, con aprobación humana previa de la especificación y control humano adicional del plan. La guía VS Code de abajo se conserva como alternativa de reproducción, no como evidencia de esa herramienta.
 
 | Documento | Contenido |
 |---|---|

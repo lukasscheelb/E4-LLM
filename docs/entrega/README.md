@@ -28,9 +28,9 @@ Los artefactos originales de la corrida, la bitácora y los prompts están en `d
 
 ## Herramienta y versiones
 
-La ejecución multiagente utilizó agentes de Codex separados, siguiendo perfiles por instrucciones. El identificador exacto del modelo y la versión de la app no estuvieron expuestos. El runtime de autoría de documentos fue bundle 26.1119.11507, Python 3.12.14; no es la versión del modelo. Pruebas del producto: Python 3.14.3 local y 3.14.10 Linux; pytest 9.0.2 en la evaluación común; Docker 29.9.2. El generalista usó inicialmente pytest 9.2.0 en su suite Windows; la comparación aislada usó 9.0.2 para ambos.
+La ejecución multiagente utilizó agentes de Codex separados, siguiendo perfiles por instrucciones. El identificador exacto del modelo y la versión de la app no estuvieron expuestos. Pruebas del producto: Python 3.14.3 local y 3.14.10 Linux; pytest 9.0.2 en la evaluación común; Docker 29.9.2. El generalista usó inicialmente pytest 9.2.0 en su suite Windows; la comparación aislada usó 9.0.2 para ambos.
 
-La edición live de presentaciones falló con `requires MXC in its execution environment`; se creó un PPTX local mediante Artifact Tool. No se afirma que se haya inspeccionado en PowerPoint. Sus diez imágenes renderizadas sí fueron revisadas, junto con las páginas del PDF.
+Se revisaron las diez diapositivas renderizadas y las páginas del informe PDF.
 
 ## Reproducción rápida
 

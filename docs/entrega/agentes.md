@@ -1,6 +1,6 @@
 # Contratos de los cuatro agentes
 
-Los cuatro roles se ejecutan como agentes de Codex: Analista, Planificador, Developer y Reviewer.
+La corrida entregada se realizó con cuatro agentes separados de Codex, uno por rol (Analista, Planificador, Developer y Reviewer).
 
 | Agente | Herramientas | Entrada | Salida | Término | Skill |
 |---|---|---|---|---|---|
