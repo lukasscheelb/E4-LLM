@@ -1,7 +1,9 @@
 # Plan técnico de MIRA E4 · multi-r0
 
+**Entorno del rol:** agente de Codex.
+
 **Estado:** propuesta para revisión humana. No autoriza la implementación.
-**Rol ejecutado:** Planificador, subagente separado de Codex.
+**Rol ejecutado:** Planificador, agente separado.
 **Revisión documental aprobada:** `2c625d6446b6fdba4cdc361c77f71235c4c4b45e`.
 **Registro de aprobación:** `cadb048819b191eac705be26ddae2575986139f9`.
 **Insumo de traspaso:** `docs/trabajo/analisis.md`.
@@ -272,7 +274,7 @@ No se crea una falla o rechazo artificial para satisfacer la rúbrica. Solo se c
 
 ## 9. Evidencia de ejecución del Planificador
 
-- Ejecución real: subagente Codex `/root/planificador`; no se cargó el perfil en VS Code. Restricciones de lectura seguidas por instrucciones.
+- Ejecución real: agente `/root/planificador`; no se cargó el perfil en VS Code. Restricciones de lectura seguidas por instrucciones.
 - Se leyó `.github/agents/planificador.agent.md`.
 - Se leyeron `verificar-trazabilidad/SKILL.md` y `references/matriz.md`. Su aplicación está materializada en la matriz de 17 criterios y en el recorrido inverso D-01 a D-04.
 - Se leyeron análisis, especificación, historia, respuestas y bitácora. La primera lectura agrupada fue truncada; se releyeron la sección de entradas y siguientes de la especificación, la historia y las aclaraciones finales. Las respuestas también constaban en el contexto heredado.

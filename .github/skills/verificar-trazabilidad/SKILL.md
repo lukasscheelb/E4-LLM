@@ -7,7 +7,8 @@ description: Comprueba la correspondencia entre requisitos aprobados, criterios,
 
 1. Fija la revisión de la especificación y la revisión que se evalúa. Aplica la [matriz](references/matriz.md) a cada requisito y criterio.
 2. Recorre la matriz en ambos sentidos. Busca requisitos sin cobertura, expectativas de pruebas que difieran de la especificación y conductas agregadas sin requisito aprobado.
-3. Contrasta las referencias con los archivos y con la salida efectiva de pytest. Reporta cada brecha con identificador y evidencia de lo encontrado.
+3. Antes de aceptar una ejecución, verifica la procedencia del módulo importado: registra su ruta absoluta y contrástala con el src de la entrega evaluada y su manifiesto. En una comparación entre checkouts fija explícitamente la configuración de pytest del checkout objetivo; PYTHONPATH por sí solo no basta. Si el módulo proviene de otra entrega, descarta esa ejecución para medir cumplimiento y conserva su log.
+4. Contrasta las referencias con los archivos y con la salida efectiva de pytest. Reporta cada brecha con identificador y evidencia de lo encontrado.
 
 ## Restricciones
 

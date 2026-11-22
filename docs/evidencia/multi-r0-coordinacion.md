@@ -1,14 +1,18 @@
 # multi-r0 · Coordinación de la corrida real
 
+Copia editada de denominaciones y rutas de entorno; véase [la nota de edición](NOTA_EDICION.md). No es una transcripción literal sin cambios.
+
 ## Encargo humano
 
 > perfecto, quiero que hagas los 7 pasos que quedan por desarrollar. Puedes tomar control de mi pc
 
 ## Entorno y alcance observados
 
-- Herramienta real: Codex con subagentes separados mediante `collaboration.spawn_agent`; no es una ejecución de perfiles de GitHub Copilot en VS Code.
-- Los perfiles `.github/agents/*.agent.md` se suministran como instrucciones a cada rol. Sus restricciones se cumplen por instrucciones; no se afirma que la lista `tools` de VS Code limite técnicamente las herramientas de Codex.
-- Rama inicial: `codex/preparacion-e4`.
+Los cuatro roles del sistema se ejecutaron como agentes de Codex.
+
+- Herramienta real: ejecución de subagentes separados mediante `collaboration.spawn_agent`; no es una ejecución de perfiles de GitHub Copilot en VS Code.
+- Los perfiles `.github/agents/*.agent.md` se suministran como instrucciones a cada rol. Sus restricciones se cumplen por instrucciones; no se afirma que la lista `tools` de VS Code limite técnicamente las herramientas de el entorno de agentes.
+- Rama inicial: `[rama de preparación]`.
 - HEAD inicial: `dba62c90a3c4f3c8b2476a0632b3129aeade182d`; árbol de trabajo limpio.
 - Revisión documental aprobada: `2c625d6446b6fdba4cdc361c77f71235c4c4b45e`.
 - Registro independiente de aprobación: `cadb048819b191eac705be26ddae2575986139f9`; `git merge-base --is-ancestor cadb048 HEAD` devolvió 0 y `git diff-tree --no-commit-id --name-only -r cadb048` mostró solo `docs/bitacora.md`.
@@ -41,15 +45,15 @@ Los detalles y resultados de cada rol se añaden solo después de observar su ej
 - Analista finalizó y entregó análisis y autorregistro; raíz inspeccionó ambos.
 - Planificador recibió el archivo de análisis, leyó skill y matriz y devolvió el plan sin escribir. Raíz guardó su salida completa, normalizando únicamente espacios finales, en `docs/trabajo/plan.md`.
 - En un turno posterior, Planificador leyó CAT-SEN local y devolvió el addendum que se anexó sin alterar la propuesta original. Su prompt está conservado en `multi-r0-planificador.md`.
-- Los traspasos internos fueron automáticos por subagentes Codex, a diferencia de los envíos manuales de Copilot previstos en la guía. No se cuentan como intervenciones humanas y deben declararse como diferencia de herramienta al comparar corridas.
+- Los traspasos internos fueron automáticos por agentes, a diferencia de los envíos manuales de Copilot previstos en la guía. No se cuentan como intervenciones humanas y deben declararse como diferencia de herramienta al comparar corridas.
 - Se detuvo la corrida para obtener revisión humana del plan y aceptación o corrección del addendum. Developer, pytest, Reviewer y línea base no han empezado.
 
 ## Continuación tras aprobación humana
 
-El representante respondió «apruebo, continua» a la solicitud explícita de aprobar plan y addendum. Se registró antes del código en `5a7b12d`. Developer y generalista trabajaron en directorios separados; sus prompts y resultados se conservaron. Reviewer emitió Aprobado en solo lectura. La línea base quedó publicada en rama `codex/linea-base`, commit `79c69fd`.
+El representante respondió «apruebo, continua» a la solicitud explícita de aprobar plan y addendum. Se registró antes del código en `5a7b12d`. Developer y generalista trabajaron en directorios separados; sus prompts y resultados se conservaron. Reviewer emitió Aprobado en solo lectura. La línea base quedó publicada en rama `[rama de línea base]`, commit `79c69fd`.
 
 El detalle de comandos reales, intentos, aislamiento, correcciones de entorno, resultados y límites de métricas está en `docs/linea-base/comparacion.md` y la bitácora. La pausa del control humano divide la corrida y no se oculta en una supuesta medición continua. No se añadieron pruebas, métricas ni fallas ficticias.
 
 ## Conservación de la línea base
 
-La rama codex/linea-base se publicó en 79c69fd. Se intentó archivar su worktree gestionado al finalizar las pruebas; la herramienta respondió `The task's primary checkout cannot be removed.`. Se dejó intacto, sin recurrir a borrado manual. Sus archivos y rama siguen disponibles.
+La rama [rama de línea base] se publicó en 79c69fd. Se intentó archivar su worktree gestionado al finalizar las pruebas; la herramienta respondió `The task's primary checkout cannot be removed.`. Se dejó intacto, sin recurrir a borrado manual. Sus archivos y rama siguen disponibles.

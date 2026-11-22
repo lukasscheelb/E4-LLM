@@ -1,5 +1,7 @@
 # Despacho y cierre de Reviewer · multi-r0
 
+**Identificación del rol:** agente de Codex.
+
 ## Prompt literal
 
 ```text

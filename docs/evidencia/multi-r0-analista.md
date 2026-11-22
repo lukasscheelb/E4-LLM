@@ -1,8 +1,12 @@
 # Evidencia de etapa Analista · multi-r0
 
+**Identificación del rol:** agente de Codex.
+
+Copia editada de denominaciones y rutas de entorno; véase [la nota de edición](NOTA_EDICION.md). No es una transcripción literal sin cambios.
+
 ## Procedencia y alcance
 
-- Ejecución real: subagente independiente de Codex, tarea `/root/analista`; no GitHub Copilot ni una ejecución de perfiles VS Code.
+- Ejecución real: agente independiente, tarea `/root/analista`; no GitHub Copilot ni una ejecución de perfiles VS Code.
 - Perfil consultado: `.github/agents/analista.agent.md`. Restricciones seguidas por instrucciones; no se afirma aislamiento técnico equivalente a `tools` de VS Code.
 - Skill consultada y aplicada: `.github/skills/generar-criterios/SKILL.md` y plantilla `references/criterio.md`.
 - Primera lectura y consulta del reloj observadas: 2026-11-21 20:24:59 UTC (17:24:59 America/Santiago). La raíz observó al agente trabajando a 20:24:58 UTC; ninguna de estas observaciones es una hora exacta de despacho.
@@ -12,13 +16,13 @@
 ## Prompt recibido íntegro
 
 ```text
-Ejecuta realmente el rol Analista definido en .github/agents/analista.agent.md en C:/Users/lukas/Documents/ChatGPT/LLM - E4. Lee ese perfil, .github/skills/generar-criterios/SKILL.md y su references/criterio.md; aplica la skill a los 17 criterios y documentos de docs/trabajo. Revisión aprobada 2c625d6446b6fdba4cdc361c77f71235c4c4b45e, aprobación cadb048819b191eac705be26ddae2575986139f9 verificada por raíz; documentos sin cambios posteriores. Conserva documentos aprobados. Escribe únicamente docs/trabajo/analisis.md y docs/evidencia/multi-r0-analista.md (crea carpeta ya existente si necesario), no bitacora para evitar concurrencia. En evidencia registra prompt recibido íntegro, herramientas/lecturas reales, skill y plantilla aplicadas, tiempo real si disponible y limitaciones de acceso fuentes. No inventes ejecución, métricas, MAST, modelos no conocidos ni afirmes haber verificado fuentes remotas si no lo hiciste. Evalúa criterios GWT fronteras colisiones, hallazgos de negocio bloqueantes frente a detalles de diseño. El material local de fuentes E3 puede no estar disponible: deja limitación explícita y contrasta decisiones aprobadas locales. No implementar, no ejecutar pytest, no Git commits. Devuelve resumen y hallazgos concretos. Tool runtime real: subagente Codex, no Copilot ni perfil VSCode cargado.
+Ejecuta realmente el rol Analista definido en .github/agents/analista.agent.md en C:/Users/lukas/Documents/ChatGPT/LLM - E4. Lee ese perfil, .github/skills/generar-criterios/SKILL.md y su references/criterio.md; aplica la skill a los 17 criterios y documentos de docs/trabajo. Revisión aprobada 2c625d6446b6fdba4cdc361c77f71235c4c4b45e, aprobación cadb048819b191eac705be26ddae2575986139f9 verificada por raíz; documentos sin cambios posteriores. Conserva documentos aprobados. Escribe únicamente docs/trabajo/analisis.md y docs/evidencia/multi-r0-analista.md (crea carpeta ya existente si necesario), no bitacora para evitar concurrencia. En evidencia registra prompt recibido íntegro, herramientas/lecturas reales, skill y plantilla aplicadas, tiempo real si disponible y limitaciones de acceso fuentes. No inventes ejecución, métricas, MAST, modelos no conocidos ni afirmes haber verificado fuentes remotas si no lo hiciste. Evalúa criterios GWT fronteras colisiones, hallazgos de negocio bloqueantes frente a detalles de diseño. El material local de fuentes E3 puede no estar disponible: deja limitación explícita y contrasta decisiones aprobadas locales. No implementar, no ejecutar pytest, no Git commits. Devuelve resumen y hallazgos concretos. Tool runtime real: agente, no Copilot ni perfil VSCode cargado.
 ```
 
 Mensaje complementario de raíz:
 
 ```text
-Registro raíz: a las 2026-11-21 20:24:58 UTC el agente ya estaba trabajando (no es hora exacta de inicio). Incluye lectura de perfiles y recursos como aplicación real, sin afirmar restricciones técnicas de permisos de Codex: el respeto al perfil es por instrucciones, no sandbox equivalente a VSCode. Si detectas detalle técnico no determinado (p.ej. catálogo adicional) identifícalo sin inventar negocio.
+Registro raíz: a las 2026-11-21 20:24:58 UTC el agente ya estaba trabajando (no es hora exacta de inicio). Incluye lectura de perfiles y recursos como aplicación real, sin afirmar restricciones técnicas de permisos de el entorno de agentes: el respeto al perfil es por instrucciones, no sandbox equivalente a VSCode. Si detectas detalle técnico no determinado (p.ej. catálogo adicional) identifícalo sin inventar negocio.
 ```
 
 ## Acciones realmente realizadas
@@ -33,6 +37,6 @@ Registro raíz: a las 2026-11-21 20:24:58 UTC el agente ya estaba trabajando (no
 - Resultado documental: 17 criterios revisados, con expectativas aprobadas diferenciadas de resultados de pruebas. No se identificó contradicción de rutas que reabra las decisiones aceptadas.
 - Hallazgos entregados: contrato Python por diseñar, alcance del catálogo externo por respaldar antes de fijar su lista de códigos, método para evidenciar CA-10 sin red, encabezados históricos y trazabilidad pendiente a código/pruebas.
 - Fuentes: se trabajó con documentos locales y sus extractos. No se verificaron URLs ni corpus remoto E1/E3. No se afirma revisión independiente de CAT-SEN v3 íntegro.
-- Intervenciones: prompt y mensaje complementario proceden del coordinador Codex; no se cuentan como mensajes humanos. La solicitud humana de ejecutar los siete pasos y el control humano posterior del plan corresponden al registro de raíz.
+- Intervenciones: prompt y mensaje complementario proceden del coordinador automático; no se cuentan como mensajes humanos. La solicitud humana de ejecutar los siete pasos y el control humano posterior del plan corresponden al registro de raíz.
 - Pruebas, métricas de calidad y fallas MAST: no ejecutadas/no medidas/no clasificadas en esta etapa. No se inventó rechazo o corrección para satisfacer la rúbrica.
 - Traspaso preparado: `docs/trabajo/analisis.md` para Planificador. La ejecución del siguiente rol y la autorización humana sobre el plan se registran separadamente por el coordinador.

@@ -1,6 +1,6 @@
 ---
 name: analista
-description: Contrasta las fuentes de MIRA y redacta una especificación revisable por el representante del cliente.
+description: Úsalo al recibir una necesidad o aclaración para contrastar fuentes y entregar análisis Markdown con criterios verificables y dudas de negocio.
 target: vscode
 disable-model-invocation: true
 tools: ['read', 'search', 'edit']
@@ -37,4 +37,4 @@ Si la revisión ya está aprobada, entrega el informe a la persona que controla 
 
 ## Criterio de término
 
-El borrador tiene fuentes, criterios verificables y preguntas identificadas. Si queda una decisión pendiente, termina en espera de revisión humana.
+El análisis tiene fuentes, criterios verificables y hallazgos trazados. Si la revisión está aprobada, analisis.md queda listo para Planificador sin modificarla. Una decisión de negocio pendiente detiene el avance y vuelve a revisión humana.

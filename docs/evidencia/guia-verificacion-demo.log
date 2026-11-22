@@ -1,0 +1,260 @@
+
+Puntaje 84
+{
+  "ok": true,
+  "decision": "REVISION_ASISTIDA",
+  "motivo_principal": {
+    "codigo": "PUNTAJE_EN_REVISION"
+  },
+  "motivos": [
+    {
+      "codigo": "PUNTAJE_EN_REVISION"
+    }
+  ],
+  "puntaje": 84,
+  "desglose": {
+    "BIO_ROSTRO": {
+      "estado": "presente",
+      "valor": 75,
+      "minimo": 75,
+      "cumple": true
+    },
+    "CRUCE_FECHA": {
+      "estado": "presente",
+      "valor": 60,
+      "minimo": 60,
+      "cumple": true
+    },
+    "CRUCE_MONTO": {
+      "estado": "presente",
+      "valor": 60,
+      "minimo": 60,
+      "cumple": true
+    },
+    "DOC_AUT": {
+      "estado": "presente",
+      "valor": 70,
+      "minimo": 70,
+      "cumple": true
+    },
+    "FRA_EDICION": {
+      "estado": "inactivo",
+      "valor": false
+    },
+    "FRA_MEMORIA": {
+      "estado": "inactivo",
+      "valor": false
+    },
+    "FRA_SINTETICO": {
+      "estado": "inactivo",
+      "valor": false
+    }
+  },
+  "configuracion": {
+    "id": "X-v1",
+    "version": "1",
+    "R": 60,
+    "A": 85
+  }
+}
+
+Puntaje 85
+{
+  "ok": true,
+  "decision": "APROBACION_AUTOMATICA",
+  "motivo_principal": {
+    "codigo": "PUNTAJE_EN_APROBACION"
+  },
+  "motivos": [
+    {
+      "codigo": "PUNTAJE_EN_APROBACION"
+    }
+  ],
+  "puntaje": 85,
+  "desglose": {
+    "BIO_ROSTRO": {
+      "estado": "presente",
+      "valor": 75,
+      "minimo": 75,
+      "cumple": true
+    },
+    "CRUCE_FECHA": {
+      "estado": "presente",
+      "valor": 60,
+      "minimo": 60,
+      "cumple": true
+    },
+    "CRUCE_MONTO": {
+      "estado": "presente",
+      "valor": 60,
+      "minimo": 60,
+      "cumple": true
+    },
+    "DOC_AUT": {
+      "estado": "presente",
+      "valor": 70,
+      "minimo": 70,
+      "cumple": true
+    },
+    "FRA_EDICION": {
+      "estado": "inactivo",
+      "valor": false
+    },
+    "FRA_MEMORIA": {
+      "estado": "inactivo",
+      "valor": false
+    },
+    "FRA_SINTETICO": {
+      "estado": "inactivo",
+      "valor": false
+    }
+  },
+  "configuracion": {
+    "id": "X-v1",
+    "version": "1",
+    "R": 60,
+    "A": 85
+  }
+}
+
+Puntaje 59
+{
+  "ok": true,
+  "decision": "ESCALAMIENTO_SUPERVISOR",
+  "motivo_principal": {
+    "codigo": "PUNTAJE_BAJO_R"
+  },
+  "motivos": [
+    {
+      "codigo": "PUNTAJE_BAJO_R"
+    }
+  ],
+  "puntaje": 59,
+  "desglose": {
+    "BIO_ROSTRO": {
+      "estado": "presente",
+      "valor": 75,
+      "minimo": 75,
+      "cumple": true
+    },
+    "CRUCE_FECHA": {
+      "estado": "presente",
+      "valor": 60,
+      "minimo": 60,
+      "cumple": true
+    },
+    "CRUCE_MONTO": {
+      "estado": "presente",
+      "valor": 60,
+      "minimo": 60,
+      "cumple": true
+    },
+    "DOC_AUT": {
+      "estado": "presente",
+      "valor": 70,
+      "minimo": 70,
+      "cumple": true
+    },
+    "FRA_EDICION": {
+      "estado": "inactivo",
+      "valor": false
+    },
+    "FRA_MEMORIA": {
+      "estado": "inactivo",
+      "valor": false
+    },
+    "FRA_SINTETICO": {
+      "estado": "inactivo",
+      "valor": false
+    }
+  },
+  "configuracion": {
+    "id": "X-v1",
+    "version": "1",
+    "R": 60,
+    "A": 85
+  }
+}
+
+Fraude, mínimo y ausencia
+{
+  "ok": true,
+  "decision": "ESCALAMIENTO_SUPERVISOR",
+  "motivo_principal": {
+    "codigo": "FRAUDE_ACTIVO",
+    "senal": "FRA_EDICION"
+  },
+  "motivos": [
+    {
+      "codigo": "FRAUDE_ACTIVO",
+      "senal": "FRA_EDICION"
+    },
+    {
+      "codigo": "SENAL_FALTANTE",
+      "senal": "BIO_ROSTRO"
+    },
+    {
+      "codigo": "MINIMO_INCUMPLIDO",
+      "senal": "DOC_AUT"
+    },
+    {
+      "codigo": "PUNTAJE_EN_APROBACION"
+    }
+  ],
+  "puntaje": 85,
+  "desglose": {
+    "BIO_ROSTRO": {
+      "estado": "ausente",
+      "valor": null,
+      "minimo": 75,
+      "cumple": null
+    },
+    "CRUCE_FECHA": {
+      "estado": "presente",
+      "valor": 60,
+      "minimo": 60,
+      "cumple": true
+    },
+    "CRUCE_MONTO": {
+      "estado": "presente",
+      "valor": 60,
+      "minimo": 60,
+      "cumple": true
+    },
+    "DOC_AUT": {
+      "estado": "presente",
+      "valor": 69,
+      "minimo": 70,
+      "cumple": false
+    },
+    "FRA_EDICION": {
+      "estado": "activo",
+      "valor": true
+    },
+    "FRA_MEMORIA": {
+      "estado": "inactivo",
+      "valor": false
+    },
+    "FRA_SINTETICO": {
+      "estado": "inactivo",
+      "valor": false
+    }
+  },
+  "configuracion": {
+    "id": "X-v1",
+    "version": "1",
+    "R": 60,
+    "A": 85
+  }
+}
+
+Indicador de fraude omitido
+{
+  "ok": false,
+  "error": {
+    "tipo": "entrada",
+    "codigo": "INDICADOR_OMITIDO",
+    "campo": "FRA_MEMORIA",
+    "mensaje": "Cada indicador de fraude debe recibirse explícitamente."
+  }
+}

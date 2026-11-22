@@ -1,0 +1,9 @@
+{
+  "comando": [
+    "runtime_python",
+    "scripts/demo.py"
+  ],
+  "retorno": 0,
+  "segundos_proceso": 0.1139,
+  "alcance": "smoke técnico de cinco escenarios; no ensayo humano ni nueva corrida de agentes"
+}

@@ -1,8 +1,10 @@
 # Revisión de implementación MIRA E4 · multi-r0
 
+**Entorno del rol:** agente de Codex.
+
 **Veredicto: Aprobado.**
 **Ciclo:** revisión inicial; cero ciclos de corrección utilizados.
-**Rol:** Reviewer, subagente separado de Codex, siguiendo `.github/agents/reviewer.agent.md` mediante instrucciones. No fue una sesión de GitHub Copilot ni se aplicó técnicamente su lista de herramientas.
+**Rol:** Reviewer, agente separado, siguiendo `.github/agents/reviewer.agent.md` mediante instrucciones. No fue una sesión de GitHub Copilot ni se aplicó técnicamente su lista de herramientas.
 
 ## Alcance de la revisión
 

@@ -1,6 +1,6 @@
 ---
 name: developer
-description: Implementa el plan aprobado, ejecuta pytest y documenta resultados reproducibles.
+description: Úsalo con plan autorizado para implementar la API y pruebas y entregar implementacion.md con ejecución real y evidencia trazable.
 target: vscode
 disable-model-invocation: true
 tools: ['read', 'search', 'edit', 'execute']

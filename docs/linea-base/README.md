@@ -1,6 +1,6 @@
 # Línea base con un solo agente
 
-**Estado:** corrida real completada en `codex/linea-base`, commit `79c69fd`. [Resultados y comparación](comparacion.md). El protocolo siguiente describe el encargo utilizado; no sustituye los resultados medidos.
+**Estado:** corrida real completada en `[rama de línea base]`, commit `79c69fd`. [Resultados y comparación](comparacion.md). El protocolo siguiente describe el encargo utilizado; no sustituye los resultados medidos.
 
 Corre el mismo caso en un chat nuevo con un solo agente generalista. Usa una rama separada desde la misma revisión previa a la implementación, la misma especificación aprobada y el mismo modelo y entorno cuando estén disponibles. El agente generalista recibe el caso y realiza análisis, plan, implementación y pruebas dentro de su propio chat. Mantén la salida de la corrida multiagente fuera de sus insumos.
 

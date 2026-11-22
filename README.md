@@ -1,12 +1,18 @@
 # MIRA · Entregable 4
 
+**Equipo:** Lukas Scheel (representante de negocio), Francisca Meyer y Sebastian Rodriguez.
+
+**Primera instalación:** sigue la [guía paso a paso desde cero](docs/entrega/guia-instalacion.md) o descarga su [versión PDF](output/pdf/Guia_Instalacion_MIRA_E4.pdf). Incluye requisitos, Windows, macOS/Linux, demo, pruebas y opciones de Docker y agentes.
+
+**Entrega académica:** [informe PDF](output/pdf/Informe_MIRA_E4.pdf), [presentación PowerPoint](output/presentacion/Presentacion_MIRA_E4.pptx), [guion de demostración](docs/entrega/guion-demo.md) y [estado y límites de entrega](docs/entrega/README.md). Diagrama y tabla de agentes en `docs/entrega/`. La versión final se identifica mediante la etiqueta `entrega-3`. Los puntos que requieren una respuesta o actuación humana se declaran pendientes, sin dar por completado un ensayo ni métricas inexistentes.
+
 **Alternativa A · Desarrollo conducido por especificación.** El caso propone un evaluador independiente de MIRA que considera puntaje de confianza, señales de fraude y umbrales configurables por organización. El componente es local, en Python y verificable con pytest.
 
 **Entrada del caso:** el cliente necesita que MIRA use el puntaje del caso, las señales de fraude y los umbrales de cada organización para decidir la ruta y explicar el motivo. El comportamiento exacto está en la especificación aprobada.
 
-**Estado actual:** revisión documental y plan aprobados por Lukas Scheel; implementación y pruebas reales completadas mediante subagentes separados de Codex. Suite propia: 173/173; suite común de aceptación: 115/115, con aislamiento de red verificado en Docker. Veredicto independiente en [la revisión](docs/trabajo/revision.md) y [comparación con un generalista](docs/linea-base/comparacion.md).
+**Estado actual:** revisión documental y plan aprobados por Lukas Scheel; implementación y pruebas reales completadas. Suite propia: 173/173; suite común de aceptación: 115/115, con aislamiento de red verificado en Docker. Veredicto independiente en [la revisión](docs/trabajo/revision.md) y [comparación con un generalista](docs/linea-base/comparacion.md).
 
-La corrida entregada utilizó Codex, siguiendo los perfiles del repositorio por instrucciones; no se presenta como una corrida de GitHub Copilot/VS Code. Los traspasos entre subagentes fueron coordinados automáticamente, con aprobación humana previa de la especificación y control humano adicional del plan. La guía VS Code de abajo se conserva como alternativa de reproducción, no como evidencia de esa herramienta.
+La corrida entregada se realizó con cuatro agentes separados de Codex, siguiendo los perfiles del repositorio por instrucciones; no se presenta como una corrida de GitHub Copilot/VS Code. Los traspasos entre subagentes fueron coordinados automáticamente, con aprobación humana previa de la especificación y control humano adicional del plan. La guía VS Code de abajo se conserva como alternativa de reproducción, no como evidencia de esa herramienta.
 
 | Documento | Contenido |
 |---|---|
@@ -26,7 +32,7 @@ La corrida entregada utilizó Codex, siguiendo los perfiles del repositorio por 
 
 La especificación de `2c625d6` ya fue aprobada por Lukas Scheel. El commit independiente `cadb048` registra su decisión. [Bitácora](docs/bitacora.md).
 
-Abre el repositorio en `codex/preparacion-e4` y abre GitHub Copilot Chat. En **Chat: Open Customizations** ubica los agentes y las Skills del proyecto. Selecciona **Local** para usar los botones de traspaso. Cada botón prepara el mensaje con `send: false`. Revisa que cite el archivo de trabajo y envíalo. Si tu sesión Copilot lista los agentes sin botones, selecciona manualmente al siguiente agente y envía el mismo mensaje con el archivo. [Agentes y handoffs en VS Code](https://code.visualstudio.com/docs/agent-customization/custom-agents#handoffs).
+Abre el repositorio en `main` y abre GitHub Copilot Chat. En **Chat: Open Customizations** ubica los agentes y las Skills del proyecto. Selecciona **Local** para usar los botones de traspaso. Cada botón prepara el mensaje con `send: false`. Revisa que cite el archivo de trabajo y envíalo. Si tu sesión Copilot lista los agentes sin botones, selecciona manualmente al siguiente agente y envía el mismo mensaje con el archivo. [Agentes y handoffs en VS Code](https://code.visualstudio.com/docs/agent-customization/custom-agents#handoffs).
 
 En el campo de chat, escribe `/` para seleccionar la Skill de la etapa cuando esté disponible. Guarda una captura o el registro de actividad que muestre su carga y uso real. [Skills en VS Code](https://code.visualstudio.com/docs/agent-customization/agent-skills#use-skills-as-slash-commands).
 
@@ -47,7 +53,7 @@ Cuando el flujo esté completo, pytest esté en verde, Reviewer haya aprobado y 
 
 ## Usar el evaluador local
 
-La implementación inicial tiene pruebas locales en verde; la aceptación final depende del veredicto de Reviewer y de la evidencia de ejecución aislada de red de CA-10.
+La implementación fue aprobada por Reviewer y CA-10 tiene evidencia real de ejecución sin red. Véanse el [veredicto](docs/trabajo/revision.md) y la [comparación](docs/linea-base/comparacion.md).
 
 Requiere Python 3.10 o superior. En PowerShell, desde la raíz:
 

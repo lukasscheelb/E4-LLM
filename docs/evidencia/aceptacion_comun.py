@@ -11,6 +11,12 @@ import socket
 import pytest
 import mira
 
+# Procedencia obligatoria para evitar evaluar accidentalmente otro checkout.
+_MODULO = Path(mira.__file__).resolve()
+_SRC_ESPERADO = Path(os.environ["MIRA_SOURCE_ROOT"]).resolve()
+assert _MODULO.is_relative_to(_SRC_ESPERADO), f"Módulo ajeno: {_MODULO} fuera de {_SRC_ESPERADO}"
+print(f"MIRA_MODULO_VERIFICADO={_MODULO}")
+
 
 MINIMOS = {"DOC_AUT": 70, "BIO_ROSTRO": 75, "CRUCE_MONTO": 60, "CRUCE_FECHA": 60}
 FRAUDES = ("FRA_EDICION", "FRA_MEMORIA", "FRA_SINTETICO")

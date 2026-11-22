@@ -1,0 +1,6 @@
+Working directory: [REPOSITORIO_LOCAL]\tmp\guia\verificacion
+Command arguments: ['[REPOSITORIO_LOCAL]\\tmp\\guia\\verificacion\\.venv\\Scripts\\python.exe', '-m', 'pytest', '-q', '--junitxml', '[REPOSITORIO_LOCAL]\\docs\\evidencia\\guia-verificacion-junit.xml', 'tests']
+........................................................................ [ 41%]
+........................................................................ [ 83%]
+.............................                                            [100%]
+173 passed in 0.25s
