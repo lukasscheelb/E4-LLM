@@ -1,0 +1,201 @@
+{
+  "alcance": "Reproducción de F-02 y comparación de pruebas funcionales en Windows. Se omite CA-10 por no aislar la red en esta ejecución.",
+  "medicion": "Reloj monotónico desde lanzamiento de pytest hasta su retorno, incluida colección. Excluye desarrollo.",
+  "entorno": {
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.9",
+    "pytest": "pytest 9.0.2"
+  },
+  "variables": "PYTHONPATH y MIRA_SOURCE_ROOT apuntan a src del checkout objetivo; PYTEST_DISABLE_PLUGIN_AUTOLOAD=1.",
+  "reproduccion_f02": {
+    "sin_guardia": {
+      "enfoque": "baseline",
+      "commit": "79c69fd2365af943f6fcab1019eac0ad2c5ed8b1",
+      "directorio": "<temp>\\baseline",
+      "comando": [
+        "<repo>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-k",
+        "test_ca01",
+        "<temp>\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py"
+      ],
+      "segundos_pared": 1.226573,
+      "retorno": 1,
+      "salida": "FFFFF\n================================== FAILURES ===================================\n________________________________ test_ca01[79] ________________________________\n\npuntaje = 79\n\n    @pytest.mark.parametrize(\"puntaje\", [79, 80, 84, 85, 86])\n    def test_ca01(puntaje):\n>       out = evaluar(datos(puntaje))\n              ^^^^^^^^^^^^^^^^^^^^^^^\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:71: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ncaso = {'organizacion': 'X', 'puntaje': 79, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}\nconfigs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}\n\n    def evaluar(caso, configs=None):\n        configs = configuraciones() if configs is None else configs\n        originales = copy.deepcopy((caso, configs))\n        enfoque = os.environ[\"MIRA_ENFOQUE\"]\n        if enfoque == \"multi\":\n            resultado = mira.evaluar_caso(caso, configs)\n        elif enfoque == \"baseline\":\n>           resultado = mira.evaluar(caso[\"organizacion\"], caso, configs)\n                        ^^^^^^^^^^^^\nE           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:41: AttributeError\n________________________________ test_ca01[80] ________________________________\n\npuntaje = 80\n\n    @pytest.mark.parametrize(\"puntaje\", [79, 80, 84, 85, 86])\n    def test_ca01(puntaje):\n>       out = evaluar(datos(puntaje))\n              ^^^^^^^^^^^^^^^^^^^^^^^\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:71: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ncaso = {'organizacion': 'X', 'puntaje': 80, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}\nconfigs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}\n\n    def evaluar(caso, configs=None):\n        configs = configuraciones() if configs is None else configs\n        originales = copy.deepcopy((caso, configs))\n        enfoque = os.environ[\"MIRA_ENFOQUE\"]\n        if enfoque == \"multi\":\n            resultado = mira.evaluar_caso(caso, configs)\n        elif enfoque == \"baseline\":\n>           resultado = mira.evaluar(caso[\"organizacion\"], caso, configs)\n                        ^^^^^^^^^^^^\nE           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:41: AttributeError\n________________________________ test_ca01[84] ________________________________\n\npuntaje = 84\n\n    @pytest.mark.parametrize(\"puntaje\", [79, 80, 84, 85, 86])\n    def test_ca01(puntaje):\n>       out = evaluar(datos(puntaje))\n              ^^^^^^^^^^^^^^^^^^^^^^^\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:71: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ncaso = {'organizacion': 'X', 'puntaje': 84, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}\nconfigs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}\n\n    def evaluar(caso, configs=None):\n        configs = configuraciones() if configs is None else configs\n        originales = copy.deepcopy((caso, configs))\n        enfoque = os.environ[\"MIRA_ENFOQUE\"]\n        if enfoque == \"multi\":\n            resultado = mira.evaluar_caso(caso, configs)\n        elif enfoque == \"baseline\":\n>           resultado = mira.evaluar(caso[\"organizacion\"], caso, configs)\n                        ^^^^^^^^^^^^\nE           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:41: AttributeError\n________________________________ test_ca01[85] ________________________________\n\npuntaje = 85\n\n    @pytest.mark.parametrize(\"puntaje\", [79, 80, 84, 85, 86])\n    def test_ca01(puntaje):\n>       out = evaluar(datos(puntaje))\n              ^^^^^^^^^^^^^^^^^^^^^^^\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:71: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ncaso = {'organizacion': 'X', 'puntaje': 85, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}\nconfigs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}\n\n    def evaluar(caso, configs=None):\n        configs = configuraciones() if configs is None else configs\n        originales = copy.deepcopy((caso, configs))\n        enfoque = os.environ[\"MIRA_ENFOQUE\"]\n        if enfoque == \"multi\":\n            resultado = mira.evaluar_caso(caso, configs)\n        elif enfoque == \"baseline\":\n>           resultado = mira.evaluar(caso[\"organizacion\"], caso, configs)\n                        ^^^^^^^^^^^^\nE           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:41: AttributeError\n________________________________ test_ca01[86] ________________________________\n\npuntaje = 86\n\n    @pytest.mark.parametrize(\"puntaje\", [79, 80, 84, 85, 86])\n    def test_ca01(puntaje):\n>       out = evaluar(datos(puntaje))\n              ^^^^^^^^^^^^^^^^^^^^^^^\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:71: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ncaso = {'organizacion': 'X', 'puntaje': 86, 'senales': {'BIO_ROSTRO': 75, 'CRUCE_FECHA': 60, 'CRUCE_MONTO': 60, 'DOC_AUT': 70, ...}}\nconfigs = {'X': {'A': 85, 'R': 60, 'id': 'config-X', 'version': '1'}}\n\n    def evaluar(caso, configs=None):\n        configs = configuraciones() if configs is None else configs\n        originales = copy.deepcopy((caso, configs))\n        enfoque = os.environ[\"MIRA_ENFOQUE\"]\n        if enfoque == \"multi\":\n            resultado = mira.evaluar_caso(caso, configs)\n        elif enfoque == \"baseline\":\n>           resultado = mira.evaluar(caso[\"organizacion\"], caso, configs)\n                        ^^^^^^^^^^^^\nE           AttributeError: module 'mira' has no attribute 'evaluar'. Did you mean: 'evaluador'?\n\n..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py:41: AttributeError\n=========================== short test summary info ===========================\nFAILED ..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py::test_ca01[79]\nFAILED ..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py::test_ca01[80]\nFAILED ..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py::test_ca01[84]\nFAILED ..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py::test_ca01[85]\nFAILED ..\\multi\\docs\\evidencia\\historico\\aceptacion_comun-v1.py::test_ca01[86]\n5 failed, 110 deselected in 0.38s\n"
+    },
+    "con_guardia": {
+      "enfoque": "baseline",
+      "commit": "79c69fd2365af943f6fcab1019eac0ad2c5ed8b1",
+      "directorio": "<temp>\\baseline",
+      "comando": [
+        "<repo>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-k",
+        "test_ca01",
+        "<temp>\\multi\\docs\\evidencia\\aceptacion_comun.py"
+      ],
+      "segundos_pared": 1.237192,
+      "retorno": 2,
+      "salida": "\n=================================== ERRORS ====================================\n_____________ ERROR collecting docs/evidencia/aceptacion_comun.py _____________\n..\\multi\\docs\\evidencia\\aceptacion_comun.py:17: in <module>\n    assert _MODULO.is_relative_to(_SRC_ESPERADO), f\"Módulo ajeno: {_MODULO} fuera de {_SRC_ESPERADO}\"\nE   AssertionErro<temp>\\multi\\src\\mira\\__init__.py fuera de <temp>\\baseline\\src\nE   assert False\nE    +  where False = is_relative_to(WindowsPath('<temp>/baseline/src'))\nE    +    where is_relative_to = WindowsPath('<temp>/multi/src/mira/__init__.py').is_relative_to\n=========================== short test summary info ===========================\nERROR ..\\multi\\docs\\evidencia\\aceptacion_comun.py - AssertionError: Módulo aj...\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.40s\n"
+    }
+  },
+  "corridas_funcionales_ordenadas": [
+    {
+      "enfoque": "multi",
+      "commit": "2952d3a8fd35e047300f64c796c3469393fbb331",
+      "directorio": "<temp>\\multi",
+      "comando": [
+        "<repo>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-c",
+        "<temp>\\multi\\pyproject.toml",
+        "-k",
+        "not test_ca10_aislamiento_os",
+        "<temp>\\multi\\docs\\evidencia\\aceptacion_comun.py"
+      ],
+      "segundos_pared": 1.253584,
+      "retorno": 0,
+      "salida": "MIRA_MODULO_VERIFICADO=<temp>\\multi\\src\\mira\\__init__.py\n..................................................................................................................\n114 passed, 1 deselected in 0.31s\n"
+    },
+    {
+      "enfoque": "baseline",
+      "commit": "79c69fd2365af943f6fcab1019eac0ad2c5ed8b1",
+      "directorio": "<temp>\\baseline",
+      "comando": [
+        "<repo>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-c",
+        "<temp>\\baseline\\pyproject.toml",
+        "-k",
+        "not test_ca10_aislamiento_os",
+        "<temp>\\multi\\docs\\evidencia\\aceptacion_comun.py"
+      ],
+      "segundos_pared": 1.243517,
+      "retorno": 0,
+      "salida": "MIRA_MODULO_VERIFICADO=<temp>\\baseline\\src\\mira\\__init__.py\n..................................................................................................................\n114 passed, 1 deselected in 0.31s\n"
+    },
+    {
+      "enfoque": "baseline",
+      "commit": "79c69fd2365af943f6fcab1019eac0ad2c5ed8b1",
+      "directorio": "<temp>\\baseline",
+      "comando": [
+        "<repo>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-c",
+        "<temp>\\baseline\\pyproject.toml",
+        "-k",
+        "not test_ca10_aislamiento_os",
+        "<temp>\\multi\\docs\\evidencia\\aceptacion_comun.py"
+      ],
+      "segundos_pared": 1.254724,
+      "retorno": 0,
+      "salida": "MIRA_MODULO_VERIFICADO=<temp>\\baseline\\src\\mira\\__init__.py\n..................................................................................................................\n114 passed, 1 deselected in 0.36s\n"
+    },
+    {
+      "enfoque": "multi",
+      "commit": "2952d3a8fd35e047300f64c796c3469393fbb331",
+      "directorio": "<temp>\\multi",
+      "comando": [
+        "<repo>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-c",
+        "<temp>\\multi\\pyproject.toml",
+        "-k",
+        "not test_ca10_aislamiento_os",
+        "<temp>\\multi\\docs\\evidencia\\aceptacion_comun.py"
+      ],
+      "segundos_pared": 1.285121,
+      "retorno": 0,
+      "salida": "MIRA_MODULO_VERIFICADO=<temp>\\multi\\src\\mira\\__init__.py\n..................................................................................................................\n114 passed, 1 deselected in 0.27s\n"
+    },
+    {
+      "enfoque": "multi",
+      "commit": "2952d3a8fd35e047300f64c796c3469393fbb331",
+      "directorio": "<temp>\\multi",
+      "comando": [
+        "<repo>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-c",
+        "<temp>\\multi\\pyproject.toml",
+        "-k",
+        "not test_ca10_aislamiento_os",
+        "<temp>\\multi\\docs\\evidencia\\aceptacion_comun.py"
+      ],
+      "segundos_pared": 1.106217,
+      "retorno": 0,
+      "salida": "MIRA_MODULO_VERIFICADO=<temp>\\multi\\src\\mira\\__init__.py\n..................................................................................................................\n114 passed, 1 deselected in 0.26s\n"
+    },
+    {
+      "enfoque": "baseline",
+      "commit": "79c69fd2365af943f6fcab1019eac0ad2c5ed8b1",
+      "directorio": "<temp>\\baseline",
+      "comando": [
+        "<repo>\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-c",
+        "<temp>\\baseline\\pyproject.toml",
+        "-k",
+        "not test_ca10_aislamiento_os",
+        "<temp>\\multi\\docs\\evidencia\\aceptacion_comun.py"
+      ],
+      "segundos_pared": 1.089032,
+      "retorno": 0,
+      "salida": "MIRA_MODULO_VERIFICADO=<temp>\\baseline\\src\\mira\\__init__.py\n..................................................................................................................\n114 passed, 1 deselected in 0.26s\n"
+    }
+  ],
+  "mediana_segundos_pared": {
+    "multi": 1.253584,
+    "baseline": 1.243517
+  },
+  "tiempo_total_de_desarrollo_comparable": null,
+  "tokens_comparables": null,
+  "edicion": "En comandos y salidas se sustituyeron rutas privadas por <temp> o <repo>. Se conservan resultados y tiempos."
+}

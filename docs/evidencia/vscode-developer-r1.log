@@ -1,0 +1,9 @@
+Commit probado: 2952d3a8fd35e047300f64c796c3469393fbb331
+MIRA_MODULO_VERIFICADO=C:\Users\Fran\OneDrive - alumnos.uv.cl\Documentos\ChatGPT\LLM-E4\src\mira\__init__.py
+pytest 9.0.2; argumento: ['-q', '-p', 'no:cacheprovider', '--junitxml', 'docs\\evidencia\\vscode-developer-r1-junit.xml', 'tests']
+........................................................................ [ 41%]
+........................................................................ [ 83%]
+.............................                                            [100%]
+173 passed in 0.53s
+MIRA_MODULO_TRAS_PYTEST=C:\Users\Fran\OneDrive - alumnos.uv.cl\Documentos\ChatGPT\LLM-E4\src\mira\__init__.py
+Exit code: 0
